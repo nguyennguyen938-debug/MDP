@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sub_list",
+  "id": "mbpp_real_282",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sub_list = candidate\n    assert sub_list([1, 2, 3],[4,5,6])==[-3,-3,-3]\n    assert sub_list([1,2],[3,4])==[-2,-2]\n    assert sub_list([90,120],[50,70])==[40,50]\n",
+    "oracle_type": "callable_check",
+    "original_id": 282,
+    "profile": "real_python",
+    "prompt": "Write a function to subtract two lists element-wise.",
+    "source": "google_research_mbpp",
+    "source_code": "def sub_list(nums1,nums2):\n  result = map(lambda x, y: x - y, nums1, nums2)\n  return list(result)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_282/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

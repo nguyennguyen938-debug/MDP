@@ -1,0 +1,25 @@
+{
+  "entrypoint": "bell_number",
+  "id": "mbpp_real_67",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    bell_number = candidate\n    assert bell_number(2)==2\n    assert bell_number(10)==115975\n    assert bell_number(56)==6775685320645824322581483068371419745979053216268760300\n",
+    "oracle_type": "callable_check",
+    "original_id": 67,
+    "profile": "real_python",
+    "prompt": "Write a function to find the number of ways to partition a set of Bell numbers.",
+    "source": "google_research_mbpp",
+    "source_code": "def bell_number(n):   \n    bell = [[0 for i in range(n+1)] for j in range(n+1)] \n    bell[0][0] = 1\n    for i in range(1, n+1): \n        bell[i][0] = bell[i-1][i-1]  \n        for j in range(1, i+1): \n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]   \n    return bell[n][0] ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_67/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 114,
+  "key": "bd6da8950baab9a4e7c1e57b1d8edf50de7cd1de1f37175300c2920efd0bba70",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Suggest concise assertions for bugsinpy_off_by_one_factorial:solve.",
+  "prompt_tokens": 5,
+  "provider": "openai",
+  "text": "Here are some concise assertions you can use for testing the `solve` function in the `bugsinpy_off_by_one_factorial` module:\n\n1. **Basic Factorial Test**:\n   ```python\n   assert solve(0) == 1  # 0! = 1\n   ```\n\n2. **Positive Integer Test**:\n   ```python\n   assert solve(1) == 1  # 1! = 1\n   assert solve(2) == 2  # 2! = 2\n   assert solve(3) == 6  # 3! = 6\n   assert solve(4) == 24 # 4! = 24\n   ```\n\n3. **Higher Factorial Test**:\n   ```python\n   assert solve(5) == 120 # 5! = 120\n   assert solve(6) == 720 # 6! = 720\n   ```\n\n4. **Large Input Test**:\n   ```python\n   assert solve(10) == 3628800 # 10! = 3628800\n   ```\n\n5. **Negative Input Test**:\n   ```python\n   assert solve(-1) == \"undefined"
+}

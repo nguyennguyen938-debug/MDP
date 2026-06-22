@@ -1,0 +1,54 @@
+{
+  "entrypoint": "solve",
+  "id": "action_balanced_stop_noop_identity",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          0
+        ]
+      },
+      {
+        "args": [
+          1
+        ]
+      },
+      {
+        "args": [
+          -1
+        ]
+      }
+    ],
+    "dataset": "action_balanced",
+    "fuzz_cases": [
+      {
+        "args": [
+          5
+        ],
+        "expected": 5
+      },
+      {
+        "args": [
+          -5
+        ],
+        "expected": -5
+      }
+    ],
+    "original_id": "stop_noop_identity",
+    "profile": "action_balanced",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(x: int) -> int:\n    return x\n",
+    "split": "test",
+    "stress_category": "stop"
+  },
+  "path": "action_balanced_stop_noop_identity/solution.py",
+  "tests": [
+    {
+      "args": [
+        3
+      ],
+      "expected": 3
+    }
+  ]
+}

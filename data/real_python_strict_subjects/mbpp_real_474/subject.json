@@ -1,0 +1,25 @@
+{
+  "entrypoint": "replace_char",
+  "id": "mbpp_real_474",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    replace_char = candidate\n    assert replace_char(\"polygon\",'y','l')==(\"pollgon\")\n    assert replace_char(\"character\",'c','a')==(\"aharaater\")\n    assert replace_char(\"python\",'l','a')==(\"python\")\n",
+    "oracle_type": "callable_check",
+    "original_id": 474,
+    "profile": "real_python",
+    "prompt": "Write a function to replace characters in a string.",
+    "source": "google_research_mbpp",
+    "source_code": "def replace_char(str1,ch,newch):\n str2 = str1.replace(ch, newch)\n return str2",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_474/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "subject_marks",
+  "id": "mbpp_real_64",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    subject_marks = candidate\n    assert subject_marks([('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])==[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]\n    assert subject_marks([('Telugu',49),('Hindhi',54),('Social',33)])==([('Social',33),('Telugu',49),('Hindhi',54)])\n    assert subject_marks([('Physics',96),('Chemistry',97),('Biology',45)])==([('Biology',45),('Physics',96),('Chemistry',97)])\n",
+    "oracle_type": "callable_check",
+    "original_id": 64,
+    "profile": "real_python",
+    "prompt": "Write a function to sort a list of tuples using the second value of each tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "def subject_marks(subjectmarks):\n#subject_marks = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])\n subjectmarks.sort(key = lambda x: x[1])\n return subjectmarks",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_64/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

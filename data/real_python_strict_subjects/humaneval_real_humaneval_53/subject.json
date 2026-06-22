@@ -1,0 +1,24 @@
+{
+  "entrypoint": "add",
+  "id": "humaneval_real_humaneval_53",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    import random\n\n    assert candidate(0, 1) == 1\n    assert candidate(1, 0) == 1\n    assert candidate(2, 3) == 5\n    assert candidate(5, 7) == 12\n    assert candidate(7, 5) == 12\n\n    for i in range(100):\n        x, y = random.randint(0, 1000), random.randint(0, 1000)\n        assert candidate(x, y) == x + y\n\n",
+    "oracle_type": "callable_check",
+    "original_id": "HumanEval/53",
+    "profile": "real_python",
+    "source": "openai_human_eval",
+    "source_code": "\n\ndef add(x: int, y: int):\n    \"\"\"Add two numbers x and y\n    >>> add(2, 3)\n    5\n    >>> add(5, 7)\n    12\n    \"\"\"\n    return x + y\n",
+    "source_url": "https://raw.githubusercontent.com/openai/human-eval/master/data/HumanEval.jsonl.gz",
+    "split": "train"
+  },
+  "path": "humaneval_real_humaneval_53/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

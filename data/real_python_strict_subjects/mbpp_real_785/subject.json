@@ -1,0 +1,25 @@
+{
+  "entrypoint": "tuple_str_int",
+  "id": "mbpp_real_785",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    tuple_str_int = candidate\n    assert tuple_str_int(\"(7, 8, 9)\") == (7, 8, 9)\n    assert tuple_str_int(\"(1, 2, 3)\") == (1, 2, 3)\n    assert tuple_str_int(\"(4, 5, 6)\") == (4, 5, 6)\n    assert tuple_str_int(\"(7, 81, 19)\") == (7, 81, 19)\n",
+    "oracle_type": "callable_check",
+    "original_id": 785,
+    "profile": "real_python",
+    "prompt": "Write a function to convert tuple string to integer tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "def tuple_str_int(test_str):\n  res = tuple(int(num) for num in test_str.replace('(', '').replace(')', '').replace('...', '').split(', '))\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_785/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

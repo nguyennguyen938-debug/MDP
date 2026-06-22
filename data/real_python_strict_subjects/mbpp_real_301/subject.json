@@ -1,0 +1,25 @@
+{
+  "entrypoint": "dict_depth",
+  "id": "mbpp_real_301",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    dict_depth = candidate\n    assert dict_depth({'a':1, 'b': {'c': {'d': {}}}})==4\n    assert dict_depth({'a':1, 'b': {'c':'python'}})==2\n    assert dict_depth({1: 'Sun', 2: {3: {4:'Mon'}}})==3\n",
+    "oracle_type": "callable_check",
+    "original_id": 301,
+    "profile": "real_python",
+    "prompt": "Write a function to find the depth of a dictionary.",
+    "source": "google_research_mbpp",
+    "source_code": "def dict_depth(d):\n    if isinstance(d, dict):\n        return 1 + (max(map(dict_depth, d.values())) if d else 0)\n    return 0",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_301/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

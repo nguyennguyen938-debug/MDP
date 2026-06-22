@@ -1,0 +1,24 @@
+{
+  "entrypoint": "unique_digits",
+  "id": "humaneval_real_humaneval_104",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([15, 33, 1422, 1]) == [1, 15, 33]\n    assert candidate([152, 323, 1422, 10]) == []\n    assert candidate([12345, 2033, 111, 151]) == [111, 151]\n    assert candidate([135, 103, 31]) == [31, 135]\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True\n\n",
+    "oracle_type": "callable_check",
+    "original_id": "HumanEval/104",
+    "profile": "real_python",
+    "source": "openai_human_eval",
+    "source_code": "\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any even digit.\n\n    Note: Returned list should be sorted in increasing order.\n    \n    For example:\n    >>> unique_digits([15, 33, 1422, 1])\n    [1, 15, 33]\n    >>> unique_digits([152, 323, 1422, 10])\n    []\n    \"\"\"\n    odd_digit_elements = []\n    for i in x:\n        if all (int(c) % 2 == 1 for c in str(i)):\n            odd_digit_elements.append(i)\n    return sorted(odd_digit_elements)\n",
+    "source_url": "https://raw.githubusercontent.com/openai/human-eval/master/data/HumanEval.jsonl.gz",
+    "split": "val"
+  },
+  "path": "humaneval_real_humaneval_104/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

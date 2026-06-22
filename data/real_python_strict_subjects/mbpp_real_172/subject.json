@@ -1,0 +1,25 @@
+{
+  "entrypoint": "count_occurance",
+  "id": "mbpp_real_172",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    count_occurance = candidate\n    assert count_occurance(\"letstdlenstdporstd\") == 3\n    assert count_occurance(\"truststdsolensporsd\") == 1\n    assert count_occurance(\"makestdsostdworthit\") == 2\n    assert count_occurance(\"stds\") == 1\n    assert count_occurance(\"\") == 0\n",
+    "oracle_type": "callable_check",
+    "original_id": 172,
+    "profile": "real_python",
+    "prompt": "Write a function to count the number of occurence of the string 'std' in a given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def count_occurance(s):\n  count = 0\n  for i in range(len(s) - 2):\n    if (s[i] == 's' and s[i+1] == 't' and s[i+2] == 'd'):\n      count = count + 1\n  return count",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_172/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

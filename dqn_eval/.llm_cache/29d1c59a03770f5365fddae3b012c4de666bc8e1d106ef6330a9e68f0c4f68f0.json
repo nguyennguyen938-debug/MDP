@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 104,
+  "key": "29d1c59a03770f5365fddae3b012c4de666bc8e1d106ef6330a9e68f0c4f68f0",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_word_lengths:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_word_lengths:solve`, categorized for clarity:\n\n**Basic Functionality & Edge Cases:**\n\n*   `assert solve(\"hello world\") == [5, 5]`\n*   `assert solve(\"a b c\") == [1, 1, 1]`\n*   `assert solve(\"single\") == [6]`\n*   `assert solve(\"\") == []`\n*   `assert solve(\"  \") == []`\n*   `assert solve(\" leading and trailing \") == [7, 3, 8]`\n\n**Punctuation & Special Characters:**\n\n*   `assert solve(\"hello, world!\") == [5, 5]`\n*   `assert solve(\"word-with-hyphen\") == [16]`\n*   `assert solve(\"don't\") == [5]`\n*   `assert solve(\"123 456\") == [3, 3]`\n*   `assert solve(\"mixed123 case\") == [8, 4]`\n\n**Multiple Spaces:**\n\n*   `assert solve(\"multiple   spaces\") == [8, 6]`\n*   `assert solve(\"  "
+}

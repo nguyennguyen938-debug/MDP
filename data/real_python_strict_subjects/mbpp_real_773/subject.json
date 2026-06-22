@@ -1,0 +1,25 @@
+{
+  "entrypoint": "occurance_substring",
+  "id": "mbpp_real_773",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    occurance_substring = candidate\n    assert occurance_substring('python programming, python language','python')==('python', 0, 6)\n    assert occurance_substring('python programming,programming language','programming')==('programming', 7, 18)\n    assert occurance_substring('python programming,programming language','language')==('language', 31, 39)\n    assert occurance_substring('c++ programming, c++ language','python')==None\n",
+    "oracle_type": "callable_check",
+    "original_id": 773,
+    "profile": "real_python",
+    "prompt": "Write a function to find the occurrence and position of the substrings within a string. Return None if there is no match.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef occurance_substring(text,pattern):\n for match in re.finditer(pattern, text):\n    s = match.start()\n    e = match.end()\n    return (text[s:e], s, e)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_773/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

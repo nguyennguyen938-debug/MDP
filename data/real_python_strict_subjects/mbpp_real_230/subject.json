@@ -1,0 +1,25 @@
+{
+  "entrypoint": "replace_blank",
+  "id": "mbpp_real_230",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    replace_blank = candidate\n    assert replace_blank(\"hello people\",'@')==(\"hello@people\")\n    assert replace_blank(\"python program language\",'$')==(\"python$program$language\")\n    assert replace_blank(\"blank space\",\"-\")==(\"blank-space\")\n",
+    "oracle_type": "callable_check",
+    "original_id": 230,
+    "profile": "real_python",
+    "prompt": "Write a function that takes in a string and character, replaces blank spaces in the string with the character, and returns the string.",
+    "source": "google_research_mbpp",
+    "source_code": "def replace_blank(str1,char):\n str2 = str1.replace(' ', char)\n return str2",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_230/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

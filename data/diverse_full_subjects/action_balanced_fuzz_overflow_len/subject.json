@@ -1,0 +1,63 @@
+{
+  "entrypoint": "solve",
+  "id": "action_balanced_fuzz_overflow_len",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          []
+        ]
+      },
+      {
+        "args": [
+          [
+            1
+          ]
+        ]
+      }
+    ],
+    "dataset": "action_balanced",
+    "fuzz_cases": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": 4
+      }
+    ],
+    "original_id": "fuzz_overflow_len",
+    "profile": "action_balanced",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int]) -> int:\n    return len(items) if len(items) < 3 else -1\n",
+    "split": "test",
+    "stress_category": "fuzz"
+  },
+  "path": "action_balanced_fuzz_overflow_len/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

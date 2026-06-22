@@ -1,0 +1,26 @@
+{
+  "entrypoint": "solve",
+  "id": "safe_div",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "train"
+  },
+  "path": "safe_div/solution.py",
+  "tests": [
+    {
+      "args": [
+        4,
+        2
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        4,
+        0
+      ],
+      "expected": 0
+    }
+  ]
+}

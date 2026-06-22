@@ -1,0 +1,25 @@
+{
+  "entrypoint": "first_Digit",
+  "id": "mbpp_real_479",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    first_Digit = candidate\n    assert first_Digit(123) == 1\n    assert first_Digit(456) == 4\n    assert first_Digit(12) == 1\n",
+    "oracle_type": "callable_check",
+    "original_id": 479,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the first digit of a given number.",
+    "source": "google_research_mbpp",
+    "source_code": "def first_Digit(n) :  \n    while n >= 10:  \n        n = n / 10 \n    return int(n) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_479/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

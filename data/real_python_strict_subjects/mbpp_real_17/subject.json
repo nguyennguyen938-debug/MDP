@@ -1,0 +1,25 @@
+{
+  "entrypoint": "square_perimeter",
+  "id": "mbpp_real_17",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    square_perimeter = candidate\n    assert square_perimeter(10)==40\n    assert square_perimeter(5)==20\n    assert square_perimeter(4)==16\n",
+    "oracle_type": "callable_check",
+    "original_id": 17,
+    "profile": "real_python",
+    "prompt": "Write a function that returns the perimeter of a square given its side length as input.",
+    "source": "google_research_mbpp",
+    "source_code": "def square_perimeter(a):\n  perimeter=4*a\n  return perimeter",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_17/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

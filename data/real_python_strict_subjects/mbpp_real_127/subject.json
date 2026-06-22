@@ -1,0 +1,25 @@
+{
+  "entrypoint": "multiply_int",
+  "id": "mbpp_real_127",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    multiply_int = candidate\n    assert multiply_int(10,20)==200\n    assert multiply_int(5,10)==50\n    assert multiply_int(4,8)==32\n",
+    "oracle_type": "callable_check",
+    "original_id": 127,
+    "profile": "real_python",
+    "prompt": "Write a function to multiply two integers.",
+    "source": "google_research_mbpp",
+    "source_code": "def multiply_int(x, y):\n    if y < 0:\n        return -multiply_int(x, -y)\n    elif y == 0:\n        return 0\n    elif y == 1:\n        return x\n    else:\n        return x + multiply_int(x, y - 1)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_127/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

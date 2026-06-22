@@ -1,0 +1,25 @@
+{
+  "entrypoint": "get_max_sum",
+  "id": "mbpp_real_392",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    get_max_sum = candidate\n    assert get_max_sum(60) == 106\n    assert get_max_sum(10) == 12\n    assert get_max_sum(2) == 2\n",
+    "oracle_type": "callable_check",
+    "original_id": 392,
+    "profile": "real_python",
+    "prompt": "Write a function to find the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).",
+    "source": "google_research_mbpp",
+    "source_code": "def get_max_sum (n):\n\tres = list()\n\tres.append(0)\n\tres.append(1)\n\ti = 2\n\twhile i<n + 1:\n\t\tres.append(max(i, (res[int(i / 2)] \n\t\t\t\t\t\t+ res[int(i / 3)] +\n\t\t\t\t\t\t\tres[int(i / 4)]\n\t\t\t\t\t\t+ res[int(i / 5)])))\n\t\ti = i + 1\n\treturn res[n]",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_392/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

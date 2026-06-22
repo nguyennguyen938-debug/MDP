@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 70,
+  "key": "b21cc5ab0011a7ef7c676b010de04d1df3d75fd864138870285c569e98151d10",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_truncate_number:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_truncate_number.solve`:\n\n**Basic Cases:**\n\n*   `assert solve(3.14159) == 3`\n*   `assert solve(10.999) == 10`\n*   `assert solve(-5.678) == -5`\n*   `assert solve(0.123) == 0`\n*   `assert solve(100) == 100`\n\n**Edge Cases:**\n\n*   `assert solve(0) == 0`\n*   `assert solve(-0.999) == 0`\n*   `assert solve(0.999) == 0`\n*   `assert solve(-10.001) == -10`\n*   `assert solve(10.001) == 10`\n\n**Large Numbers:**\n\n*   `assert solve(123456789.12345) == 123456789`\n*   `assert solve(-987654321"
+}

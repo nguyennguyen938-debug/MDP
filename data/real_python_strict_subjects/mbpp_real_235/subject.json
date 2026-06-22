@@ -1,0 +1,25 @@
+{
+  "entrypoint": "even_bit_set_number",
+  "id": "mbpp_real_235",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    even_bit_set_number = candidate\n    assert even_bit_set_number(10) == 10\n    assert even_bit_set_number(20) == 30\n    assert even_bit_set_number(30) == 30\n",
+    "oracle_type": "callable_check",
+    "original_id": 235,
+    "profile": "real_python",
+    "prompt": "Write a python function to set all even bits of a given number.",
+    "source": "google_research_mbpp",
+    "source_code": "def even_bit_set_number(n): \n    count = 0;res = 0;temp = n \n    while(temp > 0): \n        if (count % 2 == 1): \n            res |= (1 << count)\n        count+=1\n        temp >>= 1\n    return (n | res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_235/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

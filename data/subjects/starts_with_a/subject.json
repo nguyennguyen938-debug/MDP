@@ -1,0 +1,18 @@
+{
+  "entrypoint": "solve",
+  "id": "starts_with_a",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "test"
+  },
+  "path": "starts_with_a/solution.py",
+  "tests": [
+    {
+      "args": [
+        "abc"
+      ],
+      "expected": true
+    }
+  ]
+}

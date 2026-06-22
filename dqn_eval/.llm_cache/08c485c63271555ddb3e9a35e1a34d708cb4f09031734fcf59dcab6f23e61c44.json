@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 140,
+  "key": "08c485c63271555ddb3e9a35e1a34d708cb4f09031734fcf59dcab6f23e61c44",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for action_balanced_counterexample_rotate_empty:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are some concise assertions for `action_balanced_counterexample_rotate_empty:solve`, focusing on the expected outcome of rotating an empty structure:\n\n**Core Assertions:**\n\n*   `assert rotate_empty() == []` (If the expected output is an empty list)\n*   `assert rotate_empty() is None` (If the expected output is `None`)\n*   `assert rotate_empty() == {}` (If the expected output is an empty dictionary/object)\n*   `assert rotate_empty() == \"\"` (If the expected output is an empty string)\n\n**More Specific Assertions (depending on context):**\n\n*   `assert len(rotate_empty()) == 0` (Asserts the size/length is zero)\n*   `assert not rotate_empty()` (Asserts the result is falsy, common for empty collections)\n*   `assert rotate_empty() is not None` (If `None` is an invalid or unexpected outcome)\n\n**Choosing the Right Assertion:**\n\nThe best assertion depends entirely on what `rotate_empty()` is *supposed* to return when given an empty input.\n\n*   If it's a function that manipulates"
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "check_Consecutive",
+  "id": "mbpp_real_472",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    check_Consecutive = candidate\n    assert check_Consecutive([1,2,3,4,5]) == True\n    assert check_Consecutive([1,2,3,5,6]) == False\n    assert check_Consecutive([1,2,1]) == False\n",
+    "oracle_type": "callable_check",
+    "original_id": 472,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether the given list contains consecutive numbers or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def check_Consecutive(l): \n    return sorted(l) == list(range(min(l),max(l)+1)) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_472/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

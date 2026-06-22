@@ -1,0 +1,25 @@
+{
+  "entrypoint": "remove_whitespaces",
+  "id": "mbpp_real_451",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    remove_whitespaces = candidate\n    assert remove_whitespaces(' Google    Flutter ') == 'GoogleFlutter'\n    assert remove_whitespaces(' Google    Dart ') == 'GoogleDart'\n    assert remove_whitespaces(' iOS    Swift ') == 'iOSSwift'\n",
+    "oracle_type": "callable_check",
+    "original_id": 451,
+    "profile": "real_python",
+    "prompt": "Write a function to remove all whitespaces from the given string.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef remove_whitespaces(text1):\n  return (re.sub(r'\\s+', '',text1))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_451/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

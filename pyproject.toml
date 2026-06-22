@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "testgenrl"
+version = "0.1.0"
+description = "MDP-guided reinforcement learning for cost-aware LLM-based test generation."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+research = [
+  "coverage>=7",
+  "hypothesis>=6",
+  "numpy>=1.26",
+  "pytest>=8",
+  "PyYAML>=6",
+  "torch>=2",
+]
+
+[project.scripts]
+testgenrl = "testgenrl.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["testgenrl*"]
+

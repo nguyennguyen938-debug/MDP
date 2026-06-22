@@ -1,0 +1,24 @@
+{
+  "entrypoint": "starts_one_ends",
+  "id": "humaneval_real_humaneval_83",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "def check(candidate):\n\n    # Check some simple cases\n    assert True, \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate(1) == 1\n    assert candidate(2) == 18\n    assert candidate(3) == 180\n    assert candidate(4) == 1800\n    assert candidate(5) == 18000\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True, \"This prints if this assert fails 2 (also good for debugging!)\"\n\n",
+    "oracle_type": "callable_check",
+    "original_id": "HumanEval/83",
+    "profile": "real_python",
+    "source": "openai_human_eval",
+    "source_code": "\ndef starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n    \"\"\"\n    if n == 1: return 1\n    return 18 * (10 ** (n - 2))\n",
+    "source_url": "https://raw.githubusercontent.com/openai/human-eval/master/data/HumanEval.jsonl.gz",
+    "split": "train"
+  },
+  "path": "humaneval_real_humaneval_83/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

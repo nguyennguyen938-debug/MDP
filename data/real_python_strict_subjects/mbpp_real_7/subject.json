@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_char_long",
+  "id": "mbpp_real_7",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_char_long = candidate\n    assert set(find_char_long('Please move back to stream')) == set(['Please', 'move', 'back', 'stream'])\n    assert set(find_char_long('Jing Eco and Tech')) == set(['Jing', 'Tech'])\n    assert set(find_char_long('Jhingai wulu road Zone 3')) == set(['Jhingai', 'wulu', 'road', 'Zone'])\n",
+    "oracle_type": "callable_check",
+    "original_id": 7,
+    "profile": "real_python",
+    "prompt": "Write a function to find all words which are at least 4 characters long in a string.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef find_char_long(text):\n  return (re.findall(r\"\\b\\w{4,}\\b\", text))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_7/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

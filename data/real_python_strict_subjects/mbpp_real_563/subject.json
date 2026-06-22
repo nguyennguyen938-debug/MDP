@@ -1,0 +1,25 @@
+{
+  "entrypoint": "extract_values",
+  "id": "mbpp_real_563",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    extract_values = candidate\n    assert extract_values('\"Python\", \"PHP\", \"Java\"')==['Python', 'PHP', 'Java']\n    assert extract_values('\"python\",\"program\",\"language\"')==['python','program','language']\n    assert extract_values('\"red\",\"blue\",\"green\",\"yellow\"')==['red','blue','green','yellow']\n",
+    "oracle_type": "callable_check",
+    "original_id": 563,
+    "profile": "real_python",
+    "prompt": "Write a function to extract values between quotation marks from a string.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef extract_values(text):\n return (re.findall(r'\"(.*?)\"', text))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_563/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

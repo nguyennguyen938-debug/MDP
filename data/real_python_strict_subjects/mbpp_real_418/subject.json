@@ -1,0 +1,25 @@
+{
+  "entrypoint": "Find_Max",
+  "id": "mbpp_real_418",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    Find_Max = candidate\n    assert Find_Max([['A'],['A','B'],['A','B','C']]) == ['A','B','C']\n    assert Find_Max([[1],[1,2],[1,2,3]]) == [1,2,3]\n    assert Find_Max([[1,1],[1,2,3],[1,5,6,1]]) == [1,5,6,1]\n",
+    "oracle_type": "callable_check",
+    "original_id": 418,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the element of a list having maximum length.",
+    "source": "google_research_mbpp",
+    "source_code": "def Find_Max(lst): \n    maxList = max((x) for x in lst) \n    return maxList",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_418/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

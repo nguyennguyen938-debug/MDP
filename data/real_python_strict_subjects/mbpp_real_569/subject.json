@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sort_sublists",
+  "id": "mbpp_real_569",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sort_sublists = candidate\n    assert sort_sublists([['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange']])==[['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]\n    assert sort_sublists([['green', 'orange'], ['black'], ['green', 'orange'], ['white']])==[['green', 'orange'], ['black'], ['green', 'orange'], ['white']]\n    assert sort_sublists([['a','b'],['d','c'],['g','h'] , ['f','e']])==[['a', 'b'], ['c', 'd'], ['g', 'h'], ['e', 'f']]\n",
+    "oracle_type": "callable_check",
+    "original_id": 569,
+    "profile": "real_python",
+    "prompt": "Write a function to sort each sublist of strings in a given list of lists.",
+    "source": "google_research_mbpp",
+    "source_code": "def sort_sublists(list1):\n    result = list(map(sorted,list1)) \n    return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_569/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

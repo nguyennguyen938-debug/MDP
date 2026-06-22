@@ -1,0 +1,24 @@
+{
+  "entrypoint": "triangle_area",
+  "id": "humaneval_real_humaneval_45",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(5, 3) == 7.5\n    assert candidate(2, 2) == 2.0\n    assert candidate(10, 8) == 40.0\n\n",
+    "oracle_type": "callable_check",
+    "original_id": "HumanEval/45",
+    "profile": "real_python",
+    "source": "openai_human_eval",
+    "source_code": "\n\ndef triangle_area(a, h):\n    \"\"\"Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3)\n    7.5\n    \"\"\"\n    return a * h / 2.0\n",
+    "source_url": "https://raw.githubusercontent.com/openai/human-eval/master/data/HumanEval.jsonl.gz",
+    "split": "train"
+  },
+  "path": "humaneval_real_humaneval_45/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

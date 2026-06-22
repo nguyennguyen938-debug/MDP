@@ -1,0 +1,25 @@
+{
+  "entrypoint": "_sum",
+  "id": "mbpp_real_798",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    _sum = candidate\n    assert _sum([1, 2, 3]) == 6\n    assert _sum([15, 12, 13, 10]) == 50\n    assert _sum([0, 1, 2]) == 3\n",
+    "oracle_type": "callable_check",
+    "original_id": 798,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the sum of an array.",
+    "source": "google_research_mbpp",
+    "source_code": "def _sum(arr):  \n    sum=0\n    for i in arr: \n        sum = sum + i      \n    return(sum)  ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_798/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

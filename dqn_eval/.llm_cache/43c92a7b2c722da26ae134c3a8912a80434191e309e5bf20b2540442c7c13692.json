@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 99,
+  "key": "43c92a7b2c722da26ae134c3a8912a80434191e309e5bf20b2540442c7c13692",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for bugsinpy_dedupe_order:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `bugsinpy_dedupe_order.solve`, categorized for clarity:\n\n**Core Functionality:**\n\n*   `assert solve(input_list) == expected_output` (General case)\n*   `assert solve([]) == []` (Empty list)\n*   `assert solve([1, 2, 3]) == [1, 2, 3]` (No duplicates)\n*   `assert solve([1, 1, 1]) == [1]` (All duplicates)\n*   `assert solve([1, 2, 1, 3, 2]) == [1, 2, 3]` (Mixed duplicates)\n*   `assert solve([3, 2, 1, 2, 3]) == [3, 2, 1]` (Order preservation)\n\n**Edge Cases & Data Types:**\n\n*   `assert solve([None, 1, None]) == [None, 1]` (Handles `None`)\n*   `assert solve(['a', 'b', 'a']) == ['a', 'b']` (Handles strings)\n*   `assert solve([1.1, "
+}

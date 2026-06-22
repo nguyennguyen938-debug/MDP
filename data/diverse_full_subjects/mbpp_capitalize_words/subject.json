@@ -1,0 +1,22 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_capitalize_words",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_capitalize_words",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> str:\n    return ' '.join(word.capitalize() for word in text.split())\n",
+    "split": "test"
+  },
+  "path": "mbpp_capitalize_words/solution.py",
+  "tests": [
+    {
+      "args": [
+        "hello world"
+      ],
+      "expected": "Hello World"
+    }
+  ]
+}

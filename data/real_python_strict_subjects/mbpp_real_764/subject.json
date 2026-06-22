@@ -1,0 +1,25 @@
+{
+  "entrypoint": "number_ctr",
+  "id": "mbpp_real_764",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    number_ctr = candidate\n    assert number_ctr('program2bedone') == 1\n    assert number_ctr('3wonders') == 1\n    assert number_ctr('123') == 3\n    assert number_ctr('3wond-1ers2') == 3\n",
+    "oracle_type": "callable_check",
+    "original_id": 764,
+    "profile": "real_python",
+    "prompt": "Write a python function to count number of digits in a given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def number_ctr(str):\n      number_ctr= 0\n      for i in range(len(str)):\n          if str[i] >= '0' and str[i] <= '9': number_ctr += 1     \n      return  number_ctr",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_764/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

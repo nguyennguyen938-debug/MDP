@@ -1,0 +1,25 @@
+{
+  "entrypoint": "kth_element",
+  "id": "mbpp_real_101",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    kth_element = candidate\n    assert kth_element([12,3,5,7,19], 2) == 3\n    assert kth_element([17,24,8,23], 3) == 8\n    assert kth_element([16,21,25,36,4], 4) == 36\n",
+    "oracle_type": "callable_check",
+    "original_id": 101,
+    "profile": "real_python",
+    "prompt": "Write a function to find the kth element in the given array using 1-based indexing.",
+    "source": "google_research_mbpp",
+    "source_code": "def kth_element(arr, k):\n  n = len(arr)\n  for i in range(n):\n    for j in range(0, n-i-1):\n      if arr[j] > arr[j+1]:\n        arr[j], arr[j+1] == arr[j+1], arr[j]\n  return arr[k-1]",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_101/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

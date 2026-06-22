@@ -1,0 +1,60 @@
+{
+  "entrypoint": "solve",
+  "id": "action_balanced_llm_assert_sorted_abs",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          []
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ]
+      }
+    ],
+    "dataset": "action_balanced",
+    "llm_assertion_cases": [
+      {
+        "args": [
+          [
+            -3,
+            2,
+            -1
+          ]
+        ],
+        "expected": [
+          -1,
+          2,
+          -3
+        ]
+      }
+    ],
+    "original_id": "llm_assert_sorted_abs",
+    "profile": "action_balanced",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int]) -> list[int]:\n    return sorted(items)\n",
+    "split": "train",
+    "stress_category": "llm_assertion"
+  },
+  "path": "action_balanced_llm_assert_sorted_abs/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ]
+}

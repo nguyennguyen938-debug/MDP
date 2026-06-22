@@ -1,0 +1,25 @@
+{
+  "entrypoint": "geometric_sum",
+  "id": "mbpp_real_738",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    geometric_sum = candidate\n    assert geometric_sum(7) == 1.9921875\n    assert geometric_sum(4) == 1.9375\n    assert geometric_sum(8) == 1.99609375\n",
+    "oracle_type": "callable_check",
+    "original_id": 738,
+    "profile": "real_python",
+    "prompt": "Write a function to calculate the geometric sum of n-1. https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-recursion-exercise-9.php",
+    "source": "google_research_mbpp",
+    "source_code": "def geometric_sum(n):\n  if n < 0:\n    return 0\n  else:\n    return 1 / (pow(2, n)) + geometric_sum(n - 1)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_738/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

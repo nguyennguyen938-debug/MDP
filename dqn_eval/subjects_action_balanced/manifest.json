@@ -1,0 +1,632 @@
+[
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_boundary_mod_zero",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            0
+          ]
+        },
+        {
+          "args": [
+            1
+          ]
+        },
+        {
+          "args": [
+            -1
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "original_id": "boundary_mod_zero",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> int:\n    return 100 % x\n",
+      "split": "train",
+      "stress_category": "boundary"
+    },
+    "path": "action_balanced_boundary_mod_zero/solution.py",
+    "tests": [
+      {
+        "args": [
+          4
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_boundary_first_word",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            ""
+          ]
+        },
+        {
+          "args": [
+            "hello"
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "original_id": "boundary_first_word",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> str:\n    return text.split()[0]\n",
+      "split": "train",
+      "stress_category": "boundary"
+    },
+    "path": "action_balanced_boundary_first_word/solution.py",
+    "tests": [
+      {
+        "args": [
+          "hello world"
+        ],
+        "expected": "hello"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_fuzz_overflow_len",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 4
+        }
+      ],
+      "original_id": "fuzz_overflow_len",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> int:\n    return len(items) if len(items) < 3 else -1\n",
+      "split": "train",
+      "stress_category": "fuzz"
+    },
+    "path": "action_balanced_fuzz_overflow_len/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_fuzz_threshold_total",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            [
+              4,
+              4,
+              4
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            [
+              10
+            ]
+          ],
+          "expected": true
+        }
+      ],
+      "original_id": "fuzz_threshold_total",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> bool:\n    return sum(items) < 10\n",
+      "split": "train",
+      "stress_category": "fuzz"
+    },
+    "path": "action_balanced_fuzz_threshold_total/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_llm_assert_sorted_abs",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "llm_assertion_cases": [
+        {
+          "args": [
+            [
+              -3,
+              2,
+              -1
+            ]
+          ],
+          "expected": [
+            -1,
+            2,
+            -3
+          ]
+        }
+      ],
+      "original_id": "llm_assert_sorted_abs",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> list[int]:\n    return sorted(items)\n",
+      "split": "train",
+      "stress_category": "llm_assertion"
+    },
+    "path": "action_balanced_llm_assert_sorted_abs/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_llm_assert_strip_case",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            "abc"
+          ]
+        },
+        {
+          "args": [
+            ""
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "llm_assertion_cases": [
+        {
+          "args": [
+            "  AbC  "
+          ],
+          "expected": "AbC"
+        }
+      ],
+      "original_id": "llm_assert_strip_case",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> str:\n    return text.strip().lower()\n",
+      "split": "train",
+      "stress_category": "llm_assertion"
+    },
+    "path": "action_balanced_llm_assert_strip_case/solution.py",
+    "tests": [
+      {
+        "args": [
+          " abc "
+        ],
+        "expected": "abc"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_counterexample_gcd_zero",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            6,
+            3
+          ]
+        },
+        {
+          "args": [
+            4,
+            2
+          ]
+        }
+      ],
+      "counterexample_cases": [
+        {
+          "args": [
+            -6,
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            0,
+            0
+          ],
+          "expected": 0
+        }
+      ],
+      "dataset": "action_balanced",
+      "original_id": "counterexample_gcd_zero",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(a: int, b: int) -> int:\n    while b:\n        a, b = b, a % b\n    return a\n",
+      "split": "train",
+      "stress_category": "counterexample"
+    },
+    "path": "action_balanced_counterexample_gcd_zero/solution.py",
+    "tests": [
+      {
+        "args": [
+          6,
+          3
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_counterexample_rotate_empty",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            [
+              1,
+              2
+            ],
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              0
+            ],
+            0
+          ]
+        }
+      ],
+      "counterexample_cases": [
+        {
+          "args": [
+            [],
+            3
+          ],
+          "expected": []
+        }
+      ],
+      "dataset": "action_balanced",
+      "original_id": "counterexample_rotate_empty",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int], k: int) -> list[int]:\n    k %= len(items)\n    return items[k:] + items[:k]\n",
+      "split": "val",
+      "stress_category": "counterexample"
+    },
+    "path": "action_balanced_counterexample_rotate_empty/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ],
+          1
+        ],
+        "expected": [
+          2,
+          3,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_clean_clamp",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            -1
+          ]
+        },
+        {
+          "args": [
+            0
+          ]
+        },
+        {
+          "args": [
+            11
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            100
+          ],
+          "expected": 10
+        }
+      ],
+      "original_id": "clean_clamp",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> int:\n    return 0 if x < 0 else (10 if x > 10 else x)\n",
+      "split": "val",
+      "stress_category": "clean"
+    },
+    "path": "action_balanced_clean_clamp/solution.py",
+    "tests": [
+      {
+        "args": [
+          -2
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          12
+        ],
+        "expected": 10
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_clean_join",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              "a"
+            ]
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            [
+              "a",
+              "b",
+              "c"
+            ]
+          ],
+          "expected": "a,b,c"
+        }
+      ],
+      "original_id": "clean_join",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[str]) -> str:\n    return ','.join(items)\n",
+      "split": "test",
+      "stress_category": "clean"
+    },
+    "path": "action_balanced_clean_join/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            "a",
+            "b"
+          ]
+        ],
+        "expected": "a,b"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_stop_noop_identity",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            0
+          ]
+        },
+        {
+          "args": [
+            1
+          ]
+        },
+        {
+          "args": [
+            -1
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            -5
+          ],
+          "expected": -5
+        }
+      ],
+      "original_id": "stop_noop_identity",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> int:\n    return x\n",
+      "split": "test",
+      "stress_category": "stop"
+    },
+    "path": "action_balanced_stop_noop_identity/solution.py",
+    "tests": [
+      {
+        "args": [
+          3
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_stop_noop_reverse",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            ""
+          ]
+        },
+        {
+          "args": [
+            "a"
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            "abcd"
+          ],
+          "expected": "dcba"
+        },
+        {
+          "args": [
+            "race"
+          ],
+          "expected": "ecar"
+        }
+      ],
+      "original_id": "stop_noop_reverse",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> str:\n    return text[::-1]\n",
+      "split": "test",
+      "stress_category": "stop"
+    },
+    "path": "action_balanced_stop_noop_reverse/solution.py",
+    "tests": [
+      {
+        "args": [
+          "abc"
+        ],
+        "expected": "cba"
+      }
+    ]
+  }
+]

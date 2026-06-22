@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 85,
+  "key": "f74a05cc25b1a8dc8b6e9cd4f5de6c027c6fc53cb0dbd594c4db82912fb67c3a",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for stress_clean_sum:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `stress_clean_sum:solve`, categorized by what they aim to verify:\n\n**Core Functionality & Correctness:**\n\n*   `assert_equal(solve(input_data), expected_output)`: The most fundamental assertion.\n*   `assert_equal(solve(empty_input), empty_output)`: Handles the edge case of no input.\n*   `assert_equal(solve(single_item_input), single_item_output)`: Tests with minimal valid input.\n*   `assert_equal(solve(all_zeros_input), zero_sum_output)`: Verifies behavior with zero values.\n*   `assert_equal(solve(all_negative_input), negative_sum_output)`: Checks handling of negative numbers.\n*   `assert_equal(solve(mixed_sign_input), correct_mixed_sum)`: Ensures correct summation with positive and negative values.\n*   `assert_equal(solve(large_numbers_input), correct_large_sum)`: Tests with values that might approach overflow limits (if applicable).\n*   `assert_equal(solve(duplicate_numbers_input), correct_duplicate"
+}

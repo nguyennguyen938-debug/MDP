@@ -1,0 +1,25 @@
+{
+  "entrypoint": "tetrahedral_number",
+  "id": "mbpp_real_80",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    tetrahedral_number = candidate\n    assert tetrahedral_number(5) == 35\n    assert tetrahedral_number(6) == 56\n    assert tetrahedral_number(7) == 84\n",
+    "oracle_type": "callable_check",
+    "original_id": 80,
+    "profile": "real_python",
+    "prompt": "Write a function to find the nth tetrahedral number.",
+    "source": "google_research_mbpp",
+    "source_code": "def tetrahedral_number(n): \n\treturn (n * (n + 1) * (n + 2)) / 6",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_80/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

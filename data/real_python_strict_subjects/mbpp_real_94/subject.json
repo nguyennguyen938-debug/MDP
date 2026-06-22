@@ -1,0 +1,25 @@
+{
+  "entrypoint": "index_minimum",
+  "id": "mbpp_real_94",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    index_minimum = candidate\n    assert index_minimum([('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]) == 'Varsha'\n    assert index_minimum([('Yash', 185), ('Dawood', 125), ('Sanya', 175)]) == 'Dawood'\n    assert index_minimum([('Sai', 345), ('Salman', 145), ('Ayesha', 96)]) == 'Ayesha'\n",
+    "oracle_type": "callable_check",
+    "original_id": 94,
+    "profile": "real_python",
+    "prompt": "Given a list of tuples, write a function that returns the first value of the tuple with the smallest second value.",
+    "source": "google_research_mbpp",
+    "source_code": "from operator import itemgetter \ndef index_minimum(test_list):\n  res = min(test_list, key = itemgetter(1))[0]\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_94/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

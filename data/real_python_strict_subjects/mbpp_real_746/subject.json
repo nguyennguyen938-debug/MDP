@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sector_area",
+  "id": "mbpp_real_746",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sector_area = candidate\n    assert sector_area(4,45)==6.283185307179586\n    assert sector_area(9,45)==31.808625617596654\n    assert sector_area(9,361)==None\n",
+    "oracle_type": "callable_check",
+    "original_id": 746,
+    "profile": "real_python",
+    "prompt": "Write a function to find area of a sector. The function takes the radius and angle as inputs. Function should return None if the angle is larger than 360 degrees.",
+    "source": "google_research_mbpp",
+    "source_code": "import math\ndef sector_area(r,a):\n    if a > 360:\n        return None\n    return (math.pi*r**2) * (a/360)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_746/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

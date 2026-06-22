@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 113,
+  "key": "7d2198b86f727bae4c663c2b7459a294c9ecc02cfa14cb1855314cac463a2ae4",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for action_balanced_counterexample_gcd_zero:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `action_balanced_counterexample_gcd_zero:solve`, categorized for clarity:\n\n**Core Functionality & Correctness:**\n\n*   `assert solve(0, 0) == 0`  (GCD of 0, 0 is 0)\n*   `assert solve(a, 0) == a` (GCD of a, 0 is a)\n*   `assert solve(0, b) == b` (GCD of 0, b is b)\n*   `assert solve(a, b) == solve(b, a)` (Commutativity)\n*   `assert solve(a, b) == solve(a % b, b)` (Euclidean algorithm property)\n*   `assert solve(a, b) == solve(a, b % a)` (Euclidean algorithm property)\n*   `assert solve(a, b) == solve(a - b, b)` (Subtraction property)\n*   `assert solve(a, b) == solve(a, b - a)` (Subtraction property)\n*   `assert solve(a, b) == solve(a + k*b, b)` ("
+}

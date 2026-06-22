@@ -1,0 +1,25 @@
+{
+  "entrypoint": "loss_amount",
+  "id": "mbpp_real_452",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    loss_amount = candidate\n    assert loss_amount(1500,1200)==0\n    assert loss_amount(100,200)==100\n    assert loss_amount(2000,5000)==3000\n",
+    "oracle_type": "callable_check",
+    "original_id": 452,
+    "profile": "real_python",
+    "prompt": "Write a function that gives loss amount on a sale if the given amount has loss else return 0.",
+    "source": "google_research_mbpp",
+    "source_code": "def loss_amount(actual_cost,sale_amount): \n  if(sale_amount > actual_cost):\n    amount = sale_amount - actual_cost\n    return amount\n  else:\n    return 0",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_452/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

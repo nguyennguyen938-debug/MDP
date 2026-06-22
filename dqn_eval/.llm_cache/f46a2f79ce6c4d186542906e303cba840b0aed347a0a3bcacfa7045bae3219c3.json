@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 95,
+  "key": "f46a2f79ce6c4d186542906e303cba840b0aed347a0a3bcacfa7045bae3219c3",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for stress_counterexample_factorial:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `stress_counterexample_factorial:solve`, focusing on common pitfalls and edge cases for factorial calculations:\n\n**General Correctness:**\n\n*   `assert solve(0) == 1`\n*   `assert solve(1) == 1`\n*   `assert solve(5) == 120`\n*   `assert solve(10) == 3628800`\n\n**Edge Cases/Constraints:**\n\n*   `assert solve(-1) == <expected_error_or_behavior>` (e.g., `ValueError`, `None`, or specific error message)\n*   `assert solve(float(5)) == <expected_error_or_behavior>` (if only integers are supported)\n*   `assert solve(large_number) == <expected_overflow_behavior_or_large_result>` (if dealing with potential overflow)\n\n**Performance/Stress (if applicable):**\n\n*   `assert solve(very_large_number) is not None` (basic check for completion)\n*   `assert time_taken_for(solve(large_number)) < threshold` (if performance is a concern)\n\n"
+}

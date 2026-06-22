@@ -1,0 +1,25 @@
+{
+  "entrypoint": "count_Substrings",
+  "id": "mbpp_real_61",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    count_Substrings = candidate\n    assert count_Substrings('112112') == 6\n    assert count_Substrings('111') == 6\n    assert count_Substrings('1101112') == 12\n",
+    "oracle_type": "callable_check",
+    "original_id": 61,
+    "profile": "real_python",
+    "prompt": "Write a python function to count the number of substrings with the sum of digits equal to their length.",
+    "source": "google_research_mbpp",
+    "source_code": "from collections import defaultdict\ndef count_Substrings(s):\n    n = len(s)\n    count,sum = 0,0\n    mp = defaultdict(lambda : 0)\n    mp[0] += 1\n    for i in range(n):\n        sum += ord(s[i]) - ord('0')\n        count += mp[sum - (i + 1)]\n        mp[sum - (i + 1)] += 1\n    return count",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_61/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

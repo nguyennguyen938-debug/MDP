@@ -1,0 +1,25 @@
+{
+  "entrypoint": "number_of_substrings",
+  "id": "mbpp_real_238",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    number_of_substrings = candidate\n    assert number_of_substrings(\"abc\") == 6\n    assert number_of_substrings(\"abcd\") == 10\n    assert number_of_substrings(\"abcde\") == 15\n",
+    "oracle_type": "callable_check",
+    "original_id": 238,
+    "profile": "real_python",
+    "prompt": "Write a python function to count the number of non-empty substrings of a given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def number_of_substrings(str): \n\tstr_len = len(str); \n\treturn int(str_len * (str_len + 1) / 2); ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_238/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

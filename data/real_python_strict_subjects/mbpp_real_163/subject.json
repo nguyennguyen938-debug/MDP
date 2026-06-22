@@ -1,0 +1,25 @@
+{
+  "entrypoint": "area_polygon",
+  "id": "mbpp_real_163",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "import math\n\ndef check(candidate):\n    area_polygon = candidate\n    assert math.isclose(area_polygon(4, 20), 400., rel_tol=0.001)\n    assert math.isclose(area_polygon(10, 15), 1731.197, rel_tol=0.001)\n    assert math.isclose(area_polygon(9, 7), 302.909, rel_tol=0.001)\n",
+    "oracle_type": "callable_check",
+    "original_id": 163,
+    "profile": "real_python",
+    "prompt": "Write a function to calculate the area of a regular polygon given the length and number of its sides.",
+    "source": "google_research_mbpp",
+    "source_code": "from math import tan, pi\ndef area_polygon(s, l):\n  area = s * (l ** 2) / (4 * tan(pi / s))\n  return area",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_163/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

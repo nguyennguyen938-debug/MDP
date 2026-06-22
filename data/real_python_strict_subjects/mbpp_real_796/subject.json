@@ -1,0 +1,25 @@
+{
+  "entrypoint": "return_sum",
+  "id": "mbpp_real_796",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    return_sum = candidate\n    assert return_sum({'a': 100, 'b':200, 'c':300}) == 600\n    assert return_sum({'a': 25, 'b':18, 'c':45}) == 88\n    assert return_sum({'a': 36, 'b':39, 'c':49}) == 124\n",
+    "oracle_type": "callable_check",
+    "original_id": 796,
+    "profile": "real_python",
+    "prompt": "Write function to find the sum of all items in the given dictionary.",
+    "source": "google_research_mbpp",
+    "source_code": "def return_sum(dict):\n  sum = 0\n  for i in dict.values():\n    sum = sum + i\n  return sum",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_796/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

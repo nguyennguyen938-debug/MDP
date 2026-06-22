@@ -1,0 +1,25 @@
+{
+  "entrypoint": "get_median",
+  "id": "mbpp_real_622",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    get_median = candidate\n    assert get_median([1, 12, 15, 26, 38], [2, 13, 17, 30, 45], 5) == 16.0\n    assert get_median([2, 4, 8, 9], [7, 13, 19, 28], 4) == 8.5\n    assert get_median([3, 6, 14, 23, 36, 42], [2, 18, 27, 39, 49, 55], 6) == 25.0\n",
+    "oracle_type": "callable_check",
+    "original_id": 622,
+    "profile": "real_python",
+    "prompt": "Write a function to find the median of two sorted lists of same size.",
+    "source": "google_research_mbpp",
+    "source_code": "def get_median(arr1, arr2, n):\n  i = 0\n  j = 0\n  m1 = -1\n  m2 = -1\n  count = 0\n  while count < n + 1:\n    count += 1\n    if i == n:\n      m1 = m2\n      m2 = arr2[0]\n      break\n    elif j == n:\n      m1 = m2\n      m2 = arr1[0]\n      break\n    if arr1[i] <= arr2[j]:\n      m1 = m2\n      m2 = arr1[i]\n      i += 1\n    else:\n      m1 = m2\n      m2 = arr2[j]\n      j += 1\n  return (m1 + m2)/2",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_622/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

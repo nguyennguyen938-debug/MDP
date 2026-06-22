@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 104,
+  "key": "c098c11eb124f390decde829ef1664112008b623215d73d82ad9c63aebcc8296",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_filter_by_substring:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_filter_by_substring:solve`, focusing on common and edge cases:\n\n**Basic Functionality:**\n\n*   `assert solve(\"apple\", \"app\") == [\"apple\"]`\n*   `assert solve(\"banana\", \"ana\") == [\"banana\"]`\n*   `assert solve(\"cherry\", \"err\") == [\"cherry\"]`\n*   `assert solve(\"date\", \"a\") == [\"date\"]`\n\n**No Match:**\n\n*   `assert solve(\"grape\", \"xyz\") == []`\n*   `assert solve(\"kiwi\", \"apple\") == []`\n\n**Multiple Matches (if applicable to the problem's intent, though `filter_by_substring` usually implies a single string input):**\n\n*   *(If the problem was `filter_by_substrings` and took a list of strings)* `assert solve([\"apple\", \"apricot\", \"banana\"], \"ap\") == [\"apple\", \"apricot\"]`\n\n**Case Sensitivity (assuming case-sensitive by default):**\n\n*   `assert solve(\"Apple\", \"app\") == []`\n*   `assert solve(\"apple\", \"App\")"
+}

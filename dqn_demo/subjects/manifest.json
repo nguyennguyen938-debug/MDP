@@ -1,0 +1,319 @@
+[
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_has_close_elements",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "has_close_elements",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: list[float], threshold: float) -> bool:\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False\n",
+      "split": "train"
+    },
+    "path": "humaneval_has_close_elements/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1.0,
+            2.0,
+            3.0
+          ],
+          0.5
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          [
+            1.0,
+            1.2,
+            3.0
+          ],
+          0.3
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_separate_paren_groups",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "separate_paren_groups",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(paren_string: str) -> list[str]:\n    groups = []\n    depth = 0\n    current = []\n    for ch in paren_string.replace(' ', ''):\n        current.append(ch)\n        depth += 1 if ch == '(' else -1\n        if depth == 0 and current:\n            groups.append(''.join(current))\n            current = []\n    return groups\n",
+      "split": "train"
+    },
+    "path": "humaneval_separate_paren_groups/solution.py",
+    "tests": [
+      {
+        "args": [
+          "(()) ()"
+        ],
+        "expected": [
+          "(())",
+          "()"
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_truncate_number",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "truncate_number",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(number: float) -> float:\n    return number % 1.0\n",
+      "split": "train"
+    },
+    "path": "humaneval_truncate_number/solution.py",
+    "tests": [
+      {
+        "args": [
+          3.5
+        ],
+        "expected": 0.5
+      },
+      {
+        "args": [
+          1.0
+        ],
+        "expected": 0.0
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_below_zero",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "below_zero",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(operations: list[int]) -> bool:\n    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False\n",
+      "split": "train"
+    },
+    "path": "humaneval_below_zero/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            -2,
+            1
+          ]
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            -2
+          ]
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_mean_absolute_deviation",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "mean_absolute_deviation",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: list[float]) -> float:\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)\n",
+      "split": "train"
+    },
+    "path": "humaneval_mean_absolute_deviation/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1.0,
+            2.0,
+            3.0
+          ]
+        ],
+        "expected": 0.6666666666666666
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_intersperse",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "intersperse",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: list[int], delimiter: int) -> list[int]:\n    out = []\n    for idx, number in enumerate(numbers):\n        if idx:\n            out.append(delimiter)\n        out.append(number)\n    return out\n",
+      "split": "train"
+    },
+    "path": "humaneval_intersperse/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ],
+          0
+        ],
+        "expected": [
+          1,
+          0,
+          2,
+          0,
+          3
+        ]
+      },
+      {
+        "args": [
+          [],
+          9
+        ],
+        "expected": []
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_parse_nested_parens",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "parse_nested_parens",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(paren_string: str) -> list[int]:\n    out = []\n    depth = 0\n    best = 0\n    for ch in paren_string:\n        if ch == '(':\n            depth += 1\n            best = max(best, depth)\n        elif ch == ')':\n            depth -= 1\n            if depth == 0:\n                out.append(best)\n                best = 0\n    return out\n",
+      "split": "train"
+    },
+    "path": "humaneval_parse_nested_parens/solution.py",
+    "tests": [
+      {
+        "args": [
+          "(()()) ((()))"
+        ],
+        "expected": [
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_filter_by_substring",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "filter_by_substring",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(strings: list[str], substring: str) -> list[str]:\n    return [s for s in strings if substring in s]\n",
+      "split": "train"
+    },
+    "path": "humaneval_filter_by_substring/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            "abc",
+            "def",
+            "cab"
+          ],
+          "ab"
+        ],
+        "expected": [
+          "abc"
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_sum_product",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "sum_product",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: list[int]) -> list[int]:\n    total = 0\n    product = 1\n    for number in numbers:\n        total += number\n        product *= number\n    return [total, product]\n",
+      "split": "train"
+    },
+    "path": "humaneval_sum_product/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          6,
+          6
+        ]
+      },
+      {
+        "args": [
+          []
+        ],
+        "expected": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_rolling_max",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "rolling_max",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: list[int]) -> list[int]:\n    best = None\n    out = []\n    for number in numbers:\n        best = number if best is None else max(best, number)\n        out.append(best)\n    return out\n",
+      "split": "train"
+    },
+    "path": "humaneval_rolling_max/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            3,
+            2,
+            5
+          ]
+        ],
+        "expected": [
+          1,
+          3,
+          3,
+          5
+        ]
+      }
+    ]
+  }
+]

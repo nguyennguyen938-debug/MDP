@@ -1,0 +1,43 @@
+{
+  "entrypoint": "solve",
+  "id": "action_balanced_llm_assert_strip_case",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          "abc"
+        ]
+      },
+      {
+        "args": [
+          ""
+        ]
+      }
+    ],
+    "dataset": "action_balanced",
+    "llm_assertion_cases": [
+      {
+        "args": [
+          "  AbC  "
+        ],
+        "expected": "AbC"
+      }
+    ],
+    "original_id": "llm_assert_strip_case",
+    "profile": "action_balanced",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> str:\n    return text.strip().lower()\n",
+    "split": "test",
+    "stress_category": "llm_assertion"
+  },
+  "path": "action_balanced_llm_assert_strip_case/solution.py",
+  "tests": [
+    {
+      "args": [
+        " abc "
+      ],
+      "expected": "abc"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sum_digits",
+  "id": "mbpp_real_566",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sum_digits = candidate\n    assert sum_digits(345)==12\n    assert sum_digits(12)==3\n    assert sum_digits(97)==16\n",
+    "oracle_type": "callable_check",
+    "original_id": 566,
+    "profile": "real_python",
+    "prompt": "Write a function to get the sum of the digits of a non-negative integer.",
+    "source": "google_research_mbpp",
+    "source_code": "def sum_digits(n):\n  if n == 0:\n    return 0\n  else:\n    return n % 10 + sum_digits(int(n / 10))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_566/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

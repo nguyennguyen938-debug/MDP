@@ -1,0 +1,25 @@
+{
+  "entrypoint": "remove_length",
+  "id": "mbpp_real_772",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    remove_length = candidate\n    assert remove_length('The person is most value tet', 3) == 'person is most value'\n    assert remove_length('If you told me about this ok', 4) == 'If you me about ok'\n    assert remove_length('Forces of darkeness is come into the play', 4) == 'Forces of darkeness is the'\n",
+    "oracle_type": "callable_check",
+    "original_id": 772,
+    "profile": "real_python",
+    "prompt": "Write a function to remove all the words with k length in the given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def remove_length(test_str, K):\n  temp = test_str.split()\n  res = [ele for ele in temp if len(ele) != K]\n  res = ' '.join(res)\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_772/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

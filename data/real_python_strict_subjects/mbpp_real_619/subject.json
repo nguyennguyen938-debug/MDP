@@ -1,0 +1,25 @@
+{
+  "entrypoint": "move_num",
+  "id": "mbpp_real_619",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    move_num = candidate\n    assert move_num('I1love143you55three3000thousand') == 'Iloveyouthreethousand1143553000'\n    assert move_num('Avengers124Assemble') == 'AvengersAssemble124'\n    assert move_num('Its11our12path13to14see15things16do17things') == 'Itsourpathtoseethingsdothings11121314151617'\n",
+    "oracle_type": "callable_check",
+    "original_id": 619,
+    "profile": "real_python",
+    "prompt": "Write a function to move all the numbers to the end of the given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def move_num(test_str):\n  res = ''\n  dig = ''\n  for ele in test_str:\n    if ele.isdigit():\n      dig += ele\n    else:\n      res += ele\n  res += dig\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_619/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

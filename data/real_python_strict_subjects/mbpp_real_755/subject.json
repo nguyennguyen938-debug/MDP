@@ -1,0 +1,25 @@
+{
+  "entrypoint": "second_smallest",
+  "id": "mbpp_real_755",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    second_smallest = candidate\n    assert second_smallest([1, 2, -8, -2, 0, -2])==-2\n    assert second_smallest([1, 1, -0.5, 0, 2, -2, -2])==-0.5\n    assert second_smallest([2,2])==None\n    assert second_smallest([2,2,2])==None\n",
+    "oracle_type": "callable_check",
+    "original_id": 755,
+    "profile": "real_python",
+    "prompt": "Write a function to find the second smallest number in a list.",
+    "source": "google_research_mbpp",
+    "source_code": "def second_smallest(numbers):\n  unique_numbers = list(set(numbers))\n  unique_numbers.sort()\n  if len(unique_numbers) < 2:\n    return None\n  else:\n    return unique_numbers[1]",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_755/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

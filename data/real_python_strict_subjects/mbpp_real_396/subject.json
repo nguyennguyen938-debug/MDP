@@ -1,0 +1,25 @@
+{
+  "entrypoint": "check_char",
+  "id": "mbpp_real_396",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    check_char = candidate\n    assert check_char(\"abba\") == \"Valid\"\n    assert check_char(\"a\") == \"Valid\"\n    assert check_char(\"abcd\") == \"Invalid\"\n",
+    "oracle_type": "callable_check",
+    "original_id": 396,
+    "profile": "real_python",
+    "prompt": "Write a function to check whether the given string starts and ends with the same character or not.",
+    "source": "google_research_mbpp",
+    "source_code": "import re  \nregex = r'^[a-z]$|^([a-z]).*\\1$'\ndef check_char(string): \n\tif(re.search(regex, string)): \n\t\treturn \"Valid\" \n\telse: \n\t\treturn \"Invalid\" ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_396/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

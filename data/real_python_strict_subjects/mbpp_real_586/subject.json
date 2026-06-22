@@ -1,0 +1,25 @@
+{
+  "entrypoint": "split_Arr",
+  "id": "mbpp_real_586",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    split_Arr = candidate\n    assert split_Arr([12,10,5,6,52,36],2) == [5,6,52,36,12,10]\n    assert split_Arr([1,2,3,4],1) == [2,3,4,1]\n    assert split_Arr([0,1,2,3,4,5,6,7],3) == [3,4,5,6,7,0,1,2]\n",
+    "oracle_type": "callable_check",
+    "original_id": 586,
+    "profile": "real_python",
+    "prompt": "Write a python function to split a list at the nth eelment and add the first part to the end.",
+    "source": "google_research_mbpp",
+    "source_code": "def split_Arr(l, n):\n  return l[n:] + l[:n]",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_586/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

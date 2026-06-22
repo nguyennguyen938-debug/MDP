@@ -1,0 +1,25 @@
+{
+  "entrypoint": "volume_cube",
+  "id": "mbpp_real_234",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    volume_cube = candidate\n    assert volume_cube(3)==27\n    assert volume_cube(2)==8\n    assert volume_cube(5)==125\n",
+    "oracle_type": "callable_check",
+    "original_id": 234,
+    "profile": "real_python",
+    "prompt": "Write a function to find the volume of a cube given its side length.",
+    "source": "google_research_mbpp",
+    "source_code": "def volume_cube(l):\n  volume = l * l * l\n  return volume",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_234/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

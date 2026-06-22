@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 108,
+  "key": "d83a084849c9a798f79faf2504180ffcbc1b756d49aa379375653171392908fa",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_closest_pair:solve.",
+  "prompt_tokens": 5,
+  "provider": "openai",
+  "text": "Here are some concise assertions for the `mbpp_closest_pair:solve` function, which is likely designed to find the closest pair of points in a given set:\n\n1. **Basic Functionality**: \n   - `assert solve([(0, 0), (1, 1), (2, 2)]) == ((0, 0), (1, 1))`\n   - `assert solve([(1, 2), (3, 4), (5, 6), (7, 8)]) == ((3, 4), (5, 6))`\n\n2. **Edge Cases**:\n   - `assert solve([(0, 0)]) == None`  # Only one point\n   - `assert solve([]) == None`  # No points\n\n3. **Negative Coordinates**:\n   - `assert solve([(-1, -1), (-2, -2), (0, 0)]) == ((-1, -1), (0, 0))`\n\n4. **Identical Points**:\n   - `assert solve([(1, 1), (1, 1), (1, 1)]) == ((1, 1), (1, 1))`"
+}

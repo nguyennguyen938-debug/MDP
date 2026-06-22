@@ -1,0 +1,21 @@
+{
+  "entrypoint": "solve",
+  "id": "sum_list",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "train"
+  },
+  "path": "sum_list/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": 3
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "test_three_equal",
+  "id": "mbpp_real_801",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    test_three_equal = candidate\n    assert test_three_equal(1,1,1) == 3\n    assert test_three_equal(-1,-2,-3) == 0\n    assert test_three_equal(1,2,2) == 2\n",
+    "oracle_type": "callable_check",
+    "original_id": 801,
+    "profile": "real_python",
+    "prompt": "Write a python function to count the number of equal numbers from three given integers.",
+    "source": "google_research_mbpp",
+    "source_code": "def test_three_equal(x,y,z):\n  result = set([x,y,z])\n  if len(result)==3:\n    return 0\n  else:\n    return 4-len(result)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_801/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

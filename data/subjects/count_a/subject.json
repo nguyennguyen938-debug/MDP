@@ -1,0 +1,18 @@
+{
+  "entrypoint": "solve",
+  "id": "count_a",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "train"
+  },
+  "path": "count_a/solution.py",
+  "tests": [
+    {
+      "args": [
+        "banana"
+      ],
+      "expected": 3
+    }
+  ]
+}

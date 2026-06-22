@@ -1,0 +1,25 @@
+{
+  "entrypoint": "otherside_rightangle",
+  "id": "mbpp_real_293",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    otherside_rightangle = candidate\n    assert otherside_rightangle(7,8)==10.63014581273465\n    assert otherside_rightangle(3,4)==5\n    assert otherside_rightangle(7,15)==16.55294535724685\n",
+    "oracle_type": "callable_check",
+    "original_id": 293,
+    "profile": "real_python",
+    "prompt": "Write a function to find the third side of a right angled triangle.",
+    "source": "google_research_mbpp",
+    "source_code": "import math\ndef otherside_rightangle(w,h):\n  s=math.sqrt((w*w)+(h*h))\n  return s",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_293/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

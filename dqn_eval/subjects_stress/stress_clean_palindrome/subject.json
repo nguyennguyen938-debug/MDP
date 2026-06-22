@@ -1,0 +1,55 @@
+{
+  "entrypoint": "solve",
+  "id": "stress_clean_palindrome",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          ""
+        ]
+      },
+      {
+        "args": [
+          "a"
+        ]
+      }
+    ],
+    "dataset": "stress",
+    "fuzz_cases": [
+      {
+        "args": [
+          "abba"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "abca"
+        ],
+        "expected": false
+      }
+    ],
+    "original_id": "clean_palindrome",
+    "profile": "stress",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> bool:\n    return text == text[::-1]\n",
+    "split": "test",
+    "stress_category": "clean"
+  },
+  "path": "stress_clean_palindrome/solution.py",
+  "tests": [
+    {
+      "args": [
+        "aba"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "abc"
+      ],
+      "expected": false
+    }
+  ]
+}

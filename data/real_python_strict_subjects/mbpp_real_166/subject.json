@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_even_pair",
+  "id": "mbpp_real_166",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_even_pair = candidate\n    assert find_even_pair([5, 4, 7, 2, 1]) == 4\n    assert find_even_pair([7, 2, 8, 1, 0, 5, 11]) == 9\n    assert find_even_pair([1, 2, 3]) == 1\n",
+    "oracle_type": "callable_check",
+    "original_id": 166,
+    "profile": "real_python",
+    "prompt": "Write a function that counts the number of pairs of integers in a list that xor to an even number.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_even_pair(A): \n  count = 0\n  for i in range(0, len(A)): \n    for j in range(i+1, len(A)): \n        if ((A[i] ^ A[j]) % 2 == 0): \n          count += 1\n\n  return count",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_166/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

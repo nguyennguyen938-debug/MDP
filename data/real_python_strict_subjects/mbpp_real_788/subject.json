@@ -1,0 +1,25 @@
+{
+  "entrypoint": "new_tuple",
+  "id": "mbpp_real_788",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    new_tuple = candidate\n    assert new_tuple([\"WEB\", \"is\"], \"best\") == ('WEB', 'is', 'best')\n    assert new_tuple([\"We\", \"are\"], \"Developers\") == ('We', 'are', 'Developers')\n    assert new_tuple([\"Part\", \"is\"], \"Wrong\") == ('Part', 'is', 'Wrong')\n",
+    "oracle_type": "callable_check",
+    "original_id": 788,
+    "profile": "real_python",
+    "prompt": "Write a function to create a new tuple from the given string and list.",
+    "source": "google_research_mbpp",
+    "source_code": "def new_tuple(test_list, test_str):\n  return tuple(test_list + [test_str])",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_788/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

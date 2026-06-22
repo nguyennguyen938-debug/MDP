@@ -1,0 +1,18 @@
+{
+  "entrypoint": "solve",
+  "id": "middle_buggy",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "test"
+  },
+  "path": "middle_buggy/solution.py",
+  "tests": [
+    {
+      "args": [
+        []
+      ],
+      "expected": 0
+    }
+  ]
+}

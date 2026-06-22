@@ -1,0 +1,25 @@
+{
+  "entrypoint": "rearrange_bigger",
+  "id": "mbpp_real_407",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    rearrange_bigger = candidate\n    assert rearrange_bigger(12)==21\n    assert rearrange_bigger(10)==False\n    assert rearrange_bigger(102)==120\n",
+    "oracle_type": "callable_check",
+    "original_id": 407,
+    "profile": "real_python",
+    "prompt": "Write a function to create the next bigger number by rearranging the digits of a given number.",
+    "source": "google_research_mbpp",
+    "source_code": "def rearrange_bigger(n):\n    nums = list(str(n))\n    for i in range(len(nums)-2,-1,-1):\n        if nums[i] < nums[i+1]:\n            z = nums[i:]\n            y = min(filter(lambda x: x > z[0], z))\n            z.remove(y)\n            z.sort()\n            nums[i:] = [y] + z\n            return int(\"\".join(nums))\n    return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_407/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

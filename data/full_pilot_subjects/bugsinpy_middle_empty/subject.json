@@ -1,0 +1,21 @@
+{
+  "entrypoint": "solve",
+  "id": "bugsinpy_middle_empty",
+  "language": "python",
+  "metadata": {
+    "dataset": "bugsinpy",
+    "original_id": "bugsinpy_middle_empty",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int]) -> int:\n    return items[len(items) // 2]\n",
+    "split": "test"
+  },
+  "path": "bugsinpy_middle_empty/solution.py",
+  "tests": [
+    {
+      "args": [
+        []
+      ],
+      "expected": 0
+    }
+  ]
+}

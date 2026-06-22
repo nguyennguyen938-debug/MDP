@@ -1,0 +1,18 @@
+{
+  "entrypoint": "solve",
+  "id": "factorial_buggy",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "train"
+  },
+  "path": "factorial_buggy/solution.py",
+  "tests": [
+    {
+      "args": [
+        3
+      ],
+      "expected": 6
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "max_sub_array_sum",
+  "id": "mbpp_real_559",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    max_sub_array_sum = candidate\n    assert max_sub_array_sum([-2, -3, 4, -1, -2, 1, 5, -3], 8) == 7\n    assert max_sub_array_sum([-3, -4, 5, -2, -3, 2, 6, -4], 8) == 8\n    assert max_sub_array_sum([-4, -5, 6, -3, -4, 3, 7, -5], 8) == 10\n",
+    "oracle_type": "callable_check",
+    "original_id": 559,
+    "profile": "real_python",
+    "prompt": "Write a function to find the sum of the largest contiguous sublist in the given list.",
+    "source": "google_research_mbpp",
+    "source_code": "def max_sub_array_sum(a, size):\n  max_so_far = 0\n  max_ending_here = 0\n  for i in range(0, size):\n    max_ending_here = max_ending_here + a[i]\n    if max_ending_here < 0:\n      max_ending_here = 0\n    elif (max_so_far < max_ending_here):\n      max_so_far = max_ending_here\n  return max_so_far",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_559/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

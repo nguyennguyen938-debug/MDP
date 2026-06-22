@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_lower",
+  "id": "mbpp_real_477",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_lower = candidate\n    assert is_lower(\"InValid\") == \"invalid\"\n    assert is_lower(\"TruE\") == \"true\"\n    assert is_lower(\"SenTenCE\") == \"sentence\"\n",
+    "oracle_type": "callable_check",
+    "original_id": 477,
+    "profile": "real_python",
+    "prompt": "Write a python function to convert the given string to lower case.",
+    "source": "google_research_mbpp",
+    "source_code": "def is_lower(string):\n  return (string.lower())",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_477/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

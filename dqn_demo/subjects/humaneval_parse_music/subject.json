@@ -1,0 +1,26 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_parse_music",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "parse_music",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(music_string: str) -> list[int]:\n    mapping = {'o': 4, 'o|': 2, '.|': 1}\n    return [mapping[token] for token in music_string.split()]\n",
+    "split": "test"
+  },
+  "path": "humaneval_parse_music/solution.py",
+  "tests": [
+    {
+      "args": [
+        "o o| .|"
+      ],
+      "expected": [
+        4,
+        2,
+        1
+      ]
+    }
+  ]
+}

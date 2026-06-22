@@ -1,0 +1,25 @@
+{
+  "entrypoint": "triangle_area",
+  "id": "mbpp_real_626",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    triangle_area = candidate\n    assert triangle_area(-1) == None\n    assert triangle_area(0) == 0\n    assert triangle_area(2) == 4\n",
+    "oracle_type": "callable_check",
+    "original_id": 626,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the area of the largest triangle that can be inscribed in a semicircle with a given radius.",
+    "source": "google_research_mbpp",
+    "source_code": "def triangle_area(r) :  \n    if r < 0 : \n        return None\n    return r * r ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_626/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

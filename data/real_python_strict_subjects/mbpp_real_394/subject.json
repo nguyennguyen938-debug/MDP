@@ -1,0 +1,25 @@
+{
+  "entrypoint": "check_distinct",
+  "id": "mbpp_real_394",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    check_distinct = candidate\n    assert check_distinct((1, 4, 5, 6, 1, 4)) == False\n    assert check_distinct((1, 4, 5, 6)) == True\n    assert check_distinct((2, 3, 4, 5, 6)) == True\n",
+    "oracle_type": "callable_check",
+    "original_id": 394,
+    "profile": "real_python",
+    "prompt": "Write a function to check if given tuple contains no duplicates.",
+    "source": "google_research_mbpp",
+    "source_code": "def check_distinct(test_tup):\n  res = True\n  temp = set()\n  for ele in test_tup:\n    if ele in temp:\n      res = False\n      break\n    temp.add(ele)\n  return res ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_394/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

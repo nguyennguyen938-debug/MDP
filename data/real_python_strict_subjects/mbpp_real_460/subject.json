@@ -1,0 +1,25 @@
+{
+  "entrypoint": "Extract",
+  "id": "mbpp_real_460",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    Extract = candidate\n    assert Extract([[1, 2], [3, 4, 5], [6, 7, 8, 9]]) == [1, 3, 6]\n    assert Extract([[1,2,3],[4, 5]]) == [1,4]\n    assert Extract([[9,8,1],[1,2]]) == [9,1]\n",
+    "oracle_type": "callable_check",
+    "original_id": 460,
+    "profile": "real_python",
+    "prompt": "Write a python function to get the first element of each sublist.",
+    "source": "google_research_mbpp",
+    "source_code": "def Extract(lst): \n    return [item[0] for item in lst] ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_460/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

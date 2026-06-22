@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find",
+  "id": "mbpp_real_292",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find = candidate\n    assert find(10,3) == 3\n    assert find(4,2) == 2\n    assert find(20,5) == 4\n",
+    "oracle_type": "callable_check",
+    "original_id": 292,
+    "profile": "real_python",
+    "prompt": "Write a python function to find quotient of two numbers (rounded down to the nearest integer).",
+    "source": "google_research_mbpp",
+    "source_code": "def find(n,m):  \n    q = n//m \n    return (q)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_292/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

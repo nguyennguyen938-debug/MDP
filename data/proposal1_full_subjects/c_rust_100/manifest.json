@@ -1,0 +1,2927 @@
+{
+  "subjects": [
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_leap_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_leap_0",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1900
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_leap_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_leap_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_leap_1",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1996
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_leap_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_leap_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_leap_2",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            2000
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_leap_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_leap_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_leap_3",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            2019
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_leap_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_leap_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_leap_4",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            2024
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_leap_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_leap_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_leap_5",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            2100
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_leap_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_difference_squares_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_difference_squares_0",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            3
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_difference_squares_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_difference_squares_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_difference_squares_1",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            5
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_difference_squares_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_difference_squares_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_difference_squares_2",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            7
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_difference_squares_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_difference_squares_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_difference_squares_3",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            10
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_difference_squares_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_difference_squares_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_difference_squares_4",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            12
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_difference_squares_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_difference_squares_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_difference_squares_5",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            20
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_difference_squares_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_grains_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_grains_0",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_grains_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_grains_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_grains_1",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            2
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_grains_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_grains_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_grains_2",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            5
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_grains_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_grains_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_grains_3",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            10
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_grains_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_grains_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_grains_4",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            16
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_grains_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_grains_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_grains_5",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            30
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_grains_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_collatz_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_collatz_0",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_collatz_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_collatz_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_collatz_1",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            2
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_collatz_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_collatz_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_collatz_2",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            3
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_collatz_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_collatz_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_collatz_3",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            6
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_collatz_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_collatz_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_collatz_4",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            11
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_collatz_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_collatz_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_collatz_5",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            19
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_collatz_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_armstrong_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_armstrong_0",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            0
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_armstrong_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_armstrong_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_armstrong_1",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            5
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_armstrong_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_armstrong_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_armstrong_2",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            9
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_armstrong_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_armstrong_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_armstrong_3",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            153
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_armstrong_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_armstrong_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_armstrong_4",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            370
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_armstrong_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_armstrong_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_armstrong_5",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "bool"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            9474
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_armstrong_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_hamming_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_hamming_0",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string",
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "GAGCCT",
+            "CATCGT"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_hamming_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_hamming_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_hamming_1",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string",
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "AAAA",
+            "AAAT"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_hamming_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_hamming_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_hamming_2",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string",
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "",
+            ""
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_hamming_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_hamming_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_hamming_3",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string",
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc",
+            "xyz"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_hamming_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_hamming_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_hamming_4",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string",
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "GGGG",
+            "GGGG"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_hamming_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_hamming_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_hamming_5",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string",
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "ACGT",
+            "TGCA"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_hamming_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_scrabble_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_scrabble_0",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "quiz"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_scrabble_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_scrabble_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_scrabble_1",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "cabbage"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_scrabble_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_scrabble_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_scrabble_2",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "hello"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_scrabble_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_scrabble_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_scrabble_3",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            ""
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_scrabble_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_scrabble_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_scrabble_4",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "Zebra"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_scrabble_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_scrabble_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_scrabble_5",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "Rust"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_scrabble_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_nucleotide_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_nucleotide_0",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "ACGTAGGA"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_nucleotide_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_nucleotide_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_nucleotide_1",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "ACGTAGGA"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_nucleotide_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_nucleotide_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_nucleotide_2",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "ACGTAGGA"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_nucleotide_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_nucleotide_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_nucleotide_3",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "ACGTAGGA"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_nucleotide_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_nucleotide_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_nucleotide_4",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "ACGTAGGA"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_nucleotide_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_nucleotide_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_nucleotide_5",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "ACGTAGGA"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_nucleotide_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_resistor_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_resistor_0",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "black"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_resistor_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_resistor_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_resistor_1",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "brown"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_resistor_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_resistor_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_resistor_2",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "red"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_resistor_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_resistor_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_resistor_3",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "green"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_resistor_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_resistor_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_resistor_4",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "blue"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_resistor_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_resistor_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_resistor_5",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "white"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_resistor_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_accumulate_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_accumulate_0",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_accumulate_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_accumulate_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_accumulate_1",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              -1,
+              2,
+              -3
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_accumulate_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_accumulate_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_accumulate_2",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            []
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_accumulate_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_accumulate_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_accumulate_3",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              5
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_accumulate_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_accumulate_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_accumulate_4",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              10,
+              -10,
+              7
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_accumulate_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_exercism_accumulate_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "MIT",
+        "original_id": "exercism_accumulate_5",
+        "profile": "exercise_derived",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        },
+        "source_url": "https://github.com/exercism/c"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              2,
+              4,
+              6,
+              8
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_accumulate_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_boundary_clamp_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_boundary_clamp_0",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -6
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_boundary_clamp_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_boundary_clamp_1",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -5
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_boundary_clamp_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_boundary_clamp_2",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -4
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_boundary_clamp_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_boundary_clamp_3",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -3
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_boundary_clamp_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_boundary_clamp_4",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -2
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_boundary_clamp_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_boundary_clamp_5",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -1
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_boundary_clamp_6",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_boundary_clamp_6",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            0
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_6/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_boundary_clamp_7",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_boundary_clamp_7",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_7/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_boundary_clamp_8",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_boundary_clamp_8",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            2
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_8/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_boundary_clamp_9",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_boundary_clamp_9",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            3
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_9/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_division_mod_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_division_mod_0",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            7
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_division_mod_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_division_mod_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_division_mod_1",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            10
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_division_mod_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_division_mod_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_division_mod_2",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            13
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_division_mod_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_division_mod_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_division_mod_3",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            16
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_division_mod_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_division_mod_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_division_mod_4",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            22
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_division_mod_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_division_mod_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_division_mod_5",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            25
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_division_mod_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_division_mod_6",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_division_mod_6",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            28
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_division_mod_6/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_division_mod_7",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_division_mod_7",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            31
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_division_mod_7/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_division_mod_8",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_division_mod_8",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            34
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_division_mod_8/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_division_mod_9",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_division_mod_9",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            40
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_division_mod_9/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_bitwise_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_bitwise_0",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            6
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_bitwise_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_bitwise_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_bitwise_1",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            7
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_bitwise_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_bitwise_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_bitwise_2",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            8
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_bitwise_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_bitwise_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_bitwise_3",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            9
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_bitwise_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_bitwise_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_bitwise_4",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            12
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_bitwise_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_bitwise_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_bitwise_5",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            13
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_bitwise_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_bitwise_6",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_bitwise_6",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            20
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_bitwise_6/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_bitwise_7",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_bitwise_7",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            21
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_bitwise_7/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_bitwise_8",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_bitwise_8",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            36
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_bitwise_8/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_bitwise_9",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_bitwise_9",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            68
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_bitwise_9/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_array_threshold_0",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_array_threshold_0",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              0
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_array_threshold_0/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_array_threshold_1",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_array_threshold_1",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_array_threshold_1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_array_threshold_2",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_array_threshold_2",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              -3,
+              0,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_array_threshold_2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_array_threshold_3",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_array_threshold_3",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              4,
+              4,
+              4
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_array_threshold_3/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_array_threshold_4",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_array_threshold_4",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            []
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_array_threshold_4/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_array_threshold_5",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_array_threshold_5",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              9,
+              -1
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_array_threshold_5/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_array_threshold_6",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_array_threshold_6",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              2,
+              5,
+              8
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_array_threshold_6/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_array_threshold_7",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_array_threshold_7",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              -5
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_array_threshold_7/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_array_threshold_8",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_array_threshold_8",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              -1,
+              1,
+              -1
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_array_threshold_8/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_100_diag_array_threshold_9",
+      "metadata": {
+        "dataset": "c_rust_100",
+        "license": "generated",
+        "original_id": "diag_array_threshold_9",
+        "profile": "diagnostic",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              7,
+              11,
+              13
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_array_threshold_9/source.c",
+      "target_language": "rust",
+      "target_path": null
+    }
+  ]
+}

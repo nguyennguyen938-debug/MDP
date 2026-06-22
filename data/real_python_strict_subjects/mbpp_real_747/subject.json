@@ -1,0 +1,25 @@
+{
+  "entrypoint": "lcs_of_three",
+  "id": "mbpp_real_747",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    lcs_of_three = candidate\n    assert lcs_of_three('AGGT12', '12TXAYB', '12XBA') == 2\n    assert lcs_of_three('Reels', 'Reelsfor', 'ReelsforReels') == 5\n    assert lcs_of_three('abcd1e2', 'bc12ea', 'bd1ea') == 3\n",
+    "oracle_type": "callable_check",
+    "original_id": 747,
+    "profile": "real_python",
+    "prompt": "Write a function to find the longest common subsequence for the given three string sequence. https://www.geeksforgeeks.org/lcs-longest-common-subsequence-three-strings/",
+    "source": "google_research_mbpp",
+    "source_code": "def lcs_of_three(X, Y, Z): \n  m = len(X)\n  n = len(Y)\n  o = len(Z)\n  L = [[[0 for i in range(o+1)] for j in range(n+1)] for k in range(m+1)]\n  for i in range(m+1): \n\t  for j in range(n+1): \n\t\t  for k in range(o+1): \n\t\t\t  if (i == 0 or j == 0 or k == 0): \n\t\t\t\t  L[i][j][k] = 0\n\t\t\t  elif (X[i-1] == Y[j-1] and X[i-1] == Z[k-1]): \n\t\t\t\t  L[i][j][k] = L[i-1][j-1][k-1] + 1\n\t\t\t  else: \n\t\t\t\t  L[i][j][k] = max(max(L[i-1][j][k], L[i][j-1][k]), L[i][j][k-1]) \n  return L[m][n][o]",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_747/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

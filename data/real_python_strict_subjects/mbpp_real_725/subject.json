@@ -1,0 +1,25 @@
+{
+  "entrypoint": "extract_quotation",
+  "id": "mbpp_real_725",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    extract_quotation = candidate\n    assert extract_quotation('Cortex \"A53\" Based \"multi\" tasking \"Processor\"') == ['A53', 'multi', 'Processor']\n    assert extract_quotation('Cast your \"favorite\" entertainment \"apps\"') == ['favorite', 'apps']\n    assert extract_quotation('Watch content \"4k Ultra HD\" resolution with \"HDR 10\" Support') == ['4k Ultra HD', 'HDR 10']\n    assert extract_quotation(\"Watch content '4k Ultra HD' resolution with 'HDR 10' Support\") == []\n",
+    "oracle_type": "callable_check",
+    "original_id": 725,
+    "profile": "real_python",
+    "prompt": "Write a function to extract values between quotation marks \" \" of the given string.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef extract_quotation(text1):\n  return (re.findall(r'\"(.*?)\"', text1))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_725/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

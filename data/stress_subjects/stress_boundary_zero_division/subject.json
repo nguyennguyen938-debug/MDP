@@ -1,0 +1,40 @@
+{
+  "entrypoint": "solve",
+  "id": "stress_boundary_zero_division",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          0
+        ]
+      },
+      {
+        "args": [
+          1
+        ]
+      },
+      {
+        "args": [
+          -1
+        ]
+      }
+    ],
+    "dataset": "stress",
+    "original_id": "boundary_zero_division",
+    "profile": "stress",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(x: int) -> int:\n    return 10 // x\n",
+    "split": "train",
+    "stress_category": "boundary"
+  },
+  "path": "stress_boundary_zero_division/solution.py",
+  "tests": [
+    {
+      "args": [
+        2
+      ],
+      "expected": 5
+    }
+  ]
+}

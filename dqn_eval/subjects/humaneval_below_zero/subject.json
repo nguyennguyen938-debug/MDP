@@ -1,0 +1,36 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_below_zero",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "below_zero",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(operations: list[int]) -> bool:\n    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False\n",
+    "split": "train"
+  },
+  "path": "humaneval_below_zero/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          -2,
+          1
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [
+          1,
+          2,
+          -2
+        ]
+      ],
+      "expected": false
+    }
+  ]
+}

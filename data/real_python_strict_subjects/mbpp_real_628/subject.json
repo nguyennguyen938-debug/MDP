@@ -1,0 +1,25 @@
+{
+  "entrypoint": "replace_spaces",
+  "id": "mbpp_real_628",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    replace_spaces = candidate\n    assert replace_spaces(\"My Name is Dawood\") == 'My%20Name%20is%20Dawood'\n    assert replace_spaces(\"I am a Programmer\") == 'I%20am%20a%20Programmer'\n    assert replace_spaces(\"I love Coding\") == 'I%20love%20Coding'\n",
+    "oracle_type": "callable_check",
+    "original_id": 628,
+    "profile": "real_python",
+    "prompt": "Write a function to replace all spaces in the given string with '%20'.",
+    "source": "google_research_mbpp",
+    "source_code": "def replace_spaces(string):\n  return string.replace(\" \", \"%20\")",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_628/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

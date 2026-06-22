@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 88,
+  "key": "85558ba580ca17cc530507025ea7fd6d6a3898cba00beec1cde76410e103cd70",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_decimal_to_binary:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_decimal_to_binary:solve`, categorized for clarity:\n\n**Basic Cases:**\n\n*   `assert solve(0) == \"0\"`\n*   `assert solve(1) == \"1\"`\n*   `assert solve(2) == \"10\"`\n*   `assert solve(3) == \"11\"`\n\n**Powers of Two:**\n\n*   `assert solve(4) == \"100\"`\n*   `assert solve(8) == \"1000\"`\n*   `assert solve(16) == \"10000\"`\n\n**Numbers Requiring Multiple Bits:**\n\n*   `assert solve(5) == \"101\"`\n*   `assert solve(6) == \"110\"`\n*   `assert solve(7) == \"111\"`\n*   `assert solve(10) == \"1010\"`\n*   `assert solve(15) == \"1111\"`\n*   `assert solve(20) == \"10100\"`\n\n**Larger Numbers:**\n\n*   `assert solve(100"
+}

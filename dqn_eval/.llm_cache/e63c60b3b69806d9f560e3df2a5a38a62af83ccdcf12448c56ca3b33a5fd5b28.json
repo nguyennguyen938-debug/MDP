@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 78,
+  "key": "e63c60b3b69806d9f560e3df2a5a38a62af83ccdcf12448c56ca3b33a5fd5b28",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for stress_fuzz_large_square:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `stress_fuzz_large_square:solve`, categorized for clarity:\n\n**Core Functionality & Correctness:**\n\n*   `assert solve(0) == 0`\n*   `assert solve(1) == 1`\n*   `assert solve(2) == 2`\n*   `assert solve(3) == 3`\n*   `assert solve(4) == 4`\n*   `assert solve(5) == 5`\n*   `assert solve(10) == 10`\n*   `assert solve(100) == 100`\n*   `assert solve(1000) == 1000`\n*   `assert solve(10000) == 10000`\n*   `assert solve(100000) == 100000`\n*   `assert solve(1000000) == 1000000`\n*   `assert solve(10000000) == 10000000`\n"
+}

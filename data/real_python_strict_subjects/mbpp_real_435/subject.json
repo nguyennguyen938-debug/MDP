@@ -1,0 +1,25 @@
+{
+  "entrypoint": "last_Digit",
+  "id": "mbpp_real_435",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    last_Digit = candidate\n    assert last_Digit(123) == 3\n    assert last_Digit(25) == 5\n    assert last_Digit(30) == 0\n",
+    "oracle_type": "callable_check",
+    "original_id": 435,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the last digit of a given number.",
+    "source": "google_research_mbpp",
+    "source_code": "def last_Digit(n) :\n    return (n % 10) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_435/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

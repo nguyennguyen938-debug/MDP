@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sum_list",
+  "id": "mbpp_real_728",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sum_list = candidate\n    assert sum_list([10,20,30],[15,25,35])==[25,45,65]\n    assert sum_list([1,2,3],[5,6,7])==[6,8,10]\n    assert sum_list([15,20,30],[15,45,75])==[30,65,105]\n",
+    "oracle_type": "callable_check",
+    "original_id": 728,
+    "profile": "real_python",
+    "prompt": "Write a function takes as input two lists [a_1,...,a_n], [b_1,...,b_n] and returns [a_1+b_1,...,a_n+b_n].",
+    "source": "google_research_mbpp",
+    "source_code": "def sum_list(lst1,lst2):\n  res_list = [lst1[i] + lst2[i] for i in range(len(lst1))] \n  return res_list",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_728/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

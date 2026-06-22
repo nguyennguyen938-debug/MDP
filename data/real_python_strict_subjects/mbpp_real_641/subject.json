@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_nonagonal",
+  "id": "mbpp_real_641",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_nonagonal = candidate\n    assert is_nonagonal(10) == 325\n    assert is_nonagonal(15) == 750\n    assert is_nonagonal(18) == 1089\n",
+    "oracle_type": "callable_check",
+    "original_id": 641,
+    "profile": "real_python",
+    "prompt": "Write a function to find the nth nonagonal number.",
+    "source": "google_research_mbpp",
+    "source_code": "def is_nonagonal(n): \n\treturn int(n * (7 * n - 5) / 2) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_641/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

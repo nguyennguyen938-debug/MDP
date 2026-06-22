@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 78,
+  "key": "46828bcb56c0c52b9f1e20fdfa5d4f58e3c243a277d1ba3b228cc320769d4e89",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for action_balanced_llm_assert_strip_case:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `action_balanced_llm_assert_strip_case:solve`, categorized for clarity:\n\n**Core Functionality:**\n\n*   `assert_strip_case_solve_basic_case()`: Tests a simple, common case.\n*   `assert_strip_case_solve_empty_string()`: Verifies handling of an empty input.\n*   `assert_strip_case_solve_all_caps()`: Checks if all-uppercase input is handled.\n*   `assert_strip_case_solve_all_lowercase()`: Checks if all-lowercase input is handled.\n*   `assert_strip_case_solve_mixed_case()`: Tests a mix of upper and lower case.\n*   `assert_strip_case_solve_leading_trailing_spaces()`: Ensures spaces are stripped.\n*   `assert_strip_case_solve_internal_spaces()`: Verifies internal spaces are preserved.\n*   `assert_strip_case_solve_special_characters()`: Checks handling of non-alphanumeric characters.\n\n**Edge Cases & Variations:**\n\n*   `assert_strip_case_solve_only_spaces()`"
+}

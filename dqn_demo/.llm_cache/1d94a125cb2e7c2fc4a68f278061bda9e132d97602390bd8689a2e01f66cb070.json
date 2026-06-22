@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 99,
+  "key": "1d94a125cb2e7c2fc4a68f278061bda9e132d97602390bd8689a2e01f66cb070",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_intersperse:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_intersperse.solve`, categorized for clarity:\n\n**Basic Functionality:**\n\n*   `assert solve([1, 2, 3], 0) == [1, 0, 2, 0, 3]`\n*   `assert solve([1, 2], 5) == [1, 5, 2]`\n*   `assert solve([1], 10) == [1]`\n\n**Edge Cases:**\n\n*   `assert solve([], 0) == []` (Empty list)\n*   `assert solve([1, 2, 3], None) == [1, None, 2, None, 3]` (None as separator)\n*   `assert solve([1, 2, 3], \"\") == [1, \"\", 2, \"\", 3]` (Empty string as separator)\n\n**Different Data Types:**\n\n*   `assert solve([\"a\", \"b\"], \"x\") == [\"a\", \"x\", \"b\"]` (Strings)\n*   `assert solve([1.1, 2.2], 3.3) == [1.1, "
+}

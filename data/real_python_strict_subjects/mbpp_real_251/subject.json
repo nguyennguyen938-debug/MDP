@@ -1,0 +1,25 @@
+{
+  "entrypoint": "insert_element",
+  "id": "mbpp_real_251",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    insert_element = candidate\n    assert insert_element(['Red', 'Green', 'Black'] ,'c')==['c', 'Red', 'c', 'Green', 'c', 'Black']\n    assert insert_element(['python', 'java'] ,'program')==['program', 'python', 'program', 'java']\n    assert insert_element(['happy', 'sad'] ,'laugh')==['laugh', 'happy', 'laugh', 'sad']\n",
+    "oracle_type": "callable_check",
+    "original_id": 251,
+    "profile": "real_python",
+    "prompt": "Write a function that takes in a list and an element and inserts the element before each element in the list, and returns the resulting list.",
+    "source": "google_research_mbpp",
+    "source_code": "def insert_element(list,element):\n list = [v for elt in list for v in (element, elt)]\n return list",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_251/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

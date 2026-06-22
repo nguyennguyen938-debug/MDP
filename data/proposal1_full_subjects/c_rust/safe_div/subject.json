@@ -1,0 +1,22 @@
+{
+  "id": "c_real_curated_safe_div",
+  "source_language": "c",
+  "target_language": "rust",
+  "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust/safe_div/source.c",
+  "target_path": null,
+  "entrypoint": "solve",
+  "seed_tests": [
+    {
+      "args": [
+        4,
+        2
+      ]
+    }
+  ],
+  "metadata": {
+    "dataset": "c_real_curated",
+    "profile": "secondary_pilot",
+    "original_id": "safe_div"
+  },
+  "oracle_policy": "differential"
+}

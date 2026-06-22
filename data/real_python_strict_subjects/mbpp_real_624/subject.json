@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_upper",
+  "id": "mbpp_real_624",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_upper = candidate\n    assert is_upper(\"person\") ==\"PERSON\"\n    assert is_upper(\"final\") == \"FINAL\"\n    assert is_upper(\"Valid\") == \"VALID\"\n",
+    "oracle_type": "callable_check",
+    "original_id": 624,
+    "profile": "real_python",
+    "prompt": "Write a python function to convert a given string to uppercase.",
+    "source": "google_research_mbpp",
+    "source_code": "def is_upper(string):\n  return (string.upper())",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_624/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

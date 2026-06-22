@@ -1,0 +1,25 @@
+{
+  "entrypoint": "count_first_elements",
+  "id": "mbpp_real_278",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    count_first_elements = candidate\n    assert count_first_elements((1, 5, 7, (4, 6), 10) ) == 3\n    assert count_first_elements((2, 9, (5, 7), 11) ) == 2\n    assert count_first_elements((11, 15, 5, 8, (2, 3), 8) ) == 4\n",
+    "oracle_type": "callable_check",
+    "original_id": 278,
+    "profile": "real_python",
+    "prompt": "Write a function to find the number of elements that occurs before the tuple element in the given tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "def count_first_elements(test_tup):\n  for count, ele in enumerate(test_tup):\n    if isinstance(ele, tuple):\n      break\n  return (count) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_278/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

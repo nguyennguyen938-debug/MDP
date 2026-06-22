@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 98,
+  "key": "252cf952ef74d864001bb33739191c68935b6249f2e6b0b6f538b2e6afbc5d95",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_rotate_left:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_rotate_left:solve`, categorized for clarity:\n\n**Basic Functionality:**\n\n*   `assert solve([1, 2, 3, 4, 5], 1) == [2, 3, 4, 5, 1]`\n*   `assert solve([1, 2, 3, 4, 5], 2) == [3, 4, 5, 1, 2]`\n*   `assert solve([1, 2, 3], 1) == [2, 3, 1]`\n\n**Edge Cases:**\n\n*   `assert solve([1], 1) == [1]` (Single element)\n*   `assert solve([], 5) == []` (Empty list)\n*   `assert solve([1, 2, 3], 0) == [1, 2, 3]` (Zero rotations)\n*   `assert solve([1, 2, 3], 3) == [1, 2, 3]` (Rotations equal to list length)\n*   `assert solve([1, 2, "
+}

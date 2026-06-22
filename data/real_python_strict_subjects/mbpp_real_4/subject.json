@@ -1,0 +1,25 @@
+{
+  "entrypoint": "heap_queue_largest",
+  "id": "mbpp_real_4",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    heap_queue_largest = candidate\n    assert heap_queue_largest( [25, 35, 22, 85, 14, 65, 75, 22, 58],3)==[85, 75, 65]\n    assert heap_queue_largest( [25, 35, 22, 85, 14, 65, 75, 22, 58],2)==[85, 75]\n    assert heap_queue_largest( [25, 35, 22, 85, 14, 65, 75, 22, 58],5)==[85, 75, 65, 58, 35]\n",
+    "oracle_type": "callable_check",
+    "original_id": 4,
+    "profile": "real_python",
+    "prompt": "Write a function to find the n largest integers from a given list of numbers, returned in descending order.",
+    "source": "google_research_mbpp",
+    "source_code": "import heapq as hq\ndef heap_queue_largest(nums,n):\n  largest_nums = hq.nlargest(n, nums)\n  return largest_nums",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_4/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

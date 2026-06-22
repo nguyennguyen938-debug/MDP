@@ -1,0 +1,60 @@
+{
+  "entrypoint": "solve",
+  "id": "action_balanced_counterexample_rotate_empty",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          [
+            1,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            0
+          ],
+          0
+        ]
+      }
+    ],
+    "counterexample_cases": [
+      {
+        "args": [
+          [],
+          3
+        ],
+        "expected": []
+      }
+    ],
+    "dataset": "action_balanced",
+    "original_id": "counterexample_rotate_empty",
+    "profile": "action_balanced",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int], k: int) -> list[int]:\n    k %= len(items)\n    return items[k:] + items[:k]\n",
+    "split": "val",
+    "stress_category": "counterexample"
+  },
+  "path": "action_balanced_counterexample_rotate_empty/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          3
+        ],
+        1
+      ],
+      "expected": [
+        2,
+        3,
+        1
+      ]
+    }
+  ]
+}

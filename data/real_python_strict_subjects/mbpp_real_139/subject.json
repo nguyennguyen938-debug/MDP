@@ -1,0 +1,25 @@
+{
+  "entrypoint": "circle_circumference",
+  "id": "mbpp_real_139",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "import math\n\ndef check(candidate):\n    circle_circumference = candidate\n    assert math.isclose(circle_circumference(10), 62.830000000000005, rel_tol=0.001)\n    assert math.isclose(circle_circumference(5), 31.415000000000003, rel_tol=0.001)\n    assert math.isclose(circle_circumference(4), 25.132, rel_tol=0.001)\n",
+    "oracle_type": "callable_check",
+    "original_id": 139,
+    "profile": "real_python",
+    "prompt": "Write a function to find the circumference of a circle.",
+    "source": "google_research_mbpp",
+    "source_code": "def circle_circumference(r):\n  perimeter=2*3.1415*r\n  return perimeter",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_139/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

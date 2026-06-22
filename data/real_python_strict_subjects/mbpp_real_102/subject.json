@@ -1,0 +1,25 @@
+{
+  "entrypoint": "snake_to_camel",
+  "id": "mbpp_real_102",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    snake_to_camel = candidate\n    assert snake_to_camel('python_program')=='PythonProgram'\n    assert snake_to_camel('python_language')==('PythonLanguage')\n    assert snake_to_camel('programming_language')==('ProgrammingLanguage')\n",
+    "oracle_type": "callable_check",
+    "original_id": 102,
+    "profile": "real_python",
+    "prompt": "Write a function to convert a snake case string to camel case string.",
+    "source": "google_research_mbpp",
+    "source_code": "def snake_to_camel(word):\n        import re\n        return ''.join(x.capitalize() or '_' for x in word.split('_'))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_102/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

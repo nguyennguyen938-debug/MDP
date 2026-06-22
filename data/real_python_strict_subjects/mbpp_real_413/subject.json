@@ -1,0 +1,25 @@
+{
+  "entrypoint": "extract_nth_element",
+  "id": "mbpp_real_413",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    extract_nth_element = candidate\n    assert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)] ,0)==['Greyson Fulton', 'Brady Kent', 'Wyatt Knott', 'Beau Turnbull']\n    assert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)] ,2)==[99, 96, 94, 98]\n    assert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)],1)==[98, 97, 91, 94]\n",
+    "oracle_type": "callable_check",
+    "original_id": 413,
+    "profile": "real_python",
+    "prompt": "Write a function to extract the nth element from a given list of tuples.",
+    "source": "google_research_mbpp",
+    "source_code": "def extract_nth_element(list1, n):\n    result = [x[n] for x in list1]\n    return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_413/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

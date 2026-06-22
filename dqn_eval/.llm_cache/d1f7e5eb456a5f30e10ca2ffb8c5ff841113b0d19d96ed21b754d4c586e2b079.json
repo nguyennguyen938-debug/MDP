@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 119,
+  "key": "d1f7e5eb456a5f30e10ca2ffb8c5ff841113b0d19d96ed21b754d4c586e2b079",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for action_balanced_fuzz_overflow_len:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `action_balanced_fuzz_overflow_len:solve`, categorized for clarity:\n\n**Core Functionality & State:**\n\n*   `assert(state.len == expected_len)`: The final length of the state is as expected.\n*   `assert(state.balanced == expected_balanced)`: The final balanced state is as expected.\n*   `assert(state.overflow == expected_overflow)`: The final overflow state is as expected.\n\n**Input Validation (if applicable):**\n\n*   `assert(input.len >= 0)`: Input length is non-negative.\n*   `assert(input.balanced is valid)`: Input balanced state is valid.\n*   `assert(input.overflow is valid)`: Input overflow state is valid.\n\n**Edge Cases & Specific Scenarios:**\n\n*   `assert(state.len == 0)`: Handles empty input or zero length.\n*   `assert(state.balanced == true)`: Handles cases where the input is already balanced.\n*   `assert(state.overflow == false)`: Handles cases where no overflow occurs.\n*   `assert(state.len == input.len)`"
+}

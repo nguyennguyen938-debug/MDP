@@ -1,0 +1,25 @@
+{
+  "entrypoint": "get_Char",
+  "id": "mbpp_real_83",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    get_Char = candidate\n    assert get_Char(\"abc\") == \"f\"\n    assert get_Char(\"gfg\") == \"t\"\n    assert get_Char(\"ab\") == \"c\"\n",
+    "oracle_type": "callable_check",
+    "original_id": 83,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26.",
+    "source": "google_research_mbpp",
+    "source_code": "def get_Char(strr):  \n    summ = 0\n    for i in range(len(strr)): \n        summ += (ord(strr[i]) - ord('a') + 1)  \n    if (summ % 26 == 0): \n        return ord('z') \n    else: \n        summ = summ % 26\n        return chr(ord('a') + summ - 1)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_83/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_min_diff",
+  "id": "mbpp_real_763",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_min_diff = candidate\n    assert find_min_diff((1,5,3,19,18,25),6) == 1\n    assert find_min_diff((4,3,2,6),4) == 1\n    assert find_min_diff((30,5,20,9),4) == 4\n",
+    "oracle_type": "callable_check",
+    "original_id": 763,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the minimum difference between any two elements in a given array. https://www.geeksforgeeks.org/find-minimum-difference-pair/",
+    "source": "google_research_mbpp",
+    "source_code": "def find_min_diff(arr,n): \n    arr = sorted(arr) \n    diff = 10**20 \n    for i in range(n-1): \n        if arr[i+1] - arr[i] < diff: \n            diff = arr[i+1] - arr[i]  \n    return diff ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_763/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

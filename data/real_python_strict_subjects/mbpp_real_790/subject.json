@@ -1,0 +1,25 @@
+{
+  "entrypoint": "even_position",
+  "id": "mbpp_real_790",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    even_position = candidate\n    assert even_position([3,2,1]) == False\n    assert even_position([1,2,3]) == False\n    assert even_position([2,1,4]) == True\n",
+    "oracle_type": "callable_check",
+    "original_id": 790,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether every even index contains even numbers of a given list.",
+    "source": "google_research_mbpp",
+    "source_code": "def even_position(nums):\n\treturn all(nums[i]%2==i%2 for i in range(len(nums)))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_790/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

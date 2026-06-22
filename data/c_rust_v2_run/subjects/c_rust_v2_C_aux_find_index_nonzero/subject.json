@@ -1,0 +1,33 @@
+{
+  "entrypoint": "solve",
+  "id": "c_rust_v2_C_aux_find_index_nonzero",
+  "metadata": {
+    "category": "C_error",
+    "dataset": "c_rust_v2",
+    "license": "authored_for_this_paper",
+    "original_id": "C_aux_find_index_nonzero",
+    "signature": {
+      "params": [
+        "int_array"
+      ],
+      "return": "int"
+    }
+  },
+  "oracle_policy": "differential",
+  "seed_tests": [
+    {
+      "args": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "source_language": "c",
+  "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_aux_find_index_nonzero/source.c",
+  "target_language": "rust",
+  "target_path": null
+}

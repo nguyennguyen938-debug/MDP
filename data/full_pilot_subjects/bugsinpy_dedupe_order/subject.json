@@ -1,0 +1,28 @@
+{
+  "entrypoint": "solve",
+  "id": "bugsinpy_dedupe_order",
+  "language": "python",
+  "metadata": {
+    "dataset": "bugsinpy",
+    "original_id": "bugsinpy_dedupe_order",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int]) -> list[int]:\n    return list(set(items))\n",
+    "split": "test"
+  },
+  "path": "bugsinpy_dedupe_order/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1
+      ]
+    }
+  ]
+}

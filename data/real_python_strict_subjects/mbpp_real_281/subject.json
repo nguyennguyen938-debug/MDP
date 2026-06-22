@@ -1,0 +1,25 @@
+{
+  "entrypoint": "all_unique",
+  "id": "mbpp_real_281",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    all_unique = candidate\n    assert all_unique([1,2,3]) == True\n    assert all_unique([1,2,1,2]) == False\n    assert all_unique([1,2,3,4,5]) == True\n",
+    "oracle_type": "callable_check",
+    "original_id": 281,
+    "profile": "real_python",
+    "prompt": "Write a python function to check if the elements of a given list are unique or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def all_unique(test_list):\n    if len(test_list) > len(set(test_list)):\n        return False\n    return True",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_281/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

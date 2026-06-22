@@ -1,0 +1,25 @@
+{
+  "entrypoint": "check_smaller",
+  "id": "mbpp_real_809",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    check_smaller = candidate\n    assert check_smaller((1, 2, 3), (2, 3, 4)) == False\n    assert check_smaller((4, 5, 6), (3, 4, 5)) == True\n    assert check_smaller((11, 12, 13), (10, 11, 12)) == True\n",
+    "oracle_type": "callable_check",
+    "original_id": 809,
+    "profile": "real_python",
+    "prompt": "Write a function to check if each element of second tuple is smaller than its corresponding element in the first tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "def check_smaller(test_tup1, test_tup2):\n  return all(x > y for x, y in zip(test_tup1, test_tup2))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_809/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

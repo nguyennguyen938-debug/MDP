@@ -1,0 +1,25 @@
+{
+  "entrypoint": "min_val",
+  "id": "mbpp_real_410",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    min_val = candidate\n    assert min_val(['Python', 3, 2, 4, 5, 'version'])==2\n    assert min_val(['Python', 15, 20, 25])==15\n    assert min_val(['Python', 30, 20, 40, 50, 'version'])==20\n",
+    "oracle_type": "callable_check",
+    "original_id": 410,
+    "profile": "real_python",
+    "prompt": "Write a function to find the minimum value in a given heterogeneous list.",
+    "source": "google_research_mbpp",
+    "source_code": "def min_val(listval):\n     min_val = min(i for i in listval if isinstance(i, int))\n     return min_val",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_410/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

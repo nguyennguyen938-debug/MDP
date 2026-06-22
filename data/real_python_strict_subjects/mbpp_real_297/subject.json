@@ -1,0 +1,25 @@
+{
+  "entrypoint": "flatten_list",
+  "id": "mbpp_real_297",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    flatten_list = candidate\n    assert flatten_list([0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]])==[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]\n    assert flatten_list([[10, 20], [40], [30, 56, 25], [10, 20], [33], [40]])==[10, 20, 40, 30, 56, 25, 10, 20, 33, 40]\n    assert flatten_list([[1,2,3], [4,5,6], [10,11,12], [7,8,9]])==[1, 2, 3, 4, 5, 6, 10, 11, 12, 7, 8, 9]\n",
+    "oracle_type": "callable_check",
+    "original_id": 297,
+    "profile": "real_python",
+    "prompt": "Write a function to flatten a given nested list structure.",
+    "source": "google_research_mbpp",
+    "source_code": "def flatten_list(list1):\n    result_list = []\n    if not list1: return result_list\n    stack = [list(list1)]\n    while stack:\n        c_num = stack.pop()\n        next = c_num.pop()\n        if c_num: stack.append(c_num)\n        if isinstance(next, list):\n            if next: stack.append(list(next))\n        else: result_list.append(next)\n    result_list.reverse()\n    return result_list ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_297/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

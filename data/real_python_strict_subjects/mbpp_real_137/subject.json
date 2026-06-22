@@ -1,0 +1,25 @@
+{
+  "entrypoint": "zero_count",
+  "id": "mbpp_real_137",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "import math\n\ndef check(candidate):\n    zero_count = candidate\n    assert math.isclose(zero_count([0, 1, 2, -1, -5, 6, 0, -3, -2, 3, 4, 6, 8]), 0.181818, rel_tol=0.001)\n    assert math.isclose(zero_count([2, 1, 2, -1, -5, 6, 4, -3, -2, 3, 4, 6, 8]), 0.00, rel_tol=0.001)\n    assert math.isclose(zero_count([2, 4, -6, -9, 11, -12, 14, -5, 17]), 0.00, rel_tol=0.001)\n",
+    "oracle_type": "callable_check",
+    "original_id": 137,
+    "profile": "real_python",
+    "prompt": "Write a function to find the ratio of zeroes to non-zeroes in an array of integers.",
+    "source": "google_research_mbpp",
+    "source_code": "from array import array\ndef zero_count(nums):\n    n = len(nums)\n    n1 = 0\n    for x in nums:\n        if x == 0:\n            n1 += 1\n        else:\n          None\n    return n1/(n-n1)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_137/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

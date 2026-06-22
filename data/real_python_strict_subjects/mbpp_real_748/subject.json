@@ -1,0 +1,25 @@
+{
+  "entrypoint": "capital_words_spaces",
+  "id": "mbpp_real_748",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    capital_words_spaces = candidate\n    assert capital_words_spaces(\"Python\") == 'Python'\n    assert capital_words_spaces(\"PythonProgrammingExamples\") == 'Python Programming Examples'\n    assert capital_words_spaces(\"GetReadyToBeCodingFreak\") == 'Get Ready To Be Coding Freak'\n",
+    "oracle_type": "callable_check",
+    "original_id": 748,
+    "profile": "real_python",
+    "prompt": "Write a function to put spaces between words starting with capital letters in a given string.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef capital_words_spaces(str1):\n  return re.sub(r\"(\\w)([A-Z])\", r\"\\1 \\2\", str1)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_748/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

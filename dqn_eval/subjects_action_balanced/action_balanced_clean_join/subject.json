@@ -1,0 +1,52 @@
+{
+  "entrypoint": "solve",
+  "id": "action_balanced_clean_join",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          []
+        ]
+      },
+      {
+        "args": [
+          [
+            "a"
+          ]
+        ]
+      }
+    ],
+    "dataset": "action_balanced",
+    "fuzz_cases": [
+      {
+        "args": [
+          [
+            "a",
+            "b",
+            "c"
+          ]
+        ],
+        "expected": "a,b,c"
+      }
+    ],
+    "original_id": "clean_join",
+    "profile": "action_balanced",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[str]) -> str:\n    return ','.join(items)\n",
+    "split": "test",
+    "stress_category": "clean"
+  },
+  "path": "action_balanced_clean_join/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "expected": "a,b"
+    }
+  ]
+}

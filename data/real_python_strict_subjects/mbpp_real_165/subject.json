@@ -1,0 +1,25 @@
+{
+  "entrypoint": "count_char_position",
+  "id": "mbpp_real_165",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    count_char_position = candidate\n    assert count_char_position(\"xbcefg\") == 2\n    assert count_char_position(\"ABcED\") == 3\n    assert count_char_position(\"AbgdeF\") == 5\n",
+    "oracle_type": "callable_check",
+    "original_id": 165,
+    "profile": "real_python",
+    "prompt": "Write a function to count the number of characters in a string that occur at the same position in the string as in the English alphabet (case insensitive).",
+    "source": "google_research_mbpp",
+    "source_code": "def count_char_position(str1): \n    count_chars = 0\n    for i in range(len(str1)):\n        if ((i == ord(str1[i]) - ord('A')) or \n            (i == ord(str1[i]) - ord('a'))): \n            count_chars += 1\n    return count_chars ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_165/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

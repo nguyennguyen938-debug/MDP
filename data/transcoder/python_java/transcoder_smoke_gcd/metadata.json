@@ -1,0 +1,50 @@
+{
+  "dataset": "transcoder",
+  "dataset_version": "smoke-2026-05-16",
+  "entrypoint": "gcd",
+  "extra": {},
+  "extra_source_files": [],
+  "extra_target_files": [],
+  "harness_version": 2,
+  "id": "transcoder_smoke_gcd",
+  "language_dialect": "python3.10",
+  "oracle_policy": {
+    "exception_class_equivalence": [],
+    "ignore_trailing_whitespace": true,
+    "nan_equals_nan": true,
+    "numeric_tolerance": 0.0,
+    "string_case_insensitive": false,
+    "unordered_collections": []
+  },
+  "parameter_types": {
+    "a": "int",
+    "b": "int"
+  },
+  "return_type": "int",
+  "schema_version": 2,
+  "seed_tests": [
+    {
+      "args": {
+        "a": 48,
+        "b": 18
+      }
+    },
+    {
+      "args": {
+        "a": 17,
+        "b": 5
+      }
+    },
+    {
+      "args": {
+        "a": -12,
+        "b": 8
+      }
+    }
+  ],
+  "skip_reason": null,
+  "source_language": "python",
+  "source_path": "source.py",
+  "target_language": "java",
+  "target_path": "target.java"
+}

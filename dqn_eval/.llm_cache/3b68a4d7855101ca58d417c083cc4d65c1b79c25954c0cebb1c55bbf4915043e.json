@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 83,
+  "key": "3b68a4d7855101ca58d417c083cc4d65c1b79c25954c0cebb1c55bbf4915043e",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_mean_absolute_deviation:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_mean_absolute_deviation.solve`, categorized for clarity:\n\n**Basic Functionality & Edge Cases:**\n\n*   `assert solve([1, 2, 3]) == 0.6666666666666666`  (Standard case)\n*   `assert solve([1, 1, 1]) == 0.0` (All elements same)\n*   `assert solve([5]) == 0.0` (Single element)\n*   `assert solve([]) == 0.0` (Empty list)\n*   `assert solve([0, 0, 0, 0]) == 0.0` (All zeros)\n*   `assert solve([-1, -2, -3]) == 0.6666666666666666` (Negative numbers)\n*   `assert solve([1, -1, 2, -2]) == 1.5` (Mixed positive/negative)\n\n**Floating Point Precision:**\n\n*   `assert abs(solve([1.5, 2.5,"
+}

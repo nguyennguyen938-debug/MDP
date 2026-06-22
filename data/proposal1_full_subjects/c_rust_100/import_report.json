@@ -1,0 +1,8 @@
+{
+  "dataset": "c_rust_100",
+  "diagnostic_generated": 40,
+  "imported": 100,
+  "real_imported": 60,
+  "skipped": [],
+  "source_note": "Exercise-derived subjects are normalized function-level variants inspired by MIT-licensed Exercism C practice tasks; diagnostic subjects are generated templates."
+}

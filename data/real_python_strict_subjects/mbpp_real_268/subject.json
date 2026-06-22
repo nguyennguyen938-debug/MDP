@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_star_num",
+  "id": "mbpp_real_268",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_star_num = candidate\n    assert find_star_num(3) == 37\n    assert find_star_num(4) == 73\n    assert find_star_num(5) == 121\n",
+    "oracle_type": "callable_check",
+    "original_id": 268,
+    "profile": "real_python",
+    "prompt": "Write a function to find the n'th star number.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_star_num(n): \n\treturn (6 * n * (n - 1) + 1) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_268/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

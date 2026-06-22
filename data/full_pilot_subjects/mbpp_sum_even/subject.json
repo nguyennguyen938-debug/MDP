@@ -1,0 +1,26 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_sum_even",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_sum_even",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int]) -> int:\n    return sum(x for x in items if x % 2 == 0)\n",
+    "split": "test"
+  },
+  "path": "mbpp_sum_even/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          4,
+          5
+        ]
+      ],
+      "expected": 6
+    }
+  ]
+}

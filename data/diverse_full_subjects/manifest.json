@@ -1,0 +1,2566 @@
+[
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_has_close_elements",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "has_close_elements",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: list[float], threshold: float) -> bool:\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False\n",
+      "split": "train"
+    },
+    "path": "humaneval_has_close_elements/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1.0,
+            2.0,
+            3.0
+          ],
+          0.5
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          [
+            1.0,
+            1.2,
+            3.0
+          ],
+          0.3
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_separate_paren_groups",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "separate_paren_groups",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(paren_string: str) -> list[str]:\n    groups = []\n    depth = 0\n    current = []\n    for ch in paren_string.replace(' ', ''):\n        current.append(ch)\n        depth += 1 if ch == '(' else -1\n        if depth == 0 and current:\n            groups.append(''.join(current))\n            current = []\n    return groups\n",
+      "split": "train"
+    },
+    "path": "humaneval_separate_paren_groups/solution.py",
+    "tests": [
+      {
+        "args": [
+          "(()) ()"
+        ],
+        "expected": [
+          "(())",
+          "()"
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_truncate_number",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "truncate_number",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(number: float) -> float:\n    return number % 1.0\n",
+      "split": "train"
+    },
+    "path": "humaneval_truncate_number/solution.py",
+    "tests": [
+      {
+        "args": [
+          3.5
+        ],
+        "expected": 0.5
+      },
+      {
+        "args": [
+          1.0
+        ],
+        "expected": 0.0
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_below_zero",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "below_zero",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(operations: list[int]) -> bool:\n    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False\n",
+      "split": "train"
+    },
+    "path": "humaneval_below_zero/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            -2,
+            1
+          ]
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            -2
+          ]
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_mean_absolute_deviation",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "mean_absolute_deviation",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: list[float]) -> float:\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)\n",
+      "split": "train"
+    },
+    "path": "humaneval_mean_absolute_deviation/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1.0,
+            2.0,
+            3.0
+          ]
+        ],
+        "expected": 0.6666666666666666
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_intersperse",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "intersperse",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: list[int], delimiter: int) -> list[int]:\n    out = []\n    for idx, number in enumerate(numbers):\n        if idx:\n            out.append(delimiter)\n        out.append(number)\n    return out\n",
+      "split": "train"
+    },
+    "path": "humaneval_intersperse/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ],
+          0
+        ],
+        "expected": [
+          1,
+          0,
+          2,
+          0,
+          3
+        ]
+      },
+      {
+        "args": [
+          [],
+          9
+        ],
+        "expected": []
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_parse_nested_parens",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "parse_nested_parens",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(paren_string: str) -> list[int]:\n    out = []\n    depth = 0\n    best = 0\n    for ch in paren_string:\n        if ch == '(':\n            depth += 1\n            best = max(best, depth)\n        elif ch == ')':\n            depth -= 1\n            if depth == 0:\n                out.append(best)\n                best = 0\n    return out\n",
+      "split": "train"
+    },
+    "path": "humaneval_parse_nested_parens/solution.py",
+    "tests": [
+      {
+        "args": [
+          "(()()) ((()))"
+        ],
+        "expected": [
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_filter_by_substring",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "filter_by_substring",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(strings: list[str], substring: str) -> list[str]:\n    return [s for s in strings if substring in s]\n",
+      "split": "train"
+    },
+    "path": "humaneval_filter_by_substring/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            "abc",
+            "def",
+            "cab"
+          ],
+          "ab"
+        ],
+        "expected": [
+          "abc"
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_sum_product",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "sum_product",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: list[int]) -> list[int]:\n    total = 0\n    product = 1\n    for number in numbers:\n        total += number\n        product *= number\n    return [total, product]\n",
+      "split": "train"
+    },
+    "path": "humaneval_sum_product/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          6,
+          6
+        ]
+      },
+      {
+        "args": [
+          []
+        ],
+        "expected": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_rolling_max",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "rolling_max",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: list[int]) -> list[int]:\n    best = None\n    out = []\n    for number in numbers:\n        best = number if best is None else max(best, number)\n        out.append(best)\n    return out\n",
+      "split": "train"
+    },
+    "path": "humaneval_rolling_max/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            3,
+            2,
+            5
+          ]
+        ],
+        "expected": [
+          1,
+          3,
+          3,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_is_palindrome",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "is_palindrome",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> bool:\n    return text == text[::-1]\n",
+      "split": "train"
+    },
+    "path": "humaneval_is_palindrome/solution.py",
+    "tests": [
+      {
+        "args": [
+          "aba"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "abc"
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_string_xor",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "string_xor",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(a: str, b: str) -> str:\n    return ''.join('1' if x != y else '0' for x, y in zip(a, b))\n",
+      "split": "train"
+    },
+    "path": "humaneval_string_xor/solution.py",
+    "tests": [
+      {
+        "args": [
+          "010",
+          "110"
+        ],
+        "expected": "100"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_longest",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "longest",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(strings: list[str]) -> str | None:\n    if not strings:\n        return None\n    return max(strings, key=len)\n",
+      "split": "val"
+    },
+    "path": "humaneval_longest/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            "a",
+            "abcd",
+            "xy"
+          ]
+        ],
+        "expected": "abcd"
+      },
+      {
+        "args": [
+          []
+        ],
+        "expected": null
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_greatest_common_divisor",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "greatest_common_divisor",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(a: int, b: int) -> int:\n    while b:\n        a, b = b, a % b\n    return abs(a)\n",
+      "split": "val"
+    },
+    "path": "humaneval_greatest_common_divisor/solution.py",
+    "tests": [
+      {
+        "args": [
+          12,
+          18
+        ],
+        "expected": 6
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_all_prefixes",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "all_prefixes",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> list[str]:\n    return [text[:i] for i in range(len(text) + 1)]\n",
+      "split": "val"
+    },
+    "path": "humaneval_all_prefixes/solution.py",
+    "tests": [
+      {
+        "args": [
+          "abc"
+        ],
+        "expected": [
+          "",
+          "a",
+          "ab",
+          "abc"
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_string_sequence",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "string_sequence",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(n: int) -> str:\n    return ' '.join(str(i) for i in range(n + 1))\n",
+      "split": "val"
+    },
+    "path": "humaneval_string_sequence/solution.py",
+    "tests": [
+      {
+        "args": [
+          3
+        ],
+        "expected": "0 1 2 3"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_count_distinct_characters",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "count_distinct_characters",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> int:\n    return len(set(text.lower()))\n",
+      "split": "test"
+    },
+    "path": "humaneval_count_distinct_characters/solution.py",
+    "tests": [
+      {
+        "args": [
+          "AaBb"
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_parse_music",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "parse_music",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(music_string: str) -> list[int]:\n    mapping = {'o': 4, 'o|': 2, '.|': 1}\n    return [mapping[token] for token in music_string.split()]\n",
+      "split": "test"
+    },
+    "path": "humaneval_parse_music/solution.py",
+    "tests": [
+      {
+        "args": [
+          "o o| .|"
+        ],
+        "expected": [
+          4,
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_how_many_times",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "how_many_times",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(string: str, substring: str) -> int:\n    return sum(1 for i in range(len(string)) if string.startswith(substring, i))\n",
+      "split": "test"
+    },
+    "path": "humaneval_how_many_times/solution.py",
+    "tests": [
+      {
+        "args": [
+          "aaaa",
+          "aa"
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "humaneval_sort_numbers",
+    "language": "python",
+    "metadata": {
+      "dataset": "humaneval",
+      "original_id": "sort_numbers",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(numbers: str) -> str:\n    order = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}\n    return ' '.join(sorted(numbers.split(), key=order.get))\n",
+      "split": "test"
+    },
+    "path": "humaneval_sort_numbers/solution.py",
+    "tests": [
+      {
+        "args": [
+          "three one two"
+        ],
+        "expected": "one two three"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_remove_duplicates",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_remove_duplicates",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> list[int]:\n    out = []\n    for item in items:\n        if item not in out:\n            out.append(item)\n    return out\n",
+      "split": "train"
+    },
+    "path": "mbpp_remove_duplicates/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            1,
+            3
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_count_vowels",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_count_vowels",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> int:\n    return sum(1 for ch in text.lower() if ch in 'aeiou')\n",
+      "split": "train"
+    },
+    "path": "mbpp_count_vowels/solution.py",
+    "tests": [
+      {
+        "args": [
+          "banana"
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_is_prime",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_is_prime",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(n: int) -> bool:\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n",
+      "split": "train"
+    },
+    "path": "mbpp_is_prime/solution.py",
+    "tests": [
+      {
+        "args": [
+          2
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          9
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_fibonacci",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_fibonacci",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(n: int) -> int:\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a\n",
+      "split": "train"
+    },
+    "path": "mbpp_fibonacci/solution.py",
+    "tests": [
+      {
+        "args": [
+          7
+        ],
+        "expected": 13
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_reverse_words",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_reverse_words",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> str:\n    return ' '.join(reversed(text.split()))\n",
+      "split": "val"
+    },
+    "path": "mbpp_reverse_words/solution.py",
+    "tests": [
+      {
+        "args": [
+          "hello world"
+        ],
+        "expected": "world hello"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_merge_dicts",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_merge_dicts",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(a: dict[str, int], b: dict[str, int]) -> dict[str, int]:\n    out = dict(a)\n    for key, value in b.items():\n        out[key] = out.get(key, 0) + value\n    return out\n",
+      "split": "val"
+    },
+    "path": "mbpp_merge_dicts/solution.py",
+    "tests": [
+      {
+        "args": [
+          {
+            "a": 1
+          },
+          {
+            "a": 2,
+            "b": 3
+          }
+        ],
+        "expected": {
+          "a": 3,
+          "b": 3
+        }
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_flatten",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_flatten",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[list[int]]) -> list[int]:\n    return [x for group in items for x in group]\n",
+      "split": "val"
+    },
+    "path": "mbpp_flatten/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            [
+              1,
+              2
+            ],
+            [],
+            [
+              3
+            ]
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_second_largest",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_second_largest",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> int | None:\n    unique = sorted(set(items))\n    return unique[-2] if len(unique) >= 2 else None\n",
+      "split": "val"
+    },
+    "path": "mbpp_second_largest/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            3,
+            2,
+            3
+          ]
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_anagram",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_anagram",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(a: str, b: str) -> bool:\n    return sorted(a.replace(' ', '').lower()) == sorted(b.replace(' ', '').lower())\n",
+      "split": "val"
+    },
+    "path": "mbpp_anagram/solution.py",
+    "tests": [
+      {
+        "args": [
+          "listen",
+          "silent"
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_matrix_trace",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_matrix_trace",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(matrix: list[list[int]]) -> int:\n    return sum(matrix[i][i] for i in range(min(len(matrix), len(matrix[0]) if matrix else 0)))\n",
+      "split": "val"
+    },
+    "path": "mbpp_matrix_trace/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ],
+        "expected": 5
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_chunk",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_chunk",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int], size: int) -> list[list[int]]:\n    return [items[i:i + size] for i in range(0, len(items), size)]\n",
+      "split": "val"
+    },
+    "path": "mbpp_chunk/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          2
+        ],
+        "expected": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_remove_none",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_remove_none",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[object]) -> list[object]:\n    return [item for item in items if item is not None]\n",
+      "split": "val"
+    },
+    "path": "mbpp_remove_none/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            null,
+            2
+          ]
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_sum_even",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_sum_even",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> int:\n    return sum(x for x in items if x % 2 == 0)\n",
+      "split": "test"
+    },
+    "path": "mbpp_sum_even/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            4,
+            5
+          ]
+        ],
+        "expected": 6
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_decimal_to_binary",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_decimal_to_binary",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(n: int) -> str:\n    return bin(n)[2:]\n",
+      "split": "test"
+    },
+    "path": "mbpp_decimal_to_binary/solution.py",
+    "tests": [
+      {
+        "args": [
+          10
+        ],
+        "expected": "1010"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_capitalize_words",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_capitalize_words",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> str:\n    return ' '.join(word.capitalize() for word in text.split())\n",
+      "split": "test"
+    },
+    "path": "mbpp_capitalize_words/solution.py",
+    "tests": [
+      {
+        "args": [
+          "hello world"
+        ],
+        "expected": "Hello World"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_intersection",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_intersection",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(a: list[int], b: list[int]) -> list[int]:\n    return [x for x in a if x in b]\n",
+      "split": "test"
+    },
+    "path": "mbpp_intersection/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_rotate_left",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_rotate_left",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int], k: int) -> list[int]:\n    if not items:\n        return []\n    k %= len(items)\n    return items[k:] + items[:k]\n",
+      "split": "test"
+    },
+    "path": "mbpp_rotate_left/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ],
+          1
+        ],
+        "expected": [
+          2,
+          3,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_word_lengths",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_word_lengths",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> dict[str, int]:\n    return {word: len(word) for word in text.split()}\n",
+      "split": "test"
+    },
+    "path": "mbpp_word_lengths/solution.py",
+    "tests": [
+      {
+        "args": [
+          "a bee"
+        ],
+        "expected": {
+          "a": 1,
+          "bee": 3
+        }
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_closest_pair",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_closest_pair",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int], target: int) -> list[int] | None:\n    best = None\n    best_dist = None\n    for i in range(len(items)):\n        for j in range(i + 1, len(items)):\n            dist = abs(items[i] + items[j] - target)\n            if best_dist is None or dist < best_dist:\n                best = [items[i], items[j]]\n                best_dist = dist\n    return best\n",
+      "split": "test"
+    },
+    "path": "mbpp_closest_pair/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            4,
+            7
+          ],
+          8
+        ],
+        "expected": [
+          1,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "mbpp_balanced_brackets",
+    "language": "python",
+    "metadata": {
+      "dataset": "mbpp",
+      "original_id": "mbpp_balanced_brackets",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> bool:\n    depth = 0\n    for ch in text:\n        if ch == '(':\n            depth += 1\n        elif ch == ')':\n            depth -= 1\n            if depth < 0:\n                return False\n    return depth == 0\n",
+      "split": "test"
+    },
+    "path": "mbpp_balanced_brackets/solution.py",
+    "tests": [
+      {
+        "args": [
+          "(())"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "(()"
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "bugsinpy_off_by_one_factorial",
+    "language": "python",
+    "metadata": {
+      "dataset": "bugsinpy",
+      "original_id": "bugsinpy_off_by_one_factorial",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(n: int) -> int:\n    out = 1\n    for i in range(1, n):\n        out *= i\n    return out\n",
+      "split": "test"
+    },
+    "path": "bugsinpy_off_by_one_factorial/solution.py",
+    "tests": [
+      {
+        "args": [
+          4
+        ],
+        "expected": 24
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "bugsinpy_empty_first_char",
+    "language": "python",
+    "metadata": {
+      "dataset": "bugsinpy",
+      "original_id": "bugsinpy_empty_first_char",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> str:\n    return text[0]\n",
+      "split": "test"
+    },
+    "path": "bugsinpy_empty_first_char/solution.py",
+    "tests": [
+      {
+        "args": [
+          ""
+        ],
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "bugsinpy_dedupe_order",
+    "language": "python",
+    "metadata": {
+      "dataset": "bugsinpy",
+      "original_id": "bugsinpy_dedupe_order",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> list[int]:\n    return list(set(items))\n",
+      "split": "test"
+    },
+    "path": "bugsinpy_dedupe_order/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "bugsinpy_middle_empty",
+    "language": "python",
+    "metadata": {
+      "dataset": "bugsinpy",
+      "original_id": "bugsinpy_middle_empty",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> int:\n    return items[len(items) // 2]\n",
+      "split": "test"
+    },
+    "path": "bugsinpy_middle_empty/solution.py",
+    "tests": [
+      {
+        "args": [
+          []
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "bugsinpy_negative_clamp",
+    "language": "python",
+    "metadata": {
+      "dataset": "bugsinpy",
+      "original_id": "bugsinpy_negative_clamp",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> int:\n    return 10 if x > 10 else x\n",
+      "split": "test"
+    },
+    "path": "bugsinpy_negative_clamp/solution.py",
+    "tests": [
+      {
+        "args": [
+          -3
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "bugsinpy_rounding_division",
+    "language": "python",
+    "metadata": {
+      "dataset": "bugsinpy",
+      "original_id": "bugsinpy_rounding_division",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(a: int, b: int) -> int:\n    return a / b\n",
+      "split": "test"
+    },
+    "path": "bugsinpy_rounding_division/solution.py",
+    "tests": [
+      {
+        "args": [
+          5,
+          2
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "bugsinpy_case_sensitive_count",
+    "language": "python",
+    "metadata": {
+      "dataset": "bugsinpy",
+      "original_id": "bugsinpy_case_sensitive_count",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> int:\n    return text.count('a')\n",
+      "split": "test"
+    },
+    "path": "bugsinpy_case_sensitive_count/solution.py",
+    "tests": [
+      {
+        "args": [
+          "Aardvark"
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "bugsinpy_sorted_desc",
+    "language": "python",
+    "metadata": {
+      "dataset": "bugsinpy",
+      "original_id": "bugsinpy_sorted_desc",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> list[int]:\n    return sorted(items, reverse=True)\n",
+      "split": "test"
+    },
+    "path": "bugsinpy_sorted_desc/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "bugsinpy_palindrome_spaces",
+    "language": "python",
+    "metadata": {
+      "dataset": "bugsinpy",
+      "original_id": "bugsinpy_palindrome_spaces",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> bool:\n    return text == text[::-1]\n",
+      "split": "test"
+    },
+    "path": "bugsinpy_palindrome_spaces/solution.py",
+    "tests": [
+      {
+        "args": [
+          "nurses run"
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "bugsinpy_zero_is_positive",
+    "language": "python",
+    "metadata": {
+      "dataset": "bugsinpy",
+      "original_id": "bugsinpy_zero_is_positive",
+      "profile": "full_pilot",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> str:\n    return 'positive' if x >= 0 else 'negative'\n",
+      "split": "test"
+    },
+    "path": "bugsinpy_zero_is_positive/solution.py",
+    "tests": [
+      {
+        "args": [
+          0
+        ],
+        "expected": "zero"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_boundary_zero_division",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            0
+          ]
+        },
+        {
+          "args": [
+            1
+          ]
+        },
+        {
+          "args": [
+            -1
+          ]
+        }
+      ],
+      "dataset": "stress",
+      "original_id": "boundary_zero_division",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> int:\n    return 10 // x\n",
+      "split": "test",
+      "stress_category": "boundary"
+    },
+    "path": "stress_boundary_zero_division/solution.py",
+    "tests": [
+      {
+        "args": [
+          2
+        ],
+        "expected": 5
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_boundary_empty_string",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            ""
+          ]
+        },
+        {
+          "args": [
+            "a"
+          ]
+        }
+      ],
+      "dataset": "stress",
+      "original_id": "boundary_empty_string",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> str:\n    return text[0]\n",
+      "split": "test",
+      "stress_category": "boundary"
+    },
+    "path": "stress_boundary_empty_string/solution.py",
+    "tests": [
+      {
+        "args": [
+          "abc"
+        ],
+        "expected": "a"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_boundary_empty_list",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ]
+        }
+      ],
+      "dataset": "stress",
+      "original_id": "boundary_empty_list",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> int:\n    return items[0]\n",
+      "split": "test",
+      "stress_category": "boundary"
+    },
+    "path": "stress_boundary_empty_list/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1
+          ]
+        ],
+        "expected": 1
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_fuzz_large_square",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            0
+          ]
+        },
+        {
+          "args": [
+            1
+          ]
+        },
+        {
+          "args": [
+            -1
+          ]
+        }
+      ],
+      "dataset": "stress",
+      "fuzz_cases": [
+        {
+          "args": [
+            20
+          ],
+          "expected": 400
+        },
+        {
+          "args": [
+            -21
+          ],
+          "expected": 441
+        }
+      ],
+      "original_id": "fuzz_large_square",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> int:\n    return x * x if abs(x) < 20 else -1\n",
+      "split": "test",
+      "stress_category": "fuzz"
+    },
+    "path": "stress_fuzz_large_square/solution.py",
+    "tests": [
+      {
+        "args": [
+          3
+        ],
+        "expected": 9
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_fuzz_repeated_items",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ]
+        }
+      ],
+      "dataset": "stress",
+      "fuzz_cases": [
+        {
+          "args": [
+            [
+              1,
+              1,
+              2
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": 3
+        }
+      ],
+      "original_id": "fuzz_repeated_items",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> int:\n    return len(set(items))\n",
+      "split": "test",
+      "stress_category": "fuzz"
+    },
+    "path": "stress_fuzz_repeated_items/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_fuzz_long_string",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            ""
+          ]
+        },
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "dataset": "stress",
+      "fuzz_cases": [
+        {
+          "args": [
+            "abcD"
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            "longlower"
+          ],
+          "expected": true
+        }
+      ],
+      "original_id": "fuzz_long_string",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> bool:\n    return text.islower()\n",
+      "split": "test",
+      "stress_category": "fuzz"
+    },
+    "path": "stress_fuzz_long_string/solution.py",
+    "tests": [
+      {
+        "args": [
+          "abc"
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_assertion_rounding",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            4,
+            2
+          ]
+        },
+        {
+          "args": [
+            5,
+            1
+          ]
+        }
+      ],
+      "dataset": "stress",
+      "llm_assertion_cases": [
+        {
+          "args": [
+            5,
+            2
+          ],
+          "expected": 2
+        }
+      ],
+      "original_id": "assertion_rounding",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(a: int, b: int) -> int:\n    return a / b\n",
+      "split": "test",
+      "stress_category": "llm_assertion"
+    },
+    "path": "stress_assertion_rounding/solution.py",
+    "tests": [
+      {
+        "args": [
+          4,
+          2
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_assertion_casefold",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            "banana"
+          ]
+        },
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "dataset": "stress",
+      "llm_assertion_cases": [
+        {
+          "args": [
+            "Aardvark"
+          ],
+          "expected": 3
+        }
+      ],
+      "original_id": "assertion_casefold",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> int:\n    return text.count('a')\n",
+      "split": "test",
+      "stress_category": "llm_assertion"
+    },
+    "path": "stress_assertion_casefold/solution.py",
+    "tests": [
+      {
+        "args": [
+          "banana"
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_counterexample_factorial",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            0
+          ]
+        },
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "counterexample_cases": [
+        {
+          "args": [
+            4
+          ],
+          "expected": 24
+        }
+      ],
+      "dataset": "stress",
+      "original_id": "counterexample_factorial",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(n: int) -> int:\n    out = 1\n    for i in range(1, n):\n        out *= i\n    return out\n",
+      "split": "test",
+      "stress_category": "counterexample"
+    },
+    "path": "stress_counterexample_factorial/solution.py",
+    "tests": [
+      {
+        "args": [
+          2
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_counterexample_clamp",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            0
+          ]
+        },
+        {
+          "args": [
+            5
+          ]
+        }
+      ],
+      "counterexample_cases": [
+        {
+          "args": [
+            -5
+          ],
+          "expected": 0
+        }
+      ],
+      "dataset": "stress",
+      "original_id": "counterexample_clamp",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> int:\n    return x if x <= 10 else 10\n",
+      "split": "test",
+      "stress_category": "counterexample"
+    },
+    "path": "stress_counterexample_clamp/solution.py",
+    "tests": [
+      {
+        "args": [
+          -5
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_clean_sum",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ]
+        }
+      ],
+      "dataset": "stress",
+      "fuzz_cases": [
+        {
+          "args": [
+            [
+              1,
+              -1,
+              2
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              5,
+              5
+            ]
+          ],
+          "expected": 10
+        }
+      ],
+      "original_id": "clean_sum",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> int:\n    return sum(items)\n",
+      "split": "test",
+      "stress_category": "clean"
+    },
+    "path": "stress_clean_sum/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "stress_clean_palindrome",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            ""
+          ]
+        },
+        {
+          "args": [
+            "a"
+          ]
+        }
+      ],
+      "dataset": "stress",
+      "fuzz_cases": [
+        {
+          "args": [
+            "abba"
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            "abca"
+          ],
+          "expected": false
+        }
+      ],
+      "original_id": "clean_palindrome",
+      "profile": "stress",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> bool:\n    return text == text[::-1]\n",
+      "split": "test",
+      "stress_category": "clean"
+    },
+    "path": "stress_clean_palindrome/solution.py",
+    "tests": [
+      {
+        "args": [
+          "aba"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "abc"
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_boundary_mod_zero",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            0
+          ]
+        },
+        {
+          "args": [
+            1
+          ]
+        },
+        {
+          "args": [
+            -1
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "original_id": "boundary_mod_zero",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> int:\n    return 100 % x\n",
+      "split": "test",
+      "stress_category": "boundary"
+    },
+    "path": "action_balanced_boundary_mod_zero/solution.py",
+    "tests": [
+      {
+        "args": [
+          4
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_boundary_first_word",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            ""
+          ]
+        },
+        {
+          "args": [
+            "hello"
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "original_id": "boundary_first_word",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> str:\n    return text.split()[0]\n",
+      "split": "test",
+      "stress_category": "boundary"
+    },
+    "path": "action_balanced_boundary_first_word/solution.py",
+    "tests": [
+      {
+        "args": [
+          "hello world"
+        ],
+        "expected": "hello"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_fuzz_overflow_len",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 4
+        }
+      ],
+      "original_id": "fuzz_overflow_len",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> int:\n    return len(items) if len(items) < 3 else -1\n",
+      "split": "test",
+      "stress_category": "fuzz"
+    },
+    "path": "action_balanced_fuzz_overflow_len/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_fuzz_threshold_total",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            [
+              4,
+              4,
+              4
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            [
+              10
+            ]
+          ],
+          "expected": true
+        }
+      ],
+      "original_id": "fuzz_threshold_total",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> bool:\n    return sum(items) < 10\n",
+      "split": "test",
+      "stress_category": "fuzz"
+    },
+    "path": "action_balanced_fuzz_threshold_total/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_llm_assert_sorted_abs",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "llm_assertion_cases": [
+        {
+          "args": [
+            [
+              -3,
+              2,
+              -1
+            ]
+          ],
+          "expected": [
+            -1,
+            2,
+            -3
+          ]
+        }
+      ],
+      "original_id": "llm_assert_sorted_abs",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int]) -> list[int]:\n    return sorted(items)\n",
+      "split": "test",
+      "stress_category": "llm_assertion"
+    },
+    "path": "action_balanced_llm_assert_sorted_abs/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_llm_assert_strip_case",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            "abc"
+          ]
+        },
+        {
+          "args": [
+            ""
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "llm_assertion_cases": [
+        {
+          "args": [
+            "  AbC  "
+          ],
+          "expected": "AbC"
+        }
+      ],
+      "original_id": "llm_assert_strip_case",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> str:\n    return text.strip().lower()\n",
+      "split": "test",
+      "stress_category": "llm_assertion"
+    },
+    "path": "action_balanced_llm_assert_strip_case/solution.py",
+    "tests": [
+      {
+        "args": [
+          " abc "
+        ],
+        "expected": "abc"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_counterexample_gcd_zero",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            6,
+            3
+          ]
+        },
+        {
+          "args": [
+            4,
+            2
+          ]
+        }
+      ],
+      "counterexample_cases": [
+        {
+          "args": [
+            -6,
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            0,
+            0
+          ],
+          "expected": 0
+        }
+      ],
+      "dataset": "action_balanced",
+      "original_id": "counterexample_gcd_zero",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(a: int, b: int) -> int:\n    while b:\n        a, b = b, a % b\n    return a\n",
+      "split": "test",
+      "stress_category": "counterexample"
+    },
+    "path": "action_balanced_counterexample_gcd_zero/solution.py",
+    "tests": [
+      {
+        "args": [
+          6,
+          3
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_counterexample_rotate_empty",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            [
+              1,
+              2
+            ],
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              0
+            ],
+            0
+          ]
+        }
+      ],
+      "counterexample_cases": [
+        {
+          "args": [
+            [],
+            3
+          ],
+          "expected": []
+        }
+      ],
+      "dataset": "action_balanced",
+      "original_id": "counterexample_rotate_empty",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[int], k: int) -> list[int]:\n    k %= len(items)\n    return items[k:] + items[:k]\n",
+      "split": "test",
+      "stress_category": "counterexample"
+    },
+    "path": "action_balanced_counterexample_rotate_empty/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ],
+          1
+        ],
+        "expected": [
+          2,
+          3,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_clean_clamp",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            -1
+          ]
+        },
+        {
+          "args": [
+            0
+          ]
+        },
+        {
+          "args": [
+            11
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            100
+          ],
+          "expected": 10
+        }
+      ],
+      "original_id": "clean_clamp",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> int:\n    return 0 if x < 0 else (10 if x > 10 else x)\n",
+      "split": "test",
+      "stress_category": "clean"
+    },
+    "path": "action_balanced_clean_clamp/solution.py",
+    "tests": [
+      {
+        "args": [
+          -2
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          12
+        ],
+        "expected": 10
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_clean_join",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            []
+          ]
+        },
+        {
+          "args": [
+            [
+              "a"
+            ]
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            [
+              "a",
+              "b",
+              "c"
+            ]
+          ],
+          "expected": "a,b,c"
+        }
+      ],
+      "original_id": "clean_join",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(items: list[str]) -> str:\n    return ','.join(items)\n",
+      "split": "test",
+      "stress_category": "clean"
+    },
+    "path": "action_balanced_clean_join/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            "a",
+            "b"
+          ]
+        ],
+        "expected": "a,b"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_stop_noop_identity",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            0
+          ]
+        },
+        {
+          "args": [
+            1
+          ]
+        },
+        {
+          "args": [
+            -1
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            -5
+          ],
+          "expected": -5
+        }
+      ],
+      "original_id": "stop_noop_identity",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(x: int) -> int:\n    return x\n",
+      "split": "test",
+      "stress_category": "stop"
+    },
+    "path": "action_balanced_stop_noop_identity/solution.py",
+    "tests": [
+      {
+        "args": [
+          3
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "action_balanced_stop_noop_reverse",
+    "language": "python",
+    "metadata": {
+      "boundary_cases": [
+        {
+          "args": [
+            ""
+          ]
+        },
+        {
+          "args": [
+            "a"
+          ]
+        }
+      ],
+      "dataset": "action_balanced",
+      "fuzz_cases": [
+        {
+          "args": [
+            "abcd"
+          ],
+          "expected": "dcba"
+        },
+        {
+          "args": [
+            "race"
+          ],
+          "expected": "ecar"
+        }
+      ],
+      "original_id": "stop_noop_reverse",
+      "profile": "action_balanced",
+      "source": "embedded_pilot_catalog",
+      "source_code": "def solve(text: str) -> str:\n    return text[::-1]\n",
+      "split": "test",
+      "stress_category": "stop"
+    },
+    "path": "action_balanced_stop_noop_reverse/solution.py",
+    "tests": [
+      {
+        "args": [
+          "abc"
+        ],
+        "expected": "cba"
+      }
+    ]
+  }
+]

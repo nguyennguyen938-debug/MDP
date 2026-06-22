@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sort_counter",
+  "id": "mbpp_real_475",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sort_counter = candidate\n    assert sort_counter({'Math':81, 'Physics':83, 'Chemistry':87})==[('Chemistry', 87), ('Physics', 83), ('Math', 81)]\n    assert sort_counter({'Math':400, 'Physics':300, 'Chemistry':250})==[('Math', 400), ('Physics', 300), ('Chemistry', 250)]\n    assert sort_counter({'Math':900, 'Physics':1000, 'Chemistry':1250})==[('Chemistry', 1250), ('Physics', 1000), ('Math', 900)]\n",
+    "oracle_type": "callable_check",
+    "original_id": 475,
+    "profile": "real_python",
+    "prompt": "Write a function to sort a dictionary by value.",
+    "source": "google_research_mbpp",
+    "source_code": "from collections import Counter\ndef sort_counter(dict1):\n x = Counter(dict1)\n sort_counter=x.most_common()\n return sort_counter",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_475/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

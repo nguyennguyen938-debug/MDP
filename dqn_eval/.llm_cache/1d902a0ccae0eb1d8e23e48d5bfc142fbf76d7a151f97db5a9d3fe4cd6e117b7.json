@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 102,
+  "key": "1d902a0ccae0eb1d8e23e48d5bfc142fbf76d7a151f97db5a9d3fe4cd6e117b7",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_below_zero:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_below_zero.solve`, categorized for clarity:\n\n**Basic Functionality & Edge Cases:**\n\n*   `assert solve(0) == 0`\n*   `assert solve(1) == 0`\n*   `assert solve(2) == 0`\n*   `assert solve(3) == 0`\n*   `assert solve(4) == 0`\n*   `assert solve(5) == 0`\n*   `assert solve(10) == 0`\n*   `assert solve(100) == 0`\n\n**Negative Input Handling:**\n\n*   `assert solve(-1) == -1`\n*   `assert solve(-2) == -2`\n*   `assert solve(-3) == -3`\n*   `assert solve(-4) == -4`\n*   `assert solve(-5) == -5`\n*   `assert solve(-10) == -10`\n*   `assert solve(-100) == -100`\n\n**Mixed Input (Implicitly Covered by Above, but good for emphasis):**"
+}

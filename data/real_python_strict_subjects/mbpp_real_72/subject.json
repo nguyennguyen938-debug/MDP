@@ -1,0 +1,25 @@
+{
+  "entrypoint": "dif_Square",
+  "id": "mbpp_real_72",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    dif_Square = candidate\n    assert dif_Square(5) == True\n    assert dif_Square(10) == False\n    assert dif_Square(15) == True\n",
+    "oracle_type": "callable_check",
+    "original_id": 72,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether the given number can be represented as the difference of two squares or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def dif_Square(n): \n    if (n % 4 != 2): \n        return True\n    return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_72/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

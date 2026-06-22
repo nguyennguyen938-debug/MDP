@@ -1,0 +1,23 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_anagram",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_anagram",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(a: str, b: str) -> bool:\n    return sorted(a.replace(' ', '').lower()) == sorted(b.replace(' ', '').lower())\n",
+    "split": "val"
+  },
+  "path": "mbpp_anagram/solution.py",
+  "tests": [
+    {
+      "args": [
+        "listen",
+        "silent"
+      ],
+      "expected": true
+    }
+  ]
+}

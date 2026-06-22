@@ -1,0 +1,25 @@
+{
+  "entrypoint": "magic_square_test",
+  "id": "mbpp_real_129",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    magic_square_test = candidate\n    assert magic_square_test([[7, 12, 1, 14], [2, 13, 8, 11], [16, 3, 10, 5], [9, 6, 15, 4]])==True\n    assert magic_square_test([[2, 7, 6], [9, 5, 1], [4, 3, 8]])==True\n    assert magic_square_test([[2, 7, 6], [9, 5, 1], [4, 3, 7]])==False\n",
+    "oracle_type": "callable_check",
+    "original_id": 129,
+    "profile": "real_python",
+    "prompt": "Write a function to calculate whether the matrix is a magic square.",
+    "source": "google_research_mbpp",
+    "source_code": "def magic_square_test(my_matrix):\n    iSize = len(my_matrix[0])\n    sum_list = []\n    sum_list.extend([sum (lines) for lines in my_matrix])   \n    for col in range(iSize):\n        sum_list.append(sum(row[col] for row in my_matrix))\n    result1 = 0\n    for i in range(0,iSize):\n        result1 +=my_matrix[i][i]\n    sum_list.append(result1)      \n    result2 = 0\n    for i in range(iSize-1,-1,-1):\n        result2 +=my_matrix[i][i]\n    sum_list.append(result2)\n    if len(set(sum_list))>1:\n        return False\n    return True",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_129/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "entrypoint": "solve",
+  "id": "bugsinpy_sorted_desc",
+  "language": "python",
+  "metadata": {
+    "dataset": "bugsinpy",
+    "original_id": "bugsinpy_sorted_desc",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int]) -> list[int]:\n    return sorted(items, reverse=True)\n",
+    "split": "test"
+  },
+  "path": "bugsinpy_sorted_desc/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          3,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "extract_rear",
+  "id": "mbpp_real_424",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    extract_rear = candidate\n    assert extract_rear(('Mers', 'for', 'Vers') ) == ['s', 'r', 's']\n    assert extract_rear(('Avenge', 'for', 'People') ) == ['e', 'r', 'e']\n    assert extract_rear(('Gotta', 'get', 'go') ) == ['a', 't', 'o']\n",
+    "oracle_type": "callable_check",
+    "original_id": 424,
+    "profile": "real_python",
+    "prompt": "Write a function to extract only the rear index element of each string in the given tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "def extract_rear(test_tuple):\n  res = list(sub[len(sub) - 1] for sub in test_tuple)\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_424/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

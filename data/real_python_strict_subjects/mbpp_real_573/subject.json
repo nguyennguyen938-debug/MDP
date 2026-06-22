@@ -1,0 +1,25 @@
+{
+  "entrypoint": "unique_product",
+  "id": "mbpp_real_573",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    unique_product = candidate\n    assert unique_product([10, 20, 30, 40, 20, 50, 60, 40]) ==  720000000\n    assert unique_product([1, 2, 3, 1,]) == 6\n    assert unique_product([7, 8, 9, 0, 1, 1]) == 0\n",
+    "oracle_type": "callable_check",
+    "original_id": 573,
+    "profile": "real_python",
+    "prompt": "Write a python function to calculate the product of the unique numbers in a given list.",
+    "source": "google_research_mbpp",
+    "source_code": "def unique_product(list_data):\n    temp = list(set(list_data))\n    p = 1\n    for i in temp:\n        p *= i\n    return p",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_573/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

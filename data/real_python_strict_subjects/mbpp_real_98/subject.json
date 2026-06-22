@@ -1,0 +1,25 @@
+{
+  "entrypoint": "multiply_num",
+  "id": "mbpp_real_98",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "import math\n\ndef check(candidate):\n    multiply_num = candidate\n    assert math.isclose(multiply_num((8, 2, 3, -1, 7)), -67.2, rel_tol=0.001)\n    assert math.isclose(multiply_num((-10,-20,-30)), -2000.0, rel_tol=0.001)\n    assert math.isclose(multiply_num((19,15,18)), 1710.0, rel_tol=0.001)\n",
+    "oracle_type": "callable_check",
+    "original_id": 98,
+    "profile": "real_python",
+    "prompt": "Write a function to multiply all the numbers in a list and divide with the length of the list.",
+    "source": "google_research_mbpp",
+    "source_code": "def multiply_num(numbers):  \n    total = 1\n    for x in numbers:\n        total *= x  \n    return total/len(numbers) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_98/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 51,
+  "key": "730a73a12b4eb9f08d552e18620c6b8dbbead611f5dce864749ae09251d03a43",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for stress_assertion_rounding:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `stress_assertion_rounding:solve`, categorized for clarity:\n\n**Core Functionality:**\n\n*   `assert_solve_returns_correct_value`\n*   `assert_solve_handles_positive_numbers`\n*   `assert_solve_handles_negative_numbers`\n*   `assert_solve_handles_zero`\n*   `assert_solve_handles_integers`\n*   `assert_solve_handles_floats`\n\n**Edge Cases & Specific Scenarios:**\n\n*   `assert_solve_handles_large_numbers`\n*   `assert_solve_handles_small_numbers`\n*   `assert_solve_handles_numbers_near_half` (e.g., 0.5, 1.5)\n*   `assert_solve_handles_numbers_exactly_on_half` (if specific rounding rules apply)\n*   `assert_solve_handles_numbers_just_above_half`\n*   `assert_solve_handles_numbers_just_below_half`\n*   `assert_solve_handles_numbers_with_many_decimal_places`\n\n**Error"
+}

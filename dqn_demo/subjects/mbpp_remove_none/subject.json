@@ -1,0 +1,29 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_remove_none",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_remove_none",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[object]) -> list[object]:\n    return [item for item in items if item is not None]\n",
+    "split": "val"
+  },
+  "path": "mbpp_remove_none/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          null,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ]
+}

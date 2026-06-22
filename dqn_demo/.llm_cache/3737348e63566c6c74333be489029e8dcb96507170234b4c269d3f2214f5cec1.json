@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 104,
+  "key": "3737348e63566c6c74333be489029e8dcb96507170234b4c269d3f2214f5cec1",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_separate_paren_groups:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_separate_paren_groups.solve`, categorized for clarity:\n\n**Basic Functionality & Edge Cases:**\n\n*   `assert solve(\"()\") == [\"()\"]`\n*   `assert solve(\"()()\") == [\"()()\"]`\n*   `assert solve(\"(())\") == [\"(())\"]`\n*   `assert solve(\"(()())\") == [\"(()())\"]`\n*   `assert solve(\"()(())\") == [\"()(())\"]`\n*   `assert solve(\"((()))\") == [\"((()))\"]`\n*   `assert solve(\"\") == []`  (Empty input)\n*   `assert solve(\"abc\") == []` (No parentheses)\n*   `assert solve(\"(()\") == []` (Unbalanced - opening)\n*   `assert solve(\"())\") == []` (Unbalanced - closing)\n*   `assert solve(\"()(\") == []` (Unbalanced - trailing opening)\n*   `assert solve(\")()\") == []` (Unbalanced - leading closing)\n\n**Multiple Groups & Nesting:**\n\n*   `assert solve(\"()()()\") == [\"()()()\"]`\n*   `assert solve"
+}

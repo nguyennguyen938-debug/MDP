@@ -1,0 +1,25 @@
+{
+  "entrypoint": "maximum",
+  "id": "mbpp_real_309",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    maximum = candidate\n    assert maximum(5,10) == 10\n    assert maximum(-1,-2) == -1\n    assert maximum(9,7) == 9\n",
+    "oracle_type": "callable_check",
+    "original_id": 309,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the maximum of two numbers.",
+    "source": "google_research_mbpp",
+    "source_code": "def maximum(a,b):   \n    if a >= b: \n        return a \n    else: \n        return b ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_309/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

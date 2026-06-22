@@ -1,0 +1,25 @@
+{
+  "entrypoint": "centered_hexagonal_number",
+  "id": "mbpp_real_86",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    centered_hexagonal_number = candidate\n    assert centered_hexagonal_number(10) == 271\n    assert centered_hexagonal_number(2) == 7\n    assert centered_hexagonal_number(9) == 217\n",
+    "oracle_type": "callable_check",
+    "original_id": 86,
+    "profile": "real_python",
+    "prompt": "Write a function to find nth centered hexagonal number.",
+    "source": "google_research_mbpp",
+    "source_code": "def centered_hexagonal_number(n):\n  return 3 * n * (n - 1) + 1",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_86/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

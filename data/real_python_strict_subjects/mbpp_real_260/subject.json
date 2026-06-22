@@ -1,0 +1,25 @@
+{
+  "entrypoint": "newman_prime",
+  "id": "mbpp_real_260",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    newman_prime = candidate\n    assert newman_prime(3) == 7\n    assert newman_prime(4) == 17\n    assert newman_prime(5) == 41\n",
+    "oracle_type": "callable_check",
+    "original_id": 260,
+    "profile": "real_python",
+    "prompt": "Write a function to find the nth newman\u2013shanks\u2013williams prime number.",
+    "source": "google_research_mbpp",
+    "source_code": "def newman_prime(n): \n\tif n == 0 or n == 1: \n\t\treturn 1\n\treturn 2 * newman_prime(n - 1) + newman_prime(n - 2)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_260/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

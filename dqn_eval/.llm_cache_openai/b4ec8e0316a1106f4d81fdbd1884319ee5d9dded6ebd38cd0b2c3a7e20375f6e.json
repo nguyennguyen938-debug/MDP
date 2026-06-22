@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 98,
+  "key": "b4ec8e0316a1106f4d81fdbd1884319ee5d9dded6ebd38cd0b2c3a7e20375f6e",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_sort_numbers:solve.",
+  "prompt_tokens": 5,
+  "provider": "openai",
+  "text": "Here are some concise assertions for the `humaneval_sort_numbers:solve` function:\n\n1. **Basic Functionality**: \n   - `assert solve([3, 1, 2]) == [1, 2, 3]`\n   - `assert solve([-1, 0, 1]) == [-1, 0, 1]`\n\n2. **Handling Duplicates**: \n   - `assert solve([2, 2, 1]) == [1, 2, 2]`\n   - `assert solve([5, 5, 5]) == [5, 5, 5]`\n\n3. **Empty and Single Element Lists**: \n   - `assert solve([]) == []`\n   - `assert solve([42]) == [42]`\n\n4. **Negative Numbers**: \n   - `assert solve([-3, -1, -2]) == [-3, -2, -1]`\n   - `assert solve([-5, 0, 5]) == [-5, 0, 5]`\n\n5. **Large Numbers**: \n   - `assert solve([1000, 500, 100]) == [100,"
+}

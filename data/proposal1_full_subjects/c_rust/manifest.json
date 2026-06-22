@@ -1,0 +1,111 @@
+{
+  "subjects": [
+    {
+      "entrypoint": "solve",
+      "id": "c_real_curated_abs_int",
+      "metadata": {
+        "dataset": "c_real_curated",
+        "original_id": "abs_int",
+        "profile": "secondary_pilot"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            3
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust/abs_int/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_real_curated_clamp_zero",
+      "metadata": {
+        "dataset": "c_real_curated",
+        "original_id": "clamp_zero",
+        "profile": "secondary_pilot"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -1
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust/clamp_zero/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_real_curated_safe_div",
+      "metadata": {
+        "dataset": "c_real_curated",
+        "original_id": "safe_div",
+        "profile": "secondary_pilot"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            4,
+            2
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust/safe_div/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_real_curated_max2",
+      "metadata": {
+        "dataset": "c_real_curated",
+        "original_id": "max2",
+        "profile": "secondary_pilot"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            2
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust/max2/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_real_curated_is_even",
+      "metadata": {
+        "dataset": "c_real_curated",
+        "original_id": "is_even",
+        "profile": "secondary_pilot"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            2
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust/is_even/source.c",
+      "target_language": "rust",
+      "target_path": null
+    }
+  ]
+}

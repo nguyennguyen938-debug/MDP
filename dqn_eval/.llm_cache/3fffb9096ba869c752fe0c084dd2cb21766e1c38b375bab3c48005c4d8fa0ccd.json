@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 106,
+  "key": "3fffb9096ba869c752fe0c084dd2cb21766e1c38b375bab3c48005c4d8fa0ccd",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for action_balanced_boundary_mod_zero:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `action_balanced_boundary_mod_zero:solve`, categorized for clarity:\n\n**Core Functionality & Correctness:**\n\n*   `assert solve(0, 0) == 0`  (Base case: zero interval, zero modulus)\n*   `assert solve(1, 0) == 0`  (Zero modulus always results in 0)\n*   `assert solve(0, 5) == 0`  (Zero interval always results in 0)\n*   `assert solve(10, 5) == 0` (Interval divisible by modulus)\n*   `assert solve(12, 5) == 2` (Interval not divisible by modulus)\n*   `assert solve(7, 3) == 1`  (Another non-divisible case)\n*   `assert solve(100, 10) == 0` (Larger divisible case)\n*   `assert solve(101, 10) == 1` (Larger non-divisible case)\n\n**Edge Cases & Constraints:**\n\n*   `assert solve(0, 1) == "
+}

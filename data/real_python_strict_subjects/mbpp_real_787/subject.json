@@ -1,0 +1,25 @@
+{
+  "entrypoint": "text_match_three",
+  "id": "mbpp_real_787",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    text_match_three = candidate\n    assert not text_match_three(\"ac\")\n    assert not text_match_three(\"dc\")\n    assert text_match_three(\"abbbba\")\n    assert text_match_three(\"caacabbbba\")\n",
+    "oracle_type": "callable_check",
+    "original_id": 787,
+    "profile": "real_python",
+    "prompt": "Write a function that matches a string that has an a followed by three 'b'.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef text_match_three(text):\n        patterns = 'ab{3}?'\n        return re.search(patterns,  text)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_787/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

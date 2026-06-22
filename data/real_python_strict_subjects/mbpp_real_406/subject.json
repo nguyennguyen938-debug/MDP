@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_Parity",
+  "id": "mbpp_real_406",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_Parity = candidate\n    assert find_Parity(12) == False\n    assert find_Parity(7) == True\n    assert find_Parity(10) == False\n",
+    "oracle_type": "callable_check",
+    "original_id": 406,
+    "profile": "real_python",
+    "prompt": "Write a python function to find whether the parity of a given number is odd.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_Parity(x): \n    y = x ^ (x >> 1); \n    y = y ^ (y >> 2); \n    y = y ^ (y >> 4); \n    y = y ^ (y >> 8); \n    y = y ^ (y >> 16); \n    if (y & 1): \n        return True\n    return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_406/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

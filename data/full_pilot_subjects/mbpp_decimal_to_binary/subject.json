@@ -1,0 +1,21 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_decimal_to_binary",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_decimal_to_binary",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(n: int) -> str:\n    return bin(n)[2:]\n",
+    "split": "test"
+  },
+  "path": "mbpp_decimal_to_binary/solution.py",
+  "tests": [
+    {
+      "args": [
+        10
+      ],
+      "expected": "1010"
+    }
+  ]
+}

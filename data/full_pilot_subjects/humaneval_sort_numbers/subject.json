@@ -1,0 +1,21 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_sort_numbers",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "sort_numbers",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(numbers: str) -> str:\n    order = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}\n    return ' '.join(sorted(numbers.split(), key=order.get))\n",
+    "split": "test"
+  },
+  "path": "humaneval_sort_numbers/solution.py",
+  "tests": [
+    {
+      "args": [
+        "three one two"
+      ],
+      "expected": "one two three"
+    }
+  ]
+}

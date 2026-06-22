@@ -1,0 +1,25 @@
+{
+  "entrypoint": "text_starta_endb",
+  "id": "mbpp_real_794",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    text_starta_endb = candidate\n    assert text_starta_endb(\"aabbbb\")\n    assert not text_starta_endb(\"aabAbbbc\")\n    assert not text_starta_endb(\"accddbbjjj\")\n",
+    "oracle_type": "callable_check",
+    "original_id": 794,
+    "profile": "real_python",
+    "prompt": "Write a function that matches a string that has an 'a' followed by anything, ending in 'b'.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef text_starta_endb(text):\n        patterns = 'a.*?b$'\n        return re.search(patterns,  text)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_794/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

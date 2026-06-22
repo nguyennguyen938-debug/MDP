@@ -1,0 +1,25 @@
+{
+  "entrypoint": "remove_nested",
+  "id": "mbpp_real_791",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    remove_nested = candidate\n    assert remove_nested((1, 5, 7, (4, 6), 10)) == (1, 5, 7, 10)\n    assert remove_nested((2, 6, 8, (5, 7), 11)) == (2, 6, 8, 11)\n    assert remove_nested((3, 7, 9, (6, 8), 12)) == (3, 7, 9, 12)\n    assert remove_nested((3, 7, 9, (6, 8), (5,12), 12)) == (3, 7, 9, 12)\n",
+    "oracle_type": "callable_check",
+    "original_id": 791,
+    "profile": "real_python",
+    "prompt": "Write a function to remove tuples from the given tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "def remove_nested(test_tup):\n  res = tuple()\n  for count, ele in enumerate(test_tup):\n    if not isinstance(ele, tuple):\n      res = res + (ele, )\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_791/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

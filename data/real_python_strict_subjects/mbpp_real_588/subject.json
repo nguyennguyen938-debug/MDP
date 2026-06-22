@@ -1,0 +1,25 @@
+{
+  "entrypoint": "big_diff",
+  "id": "mbpp_real_588",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    big_diff = candidate\n    assert big_diff([1,2,3,4]) == 3\n    assert big_diff([4,5,12]) == 8\n    assert big_diff([9,2,3]) == 7\n",
+    "oracle_type": "callable_check",
+    "original_id": 588,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the difference between largest and smallest value in a given list.",
+    "source": "google_research_mbpp",
+    "source_code": "def big_diff(nums):\n     diff= max(nums)-min(nums)\n     return diff",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_588/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_has_close_elements",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "has_close_elements",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(numbers: list[float], threshold: float) -> bool:\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False\n",
+    "split": "train"
+  },
+  "path": "humaneval_has_close_elements/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1.0,
+          2.0,
+          3.0
+        ],
+        0.5
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [
+          1.0,
+          1.2,
+          3.0
+        ],
+        0.3
+      ],
+      "expected": true
+    }
+  ]
+}

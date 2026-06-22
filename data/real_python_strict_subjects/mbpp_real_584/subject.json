@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_adverbs",
+  "id": "mbpp_real_584",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_adverbs = candidate\n    assert find_adverbs(\"Clearly, he has no excuse for such behavior.\") == '0-7: Clearly'\n    assert find_adverbs(\"Please handle the situation carefuly\") == '28-36: carefuly'\n    assert find_adverbs(\"Complete the task quickly\") == '18-25: quickly'\n",
+    "oracle_type": "callable_check",
+    "original_id": 584,
+    "profile": "real_python",
+    "prompt": "Write a function to find the first adverb ending with ly and its positions in a given string.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef find_adverbs(text):\n  for m in re.finditer(r\"\\w+ly\", text):\n    return ('%d-%d: %s' % (m.start(), m.end(), m.group(0)))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_584/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

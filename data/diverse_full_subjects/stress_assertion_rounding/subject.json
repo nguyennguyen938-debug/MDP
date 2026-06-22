@@ -1,0 +1,47 @@
+{
+  "entrypoint": "solve",
+  "id": "stress_assertion_rounding",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          4,
+          2
+        ]
+      },
+      {
+        "args": [
+          5,
+          1
+        ]
+      }
+    ],
+    "dataset": "stress",
+    "llm_assertion_cases": [
+      {
+        "args": [
+          5,
+          2
+        ],
+        "expected": 2
+      }
+    ],
+    "original_id": "assertion_rounding",
+    "profile": "stress",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(a: int, b: int) -> int:\n    return a / b\n",
+    "split": "test",
+    "stress_category": "llm_assertion"
+  },
+  "path": "stress_assertion_rounding/solution.py",
+  "tests": [
+    {
+      "args": [
+        4,
+        2
+      ],
+      "expected": 2
+    }
+  ]
+}

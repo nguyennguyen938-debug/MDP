@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_lucas",
+  "id": "mbpp_real_389",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_lucas = candidate\n    assert find_lucas(9) == 76\n    assert find_lucas(4) == 7\n    assert find_lucas(3) == 4\n",
+    "oracle_type": "callable_check",
+    "original_id": 389,
+    "profile": "real_python",
+    "prompt": "Write a function to find the n'th lucas number.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_lucas(n): \n\tif (n == 0): \n\t\treturn 2\n\tif (n == 1): \n\t\treturn 1\n\treturn find_lucas(n - 1) + find_lucas(n - 2) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_389/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

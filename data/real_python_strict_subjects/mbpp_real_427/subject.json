@@ -1,0 +1,25 @@
+{
+  "entrypoint": "change_date_format",
+  "id": "mbpp_real_427",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    change_date_format = candidate\n    assert change_date_format(\"2026-01-02\") == '02-01-2026'\n    assert change_date_format(\"2020-11-13\") == '13-11-2020'\n    assert change_date_format(\"2021-04-26\") == '26-04-2021'\n",
+    "oracle_type": "callable_check",
+    "original_id": 427,
+    "profile": "real_python",
+    "prompt": "Write a function to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef change_date_format(dt):\n        return re.sub(r'(\\d{4})-(\\d{1,2})-(\\d{1,2})', '\\\\3-\\\\2-\\\\1', dt)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_427/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

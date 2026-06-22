@@ -1,0 +1,39 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_intersperse",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "intersperse",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(numbers: list[int], delimiter: int) -> list[int]:\n    out = []\n    for idx, number in enumerate(numbers):\n        if idx:\n            out.append(delimiter)\n        out.append(number)\n    return out\n",
+    "split": "train"
+  },
+  "path": "humaneval_intersperse/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          3
+        ],
+        0
+      ],
+      "expected": [
+        1,
+        0,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "args": [
+        [],
+        9
+      ],
+      "expected": []
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "test_duplicate",
+  "id": "mbpp_real_19",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    test_duplicate = candidate\n    assert test_duplicate(([1,2,3,4,5]))==False\n    assert test_duplicate(([1,2,3,4, 4]))==True\n    assert test_duplicate([1,1,2,2,3,3,4,4,5])==True\n",
+    "oracle_type": "callable_check",
+    "original_id": 19,
+    "profile": "real_python",
+    "prompt": "Write a function to find whether a given array of integers contains any duplicate element.",
+    "source": "google_research_mbpp",
+    "source_code": "def test_duplicate(arraynums):\n    nums_set = set(arraynums)    \n    return len(arraynums) != len(nums_set)     ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_19/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

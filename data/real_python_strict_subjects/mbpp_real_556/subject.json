@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_Odd_Pair",
+  "id": "mbpp_real_556",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_Odd_Pair = candidate\n    assert find_Odd_Pair([5,4,7,2,1],5) == 6\n    assert find_Odd_Pair([7,2,8,1,0,5,11],7) == 12\n    assert find_Odd_Pair([1,2,3],3) == 2\n",
+    "oracle_type": "callable_check",
+    "original_id": 556,
+    "profile": "real_python",
+    "prompt": "Write a python function to count the number of pairs whose xor value is odd.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_Odd_Pair(A,N) : \n    oddPair = 0\n    for i in range(0,N) :  \n        for j in range(i+1,N) :  \n            if ((A[i] ^ A[j]) % 2 != 0):  \n                oddPair+=1  \n    return oddPair  ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_556/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "entrypoint": "solve",
+  "id": "bugsinpy_negative_clamp",
+  "language": "python",
+  "metadata": {
+    "dataset": "bugsinpy",
+    "original_id": "bugsinpy_negative_clamp",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(x: int) -> int:\n    return 10 if x > 10 else x\n",
+    "split": "test"
+  },
+  "path": "bugsinpy_negative_clamp/solution.py",
+  "tests": [
+    {
+      "args": [
+        -3
+      ],
+      "expected": 0
+    }
+  ]
+}

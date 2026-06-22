@@ -1,0 +1,25 @@
+{
+  "entrypoint": "convert",
+  "id": "mbpp_real_252",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    convert = candidate\n    assert convert(1) == (1.0, 0.0)\n    assert convert(4) == (4.0,0.0)\n    assert convert(5) == (5.0,0.0)\n",
+    "oracle_type": "callable_check",
+    "original_id": 252,
+    "profile": "real_python",
+    "prompt": "Write a python function to convert complex numbers to polar coordinates.",
+    "source": "google_research_mbpp",
+    "source_code": "import cmath  \ndef convert(numbers):    \n  num = cmath.polar(numbers)  \n  return (num) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_252/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

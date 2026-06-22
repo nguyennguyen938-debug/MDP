@@ -1,0 +1,27 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_is_prime",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_is_prime",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(n: int) -> bool:\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n",
+    "split": "train"
+  },
+  "path": "mbpp_is_prime/solution.py",
+  "tests": [
+    {
+      "args": [
+        2
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        9
+      ],
+      "expected": false
+    }
+  ]
+}

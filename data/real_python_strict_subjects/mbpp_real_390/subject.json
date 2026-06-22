@@ -1,0 +1,25 @@
+{
+  "entrypoint": "add_string",
+  "id": "mbpp_real_390",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    add_string = candidate\n    assert add_string([1,2,3,4],'temp{0}')==['temp1', 'temp2', 'temp3', 'temp4']\n    assert add_string(['a','b','c','d'], 'python{0}')==[ 'pythona', 'pythonb', 'pythonc', 'pythond']\n    assert add_string([5,6,7,8],'string{0}')==['string5', 'string6', 'string7', 'string8']\n",
+    "oracle_type": "callable_check",
+    "original_id": 390,
+    "profile": "real_python",
+    "prompt": "Write a function to apply a given format string to all of the elements in a list.",
+    "source": "google_research_mbpp",
+    "source_code": "def add_string(list_, string):\n add_string=[string.format(i) for i in  list_]\n return add_string",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_390/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

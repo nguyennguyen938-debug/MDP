@@ -1,0 +1,25 @@
+{
+  "entrypoint": "word_len",
+  "id": "mbpp_real_79",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    word_len = candidate\n    assert word_len(\"Hadoop\") == False\n    assert word_len(\"great\") == True\n    assert word_len(\"structure\") == True\n",
+    "oracle_type": "callable_check",
+    "original_id": 79,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether the length of the word is odd or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def word_len(s): \n    s = s.split(' ')   \n    for word in s:    \n        if len(word)%2!=0: \n            return True  \n        else:\n          return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_79/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

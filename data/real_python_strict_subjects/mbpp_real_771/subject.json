@@ -1,0 +1,25 @@
+{
+  "entrypoint": "check_expression",
+  "id": "mbpp_real_771",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    check_expression = candidate\n    assert check_expression(\"{()}[{}]\") == True\n    assert check_expression(\"{()}[{]\") == False\n    assert check_expression(\"{()}[{}][]({})\") == True\n",
+    "oracle_type": "callable_check",
+    "original_id": 771,
+    "profile": "real_python",
+    "prompt": "Write a function to check if the given expression is balanced or not. https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/",
+    "source": "google_research_mbpp",
+    "source_code": "from collections import deque\ndef check_expression(exp):\n    if len(exp) & 1:\n        return False\n    stack = deque()\n    for ch in exp:\n        if ch == '(' or ch == '{' or ch == '[':\n            stack.append(ch)\n        if ch == ')' or ch == '}' or ch == ']':\n            if not stack:\n                return False\n            top = stack.pop()\n            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):\n                return False\n    return not stack",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_771/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

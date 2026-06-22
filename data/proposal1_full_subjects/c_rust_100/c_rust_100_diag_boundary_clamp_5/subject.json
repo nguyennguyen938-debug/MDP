@@ -1,0 +1,28 @@
+{
+  "entrypoint": "solve",
+  "id": "c_rust_100_diag_boundary_clamp_5",
+  "metadata": {
+    "dataset": "c_rust_100",
+    "license": "generated",
+    "original_id": "diag_boundary_clamp_5",
+    "profile": "diagnostic",
+    "signature": {
+      "params": [
+        "int"
+      ],
+      "return": "int"
+    }
+  },
+  "oracle_policy": "differential",
+  "seed_tests": [
+    {
+      "args": [
+        -1
+      ]
+    }
+  ],
+  "source_language": "c",
+  "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_diag_boundary_clamp_5/source.c",
+  "target_language": "rust",
+  "target_path": null
+}

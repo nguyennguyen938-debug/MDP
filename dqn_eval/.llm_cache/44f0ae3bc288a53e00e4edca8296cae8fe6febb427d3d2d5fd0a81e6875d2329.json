@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 117,
+  "key": "44f0ae3bc288a53e00e4edca8296cae8fe6febb427d3d2d5fd0a81e6875d2329",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for bugsinpy_off_by_one_factorial:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `bugsinpy_off_by_one_factorial:solve`, focusing on common off-by-one errors in factorial calculations:\n\n**General Correctness:**\n\n*   `assert solve(0) == 1`\n*   `assert solve(1) == 1`\n*   `assert solve(5) == 120`\n*   `assert solve(10) == 3628800`\n\n**Edge Cases/Boundary Conditions:**\n\n*   `assert solve(-1) == 1` (Assuming the bug handles negative input by returning 1, which is a common way to \"fix\" it or a symptom of an off-by-one in loop termination).\n*   `assert solve(2) == 2` (A simple case that can expose off-by-one errors in loop ranges).\n\n**Specific Off-by-One Scenarios (if you suspect particular types of bugs):**\n\n*   `assert solve(3) == 6` (If the loop is `range(n)` instead of `range(1, n+1)` or similar).\n*   `assert solve(4) == 2"
+}

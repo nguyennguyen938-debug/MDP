@@ -1,0 +1,11 @@
+{
+  "by_category": {
+    "A_integer": 11,
+    "C_error": 10,
+    "D_strings": 9
+  },
+  "dataset": "c_rust_v2",
+  "imported": 30,
+  "skipped": [],
+  "source_note": "Authored 2026-05-16 / extended 2026-05-17 for the v2 evaluation. Each subject is chosen so the idiomatic LLM Rust translation either (a) panics where the C function returns a value (UB-triggering A and sentinel-error C), (b) drops a width / signedness annotation and diverges on the test input (defined-defined A), or (c) operates on Unicode codepoints where C operates on bytes (D)."
+}

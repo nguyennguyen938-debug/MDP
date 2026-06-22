@@ -1,0 +1,25 @@
+{
+  "entrypoint": "move_zero",
+  "id": "mbpp_real_632",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    move_zero = candidate\n    assert move_zero([1,0,2,0,3,4]) == [1,2,3,4,0,0]\n    assert move_zero([2,3,2,0,0,4,0,5,0]) == [2,3,2,4,5,0,0,0,0]\n    assert move_zero([0,1,0,1,1]) == [1,1,1,0,0]\n",
+    "oracle_type": "callable_check",
+    "original_id": 632,
+    "profile": "real_python",
+    "prompt": "Write a python function to move all zeroes to the end of the given list.",
+    "source": "google_research_mbpp",
+    "source_code": "def move_zero(num_list):\n    a = [0 for i in range(num_list.count(0))]\n    x = [i for i in num_list if i != 0]\n    return x + a",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_632/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

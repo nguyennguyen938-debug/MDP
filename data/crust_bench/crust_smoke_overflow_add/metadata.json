@@ -1,0 +1,50 @@
+{
+  "dataset": "crust_bench",
+  "dataset_version": "smoke-2026-05-16",
+  "entrypoint": "overflow_add",
+  "extra": {},
+  "extra_source_files": [],
+  "extra_target_files": [],
+  "harness_version": 2,
+  "id": "crust_smoke_overflow_add",
+  "language_dialect": "c11",
+  "oracle_policy": {
+    "exception_class_equivalence": [],
+    "ignore_trailing_whitespace": true,
+    "nan_equals_nan": true,
+    "numeric_tolerance": 0.0,
+    "string_case_insensitive": false,
+    "unordered_collections": []
+  },
+  "parameter_types": {
+    "a": "i32",
+    "b": "i32"
+  },
+  "return_type": "i32",
+  "schema_version": 2,
+  "seed_tests": [
+    {
+      "args": {
+        "a": 2147483647,
+        "b": 1
+      }
+    },
+    {
+      "args": {
+        "a": 100,
+        "b": 200
+      }
+    },
+    {
+      "args": {
+        "a": -2147483648,
+        "b": -1
+      }
+    }
+  ],
+  "skip_reason": null,
+  "source_language": "c",
+  "source_path": "source.c",
+  "target_language": "rust",
+  "target_path": null
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "common_in_nested_lists",
+  "id": "mbpp_real_111",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    common_in_nested_lists = candidate\n    assert set(common_in_nested_lists([[12, 18, 23, 25, 45], [7, 12, 18, 24, 28], [1, 5, 8, 12, 15, 16, 18]]))==set([18, 12])\n    assert set(common_in_nested_lists([[12, 5, 23, 25, 45], [7, 11, 5, 23, 28], [1, 5, 8, 18, 23, 16]]))==set([5,23])\n    assert set(common_in_nested_lists([[2, 3,4, 1], [4, 5], [6,4, 8],[4, 5], [6, 8,4]]))==set([4])\n",
+    "oracle_type": "callable_check",
+    "original_id": 111,
+    "profile": "real_python",
+    "prompt": "Write a function to find the common elements in given nested lists.",
+    "source": "google_research_mbpp",
+    "source_code": "def common_in_nested_lists(nestedlist):\n    result = list(set.intersection(*map(set, nestedlist)))\n    return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_111/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

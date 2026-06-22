@@ -1,0 +1,25 @@
+{
+  "entrypoint": "remove_parenthesis",
+  "id": "mbpp_real_640",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    remove_parenthesis = candidate\n    assert remove_parenthesis([\"python (chrome)\"])==(\"python\")\n    assert remove_parenthesis([\"string(.abc)\"])==(\"string\")\n    assert remove_parenthesis([\"alpha(num)\"])==(\"alpha\")\n",
+    "oracle_type": "callable_check",
+    "original_id": 640,
+    "profile": "real_python",
+    "prompt": "Write a function to remove the parenthesis and what is inbetween them from a string.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef remove_parenthesis(items):\n for item in items:\n    return (re.sub(r\" ?\\([^)]+\\)\", \"\", item))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_640/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

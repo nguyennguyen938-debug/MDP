@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 110,
+  "key": "8ba9cee7baa0868aec09f83b383bb78bf7c751d74ceef595d672db0bf7de53ec",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_balanced_brackets:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_balanced_brackets.solve`, categorized by the type of input they test:\n\n**Basic Cases:**\n\n*   `assert solve(\"()\") == True`\n*   `assert solve(\"()[]{}\") == True`\n*   `assert solve(\"(]\") == False`\n*   `assert solve(\"([)]\") == False`\n*   `assert solve(\"{[]}\") == True`\n\n**Edge Cases:**\n\n*   `assert solve(\"\") == True` (Empty string is balanced)\n*   `assert solve(\"(\") == False` (Unclosed bracket)\n*   `assert solve(\")\") == False` (Unopened bracket)\n*   `assert solve(\"{{\") == False` (Multiple unclosed)\n*   `assert solve(\"}}\") == False` (Multiple unopened)\n\n**Complex Cases:**\n\n*   `assert solve(\"((()))\") == True`\n*   `assert solve(\"(()())\") == True`\n*   `assert solve(\"([{}])\") == True`\n*   `assert solve(\"({[()]})\") == True`\n*   `assert solve(\"())\") == False`\n*   `assert solve(\"(()"
+}

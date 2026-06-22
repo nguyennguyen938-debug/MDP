@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sum_of_digits",
+  "id": "mbpp_real_398",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sum_of_digits = candidate\n    assert sum_of_digits([10,2,56])==14\n    assert sum_of_digits([[10,20,4,5,'b',70,'a']])==19\n    assert sum_of_digits([10,20,-4,5,-70])==19\n",
+    "oracle_type": "callable_check",
+    "original_id": 398,
+    "profile": "real_python",
+    "prompt": "Write a function to compute the sum of digits of each number of a given list.",
+    "source": "google_research_mbpp",
+    "source_code": "def sum_of_digits(nums):\n    return sum(int(el) for n in nums for el in str(n) if el.isdigit())",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_398/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

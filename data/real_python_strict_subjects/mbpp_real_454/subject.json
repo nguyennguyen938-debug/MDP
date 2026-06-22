@@ -1,0 +1,25 @@
+{
+  "entrypoint": "text_match_wordz",
+  "id": "mbpp_real_454",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    text_match_wordz = candidate\n    assert text_match_wordz(\"pythonz.\")==True\n    assert text_match_wordz(\"xyz.\")==True\n    assert text_match_wordz(\"  lang  .\")==False\n",
+    "oracle_type": "callable_check",
+    "original_id": 454,
+    "profile": "real_python",
+    "prompt": "Write a function that matches a word containing 'z'.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef text_match_wordz(text):\n        patterns = '\\w*z.\\w*'\n        if re.search(patterns,  text):\n                return True\n        else:\n                return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_454/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "odd_values_string",
+  "id": "mbpp_real_226",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    odd_values_string = candidate\n    assert odd_values_string('abcdef') == 'ace'\n    assert odd_values_string('python') == 'pto'\n    assert odd_values_string('data') == 'dt'\n    assert odd_values_string('lambs') == 'lms'\n",
+    "oracle_type": "callable_check",
+    "original_id": 226,
+    "profile": "real_python",
+    "prompt": "Write a python function to remove the characters which have odd index values of a given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def odd_values_string(str):\n  result = \"\" \n  for i in range(len(str)):\n    if i % 2 == 0:\n      result = result + str[i]\n  return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_226/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

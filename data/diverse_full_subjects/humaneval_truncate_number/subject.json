@@ -1,0 +1,28 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_truncate_number",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "truncate_number",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(number: float) -> float:\n    return number % 1.0\n",
+    "split": "train"
+  },
+  "path": "humaneval_truncate_number/solution.py",
+  "tests": [
+    {
+      "args": [
+        3.5
+      ],
+      "expected": 0.5
+    },
+    {
+      "args": [
+        1.0
+      ],
+      "expected": 0.0
+    }
+  ]
+}

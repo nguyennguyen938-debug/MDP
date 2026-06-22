@@ -1,0 +1,25 @@
+{
+  "entrypoint": "reverse_vowels",
+  "id": "mbpp_real_131",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    reverse_vowels = candidate\n    assert reverse_vowels(\"Python\") == \"Python\"\n    assert reverse_vowels(\"USA\") == \"ASU\"\n    assert reverse_vowels(\"ab\") == \"ab\"\n",
+    "oracle_type": "callable_check",
+    "original_id": 131,
+    "profile": "real_python",
+    "prompt": "Write a python function to reverse only the vowels of a given string (where y is not a vowel).",
+    "source": "google_research_mbpp",
+    "source_code": "def reverse_vowels(str1):\n\tvowels = \"\"\n\tfor char in str1:\n\t\tif char in \"aeiouAEIOU\":\n\t\t\tvowels += char\n\tresult_string = \"\"\n\tfor char in str1:\n\t\tif char in \"aeiouAEIOU\":\n\t\t\tresult_string += vowels[-1]\n\t\t\tvowels = vowels[:-1]\n\t\telse:\n\t\t\tresult_string += char\n\treturn result_string",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_131/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

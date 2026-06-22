@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 117,
+  "key": "ec0cb57c1589b561d97612aafb9b07b022fde239949b7b9c2b6b2d1d89e10f77",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_capitalize_words:solve.",
+  "prompt_tokens": 5,
+  "provider": "openai",
+  "text": "Here are some concise assertions for the `mbpp_capitalize_words:solve` function:\n\n1. **Basic Capitalization**: \n   - Input: \"hello world\" \u2192 Output: \"Hello World\"\n\n2. **Multiple Spaces**: \n   - Input: \"  leading space\" \u2192 Output: \"  Leading Space\"\n\n3. **Punctuation Handling**: \n   - Input: \"hello, world!\" \u2192 Output: \"Hello, World!\"\n\n4. **Single Word**: \n   - Input: \"python\" \u2192 Output: \"Python\"\n\n5. **All Uppercase**: \n   - Input: \"HELLO WORLD\" \u2192 Output: \"Hello World\"\n\n6. **Mixed Case**: \n   - Input: \"hElLo wOrLd\" \u2192 Output: \"Hello World\"\n\n7. **Empty String**: \n   - Input: \"\" \u2192 Output: \"\"\n\n8. **Numbers and Special Characters**: \n   - Input: \"123 hello! @world\" \u2192 Output: \"123 Hello! @World\"\n\n9. **Non-English Characters**: \n   - Input: \"caf\u00e9 au lait\" \u2192 Output: \"Caf\u00e9 Au Lait\"\n\n10. **Long Sentences**: \n    - Input:"
+}

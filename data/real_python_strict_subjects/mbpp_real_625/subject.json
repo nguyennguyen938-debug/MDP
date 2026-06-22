@@ -1,0 +1,25 @@
+{
+  "entrypoint": "swap_List",
+  "id": "mbpp_real_625",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    swap_List = candidate\n    assert swap_List([1,2,3]) == [3,2,1]\n    assert swap_List([1,2,3,4,4]) == [4,2,3,4,1]\n    assert swap_List([4,5,6]) == [6,5,4]\n",
+    "oracle_type": "callable_check",
+    "original_id": 625,
+    "profile": "real_python",
+    "prompt": "Write a python function to interchange the first and last element in a given list.",
+    "source": "google_research_mbpp",
+    "source_code": "def swap_List(newList): \n    size = len(newList) \n    temp = newList[0] \n    newList[0] = newList[size - 1] \n    newList[size - 1] = temp   \n    return newList ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_625/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

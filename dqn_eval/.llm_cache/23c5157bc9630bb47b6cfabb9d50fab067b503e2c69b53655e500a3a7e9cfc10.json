@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 108,
+  "key": "23c5157bc9630bb47b6cfabb9d50fab067b503e2c69b53655e500a3a7e9cfc10",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for action_balanced_llm_assert_sorted_abs:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `action_balanced_llm_assert_sorted_abs:solve`, focusing on the core requirements of the function:\n\n**Core Functionality:**\n\n*   `assert sorted(abs(x) for x in input) == output`\n*   `assert all(abs(x) <= abs(y) for x, y in zip(output, output[1:]))`\n*   `assert all(abs(x) == abs(y) for x, y in zip(output, output[1:])) or all(abs(x) < abs(y) for x, y in zip(output, output[1:]))`\n\n**Input/Output Properties:**\n\n*   `assert len(input) == len(output)`\n*   `assert all(isinstance(x, (int, float)) for x in input)`\n*   `assert all(isinstance(x, (int, float)) for x in output)`\n\n**Edge Cases/Specific Scenarios:**\n\n*   `assert output == [] if not input` (Empty input)\n*   `assert output == [0] if input == [0]` (Single zero)\n*   `assert"
+}

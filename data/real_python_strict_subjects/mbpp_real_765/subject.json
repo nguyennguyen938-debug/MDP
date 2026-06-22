@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_polite",
+  "id": "mbpp_real_765",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_polite = candidate\n    assert is_polite(7) == 11\n    assert is_polite(4) == 7\n    assert is_polite(9) == 13\n",
+    "oracle_type": "callable_check",
+    "original_id": 765,
+    "profile": "real_python",
+    "prompt": "Write a function to find nth polite number. geeksforgeeks.org/n-th-polite-number/",
+    "source": "google_research_mbpp",
+    "source_code": "import math \ndef is_polite(n): \n\tn = n + 1\n\treturn (int)(n+(math.log((n + math.log(n, 2)), 2))) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_765/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

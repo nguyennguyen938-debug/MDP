@@ -1,0 +1,25 @@
+{
+  "entrypoint": "set_left_most_unset_bit",
+  "id": "mbpp_real_311",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    set_left_most_unset_bit = candidate\n    assert set_left_most_unset_bit(10) == 14\n    assert set_left_most_unset_bit(12) == 14\n    assert set_left_most_unset_bit(15) == 15\n",
+    "oracle_type": "callable_check",
+    "original_id": 311,
+    "profile": "real_python",
+    "prompt": "Write a python function to set the left most unset bit.",
+    "source": "google_research_mbpp",
+    "source_code": "def set_left_most_unset_bit(n): \n    if not (n & (n + 1)): \n        return n \n    pos, temp, count = 0, n, 0 \n    while temp: \n        if not (temp & 1): \n            pos = count      \n        count += 1; temp>>=1\n    return (n | (1 << (pos))) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_311/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

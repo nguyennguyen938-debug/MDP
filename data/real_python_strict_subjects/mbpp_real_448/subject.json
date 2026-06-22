@@ -1,0 +1,25 @@
+{
+  "entrypoint": "cal_sum",
+  "id": "mbpp_real_448",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    cal_sum = candidate\n    assert cal_sum(9) == 49\n    assert cal_sum(10) == 66\n    assert cal_sum(11) == 88\n",
+    "oracle_type": "callable_check",
+    "original_id": 448,
+    "profile": "real_python",
+    "prompt": "Write a function to calculate the sum of perrin numbers.",
+    "source": "google_research_mbpp",
+    "source_code": "def cal_sum(n): \n\ta = 3\n\tb = 0\n\tc = 2\n\tif (n == 0): \n\t\treturn 3\n\tif (n == 1): \n\t\treturn 3\n\tif (n == 2): \n\t\treturn 5\n\tsum = 5\n\twhile (n > 2): \n\t\td = a + b \n\t\tsum = sum + d \n\t\ta = b \n\t\tb = c \n\t\tc = d \n\t\tn = n-1\n\treturn sum",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_448/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "odd_length_sum",
+  "id": "mbpp_real_782",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    odd_length_sum = candidate\n    assert odd_length_sum([1,2,4]) == 14\n    assert odd_length_sum([1,2,1,2]) == 15\n    assert odd_length_sum([1,7]) == 8\n",
+    "oracle_type": "callable_check",
+    "original_id": 782,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the sum of all odd length subarrays. https://www.geeksforgeeks.org/sum-of-all-odd-length-subarrays/",
+    "source": "google_research_mbpp",
+    "source_code": "def odd_length_sum(arr):\n    Sum = 0\n    l = len(arr)\n    for i in range(l):\n        Sum += ((((i + 1) *(l - i) + 1) // 2) * arr[i])\n    return Sum",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_782/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "division_elements",
+  "id": "mbpp_real_261",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    division_elements = candidate\n    assert division_elements((10, 4, 6, 9),(5, 2, 3, 3)) == (2, 2, 2, 3)\n    assert division_elements((12, 6, 8, 16),(6, 3, 4, 4)) == (2, 2, 2, 4)\n    assert division_elements((20, 14, 36, 18),(5, 7, 6, 9)) == (4, 2, 6, 2)\n",
+    "oracle_type": "callable_check",
+    "original_id": 261,
+    "profile": "real_python",
+    "prompt": "Write a function that takes in two tuples and performs mathematical division operation element-wise across the given tuples.",
+    "source": "google_research_mbpp",
+    "source_code": "def division_elements(test_tup1, test_tup2):\n  res = tuple(ele1 // ele2 for ele1, ele2 in zip(test_tup1, test_tup2))\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_261/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

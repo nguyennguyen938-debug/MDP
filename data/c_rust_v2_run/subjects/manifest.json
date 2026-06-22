@@ -1,0 +1,887 @@
+{
+  "subjects": [
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_signed_add_overflow",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_signed_add_overflow",
+        "signature": {
+          "params": [
+            "int",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            2147483647,
+            1
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_signed_add_overflow/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_signed_mul_overflow",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_signed_mul_overflow",
+        "signature": {
+          "params": [
+            "int",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            46341,
+            46341
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_signed_mul_overflow/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_shift_at_width",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_shift_at_width",
+        "signature": {
+          "params": [
+            "int",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            32
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_shift_at_width/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_intmin_div_neg1",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_intmin_div_neg1",
+        "signature": {
+          "params": [
+            "int",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -2147483648,
+            -1
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_intmin_div_neg1/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_neg_div_truncation",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_neg_div_truncation",
+        "signature": {
+          "params": [
+            "int",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -7,
+            2
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_neg_div_truncation/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_abs_intmin",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_abs_intmin",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -2147483648
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_abs_intmin/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_def_unsigned_compare",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_def_unsigned_compare",
+        "signature": {
+          "params": [
+            "int",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -1,
+            1
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_def_unsigned_compare/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_def_unsigned_shr",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_def_unsigned_shr",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -1
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_def_unsigned_shr/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_def_unsigned_div",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_def_unsigned_div",
+        "signature": {
+          "params": [
+            "int",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -1,
+            3
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_def_unsigned_div/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_def_unsigned_mod",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_def_unsigned_mod",
+        "signature": {
+          "params": [
+            "int",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -1,
+            7
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_def_unsigned_mod/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_A_def_abs_via_long",
+      "metadata": {
+        "category": "A_integer",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "A_def_abs_via_long",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -2147483648
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_def_abs_via_long/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_C_sentinel_negative_input",
+      "metadata": {
+        "category": "C_error",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "C_sentinel_negative_input",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -5
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_sentinel_negative_input/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_C_sentinel_empty_string",
+      "metadata": {
+        "category": "C_error",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "C_sentinel_empty_string",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            ""
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_sentinel_empty_string/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_C_sentinel_overflow_guard",
+      "metadata": {
+        "category": "C_error",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "C_sentinel_overflow_guard",
+        "signature": {
+          "params": [
+            "int",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            50000,
+            50000
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_sentinel_overflow_guard/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_C_sentinel_lookup_miss",
+      "metadata": {
+        "category": "C_error",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "C_sentinel_lookup_miss",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "delta"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_sentinel_lookup_miss/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_C_sentinel_safe_div",
+      "metadata": {
+        "category": "C_error",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "C_sentinel_safe_div",
+        "signature": {
+          "params": [
+            "int",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            10,
+            0
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_sentinel_safe_div/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_C_sentinel_index_out_of_range",
+      "metadata": {
+        "category": "C_error",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "C_sentinel_index_out_of_range",
+        "signature": {
+          "params": [
+            "int_array",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              10,
+              20,
+              30
+            ],
+            5
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_sentinel_index_out_of_range/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_C_sentinel_match_first",
+      "metadata": {
+        "category": "C_error",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "C_sentinel_match_first",
+        "signature": {
+          "params": [
+            "int_array",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            99
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_sentinel_match_first/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_C_aux_parse_int",
+      "metadata": {
+        "category": "C_error",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "C_aux_parse_int",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "12a3"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_aux_parse_int/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_C_aux_find_index_nonzero",
+      "metadata": {
+        "category": "C_error",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "C_aux_find_index_nonzero",
+        "signature": {
+          "params": [
+            "int_array"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_aux_find_index_nonzero/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_C_aux_validate_positive",
+      "metadata": {
+        "category": "C_error",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "C_aux_validate_positive",
+        "signature": {
+          "params": [
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            -3
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_aux_validate_positive/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_D_strlen_utf8",
+      "metadata": {
+        "category": "D_strings",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "D_strlen_utf8",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "h\u00e9llo"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_D_strlen_utf8/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_D_index_byte",
+      "metadata": {
+        "category": "D_strings",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "D_index_byte",
+        "signature": {
+          "params": [
+            "string",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "h\u00e9llo",
+            2
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_D_index_byte/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_D_count_char",
+      "metadata": {
+        "category": "D_strings",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "D_count_char",
+        "signature": {
+          "params": [
+            "string",
+            "int"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "h\u00e9llo",
+            108
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_D_count_char/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_D_count_non_ascii",
+      "metadata": {
+        "category": "D_strings",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "D_count_non_ascii",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "h\u00e9llo"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_D_count_non_ascii/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_D_reverse_bytes",
+      "metadata": {
+        "category": "D_strings",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "D_reverse_bytes",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "h\u00e9llo"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_D_reverse_bytes/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_D_toupper_ascii",
+      "metadata": {
+        "category": "D_strings",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "D_toupper_ascii",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "Caf\u00e9"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_D_toupper_ascii/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_D_embedded_terminator",
+      "metadata": {
+        "category": "D_strings",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "D_embedded_terminator",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abcdef"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_D_embedded_terminator/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_D_aux_substring_match",
+      "metadata": {
+        "category": "D_strings",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "D_aux_substring_match",
+        "signature": {
+          "params": [
+            "string",
+            "string"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "h\u00e9lloh\u00e9lloA",
+            "\u00e9"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_D_aux_substring_match/source.c",
+      "target_language": "rust",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "c_rust_v2_D_aux_count_uppercase_byte",
+      "metadata": {
+        "category": "D_strings",
+        "dataset": "c_rust_v2",
+        "license": "authored_for_this_paper",
+        "original_id": "D_aux_count_uppercase_byte",
+        "signature": {
+          "params": [
+            "string"
+          ],
+          "return": "int"
+        }
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "\u00c4\u00d6\u00dcAB"
+          ]
+        }
+      ],
+      "source_language": "c",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_D_aux_count_uppercase_byte/source.c",
+      "target_language": "rust",
+      "target_path": null
+    }
+  ]
+}

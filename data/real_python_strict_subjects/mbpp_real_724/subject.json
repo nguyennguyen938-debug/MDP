@@ -1,0 +1,25 @@
+{
+  "entrypoint": "power_base_sum",
+  "id": "mbpp_real_724",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    power_base_sum = candidate\n    assert power_base_sum(2,100)==115\n    assert power_base_sum(8,10)==37\n    assert power_base_sum(8,15)==62\n    assert power_base_sum(3,3)==9\n",
+    "oracle_type": "callable_check",
+    "original_id": 724,
+    "profile": "real_python",
+    "prompt": "Write a function that takes base and power as arguments and calculate the sum of all digits of the base to the specified power.",
+    "source": "google_research_mbpp",
+    "source_code": "def power_base_sum(base, power):\n    return sum([int(i) for i in str(pow(base, power))])",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_724/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 156,
+  "key": "b92e9f5ea5ed76bf0d69f3b69bb425033e393fb5782f99680be8c1e944ea4f53",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_rotate_left:solve.",
+  "prompt_tokens": 5,
+  "provider": "openai",
+  "text": "Here are some concise assertions for the `mbpp_rotate_left:solve` function:\n\n1. **Input Validation**: Assert that the input list is not empty.\n   ```python\n   assert len(lst) > 0, \"Input list must not be empty.\"\n   ```\n\n2. **Rotation Count**: Assert that the rotation count is a non-negative integer.\n   ```python\n   assert isinstance(k, int) and k >= 0, \"Rotation count must be a non-negative integer.\"\n   ```\n\n3. **Effective Rotation**: Assert that the effective rotation count is within the bounds of the list length.\n   ```python\n   assert k < len(lst), \"Rotation count must be less than the length of the list.\"\n   ```\n\n4. **Output Length**: Assert that the output list has the same length as the input list.\n   ```python\n   assert len(result) == len(lst), \"Output list must have the same length as input list.\"\n   ```\n\n5. **Correctness of Rotation**: Assert that the first `len(lst) - k` elements of the output match the last `len(lst) - k` elements of the input.\n   ```python\n   assert result[:len(lst) - k]"
+}

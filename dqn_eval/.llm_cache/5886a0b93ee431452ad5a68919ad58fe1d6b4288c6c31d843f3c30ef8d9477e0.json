@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 97,
+  "key": "5886a0b93ee431452ad5a68919ad58fe1d6b4288c6c31d843f3c30ef8d9477e0",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_parse_nested_parens:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_parse_nested_parens.solve`, categorized for clarity:\n\n**Basic Cases:**\n\n*   `assert solve(\"()\") == []`\n*   `assert solve(\"(())\") == [[]]`\n*   `assert solve(\"()()\") == [[], []]`\n*   `assert solve(\"(()())\") == [[[]]]`\n\n**Nested Structures:**\n\n*   `assert solve(\"((()))\") == [[[]]]`\n*   `assert solve(\"(()(()))\") == [[[]]]`\n*   `assert solve(\"()(())\") == [[], [[]]]`\n*   `assert solve(\"(())()\") == [[], []]`\n\n**Deeper Nesting:**\n\n*   `assert solve(\"(((())))\") == [[[]]]`\n*   `assert solve(\"((()()))\") == [[[]]]`\n\n**Mixed Structures:**\n\n*   `assert solve(\"()()()\") == [[], [], []]`\n*   `assert solve(\"(()()())\") == [[[]]]`\n*   `assert solve(\"(())(())\") == [[[]], [[]]]`\n\n**Edge Cases (if applicable, though the problem implies valid"
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "large_product",
+  "id": "mbpp_real_308",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    large_product = candidate\n    assert large_product([1, 2, 3, 4, 5, 6],[3, 6, 8, 9, 10, 6],3)==[60, 54, 50]\n    assert large_product([1, 2, 3, 4, 5, 6],[3, 6, 8, 9, 10, 6],4)==[60, 54, 50, 48]\n    assert large_product([1, 2, 3, 4, 5, 6],[3, 6, 8, 9, 10, 6],5)==[60, 54, 50, 48, 45]\n",
+    "oracle_type": "callable_check",
+    "original_id": 308,
+    "profile": "real_python",
+    "prompt": "Write a function to find the specified number of largest products from two given lists, selecting one factor from each list.",
+    "source": "google_research_mbpp",
+    "source_code": "def large_product(nums1, nums2, N):\n    result = sorted([x*y for x in nums1 for y in nums2], reverse=True)[:N]\n    return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_308/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 118,
+  "key": "26f3d598b7242f0aa0663539dc186138a874226d2fa1f0ed1dd8437036deaccf",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for stress_boundary_zero_division:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `stress_boundary_zero_division:solve`, focusing on the core issue of zero division:\n\n**General Assertions:**\n\n*   `assert_raises(ZeroDivisionError, solve, ...)`: The most direct assertion.\n*   `assert_raises(ZeroDivisionError, solve, 0, ...)`: If the zero division specifically occurs when the divisor is 0.\n*   `assert_raises(ZeroDivisionError, solve, ..., 0)`: If the zero division occurs when a specific argument (e.g., a denominator) is 0.\n\n**Assertions for Specific Scenarios (if applicable):**\n\n*   `assert_raises(ZeroDivisionError, solve, 10, 0)`: If the function is `solve(numerator, denominator)` and the denominator is 0.\n*   `assert_raises(ZeroDivisionError, solve, 0, 5)`: If the function is `solve(numerator, denominator)` and the numerator is 0 but the denominator is also 0 (leading to 0/0, which can still raise ZeroDivisionError in some implementations or contexts).\n*   `assert_raises(ZeroDivisionError,"
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "nth_nums",
+  "id": "mbpp_real_623",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    nth_nums = candidate\n    assert nth_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],2)==[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n    assert nth_nums([10,20,30],3)==([1000, 8000, 27000])\n    assert nth_nums([12,15],5)==([248832, 759375])\n",
+    "oracle_type": "callable_check",
+    "original_id": 623,
+    "profile": "real_python",
+    "prompt": "Write a function to compute the n-th power of each number in a list.",
+    "source": "google_research_mbpp",
+    "source_code": "def nth_nums(nums,n):\n nth_nums = list(map(lambda x: x ** n, nums))\n return nth_nums",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_623/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

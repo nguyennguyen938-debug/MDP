@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 104,
+  "key": "9046af14ca46b3df3739e84faabd23d3b08eedc7dfba42e1f1f35799342df2a7",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_word_lengths:solve.",
+  "prompt_tokens": 5,
+  "provider": "openai",
+  "text": "Here are some concise assertions for the `mbpp_word_lengths:solve` function:\n\n1. **Basic Functionality**: \n   - `assert solve(\"Hello world\") == [5, 5]`\n   - `assert solve(\"Python programming\") == [6, 11]`\n\n2. **Empty String**: \n   - `assert solve(\"\") == []`\n\n3. **Single Word**: \n   - `assert solve(\"OpenAI\") == [6]`\n\n4. **Multiple Spaces**: \n   - `assert solve(\"  Leading and trailing  \") == [7, 8]`\n\n5. **Punctuation Handling**: \n   - `assert solve(\"Hello, world!\") == [5, 5]`\n   - `assert solve(\"Test-case: example.\") == [9, 7]`\n\n6. **Mixed Case**: \n   - `assert solve(\"Mixed CASE words\") == [5, 4, 5]`\n\n7. **Numerical Words**: \n   - `assert solve(\"123 4567\") == [3, 4]`\n\n8. **Special Characters**: \n   - `assert solve(\"Caf\u00e9 cr\u00e8me\") == [4, 6]`\n\n"
+}

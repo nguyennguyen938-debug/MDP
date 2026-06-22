@@ -1,0 +1,25 @@
+{
+  "entrypoint": "larg_nnum",
+  "id": "mbpp_real_232",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    larg_nnum = candidate\n    assert set(larg_nnum([10, 20, 50, 70, 90, 20, 50, 40, 60, 80, 100],2))==set([100,90])\n    assert set(larg_nnum([10, 20, 50, 70, 90, 20, 50, 40, 60, 80, 100],5))==set([100,90,80,70,60])\n    assert set(larg_nnum([10, 20, 50, 70, 90, 20, 50, 40, 60, 80, 100],3))==set([100,90,80])\n",
+    "oracle_type": "callable_check",
+    "original_id": 232,
+    "profile": "real_python",
+    "prompt": "Write a function that takes in a list and an integer n and returns a list containing the n largest items from the list.",
+    "source": "google_research_mbpp",
+    "source_code": "import heapq\ndef larg_nnum(list1,n):\n largest=heapq.nlargest(n,list1)\n return largest",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_232/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

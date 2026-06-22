@@ -1,0 +1,25 @@
+{
+  "entrypoint": "group_tuples",
+  "id": "mbpp_real_417",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    group_tuples = candidate\n    assert group_tuples([('x', 'y'), ('x', 'z'), ('w', 't')]) == [('x', 'y', 'z'), ('w', 't')]\n    assert group_tuples([('a', 'b'), ('a', 'c'), ('d', 'e')]) == [('a', 'b', 'c'), ('d', 'e')]\n    assert group_tuples([('f', 'g'), ('f', 'g'), ('h', 'i')]) == [('f', 'g', 'g'), ('h', 'i')]\n",
+    "oracle_type": "callable_check",
+    "original_id": 417,
+    "profile": "real_python",
+    "prompt": "Write a function to find common first element in given list of tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "def group_tuples(Input): \n\tout = {} \n\tfor elem in Input: \n\t\ttry: \n\t\t\tout[elem[0]].extend(elem[1:]) \n\t\texcept KeyError: \n\t\t\tout[elem[0]] = list(elem) \n\treturn [tuple(values) for values in out.values()] ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_417/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

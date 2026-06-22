@@ -1,0 +1,24 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_word_lengths",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_word_lengths",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> dict[str, int]:\n    return {word: len(word) for word in text.split()}\n",
+    "split": "test"
+  },
+  "path": "mbpp_word_lengths/solution.py",
+  "tests": [
+    {
+      "args": [
+        "a bee"
+      ],
+      "expected": {
+        "a": 1,
+        "bee": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 82,
+  "key": "62a3a8340930f5801fb34aec8c0d47695ecaad67bccb8554ca87040e99867da7",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_decimal_to_binary:solve.",
+  "prompt_tokens": 5,
+  "provider": "openai",
+  "text": "Here are some concise assertions for the function `mbpp_decimal_to_binary:solve`:\n\n1. **Basic Conversion**: \n   - `assert mbpp_decimal_to_binary.solve(0) == '0'`\n   - `assert mbpp_decimal_to_binary.solve(1) == '1'`\n   - `assert mbpp_decimal_to_binary.solve(2) == '10'`\n   - `assert mbpp_decimal_to_binary.solve(3) == '11'`\n\n2. **Higher Values**:\n   - `assert mbpp_decimal_to_binary.solve(4) == '100'`\n   - `assert mbpp_decimal_to_binary.solve(5) == '101'`\n   - `assert mbpp_decimal_to_binary.solve(10) == '1010'`\n   - `assert mbpp_decimal_to_binary.solve(15) == '1111'`\n   - `assert mbpp_decimal_to_binary.solve(16) == '10000'`\n\n3. **Edge Cases**:\n   - `assert mbpp_decimal_to_binary.solve(-1) == 'Invalid input'`  # Assuming negative input is handled\n   - `assert mbpp_decimal_to_binary.solve(255) == '11111111'`\n   - `assert"
+}

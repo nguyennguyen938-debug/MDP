@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 105,
+  "key": "d6a509d6e90161298aeb3c61cdb77b0796e6d63a5263d0c3621158390254e527",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_how_many_times:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_how_many_times:solve`, focusing on clarity and covering common scenarios:\n\n**Basic Cases:**\n\n*   `assert solve(\"abc\", \"a\") == 1`\n*   `assert solve(\"aaaaa\", \"a\") == 5`\n*   `assert solve(\"ababab\", \"ab\") == 3`\n*   `assert solve(\"banana\", \"na\") == 2`\n\n**Edge Cases & Variations:**\n\n*   `assert solve(\"abc\", \"d\") == 0` (Substring not present)\n*   `assert solve(\"\", \"a\") == 0` (Empty string)\n*   `assert solve(\"abc\", \"\") == 0` (Empty substring - typically not counted)\n*   `assert solve(\"aaaaa\", \"aa\") == 2` (Overlapping substrings)\n*   `assert solve(\"aaaaa\", \"aaa\") == 1` (Overlapping substrings)\n*   `assert solve(\"abcabcabc\", \"abc\") == 3` (Multiple occurrences)\n*   `assert solve(\"mississippi\", \"iss\") == 2` (Overlapping occurrences)\n*   "
+}

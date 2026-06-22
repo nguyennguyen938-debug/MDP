@@ -1,0 +1,25 @@
+{
+  "entrypoint": "unique_Element",
+  "id": "mbpp_real_760",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    unique_Element = candidate\n    assert unique_Element([1,1,1]) == True\n    assert unique_Element([1,2,1,2]) == False\n    assert unique_Element([1,2,3,4,5]) == False\n",
+    "oracle_type": "callable_check",
+    "original_id": 760,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether a list of numbers contains only one distinct element or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def unique_Element(arr):\n    s = set(arr)\n    return len(s) == 1",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_760/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

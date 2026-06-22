@@ -1,0 +1,21 @@
+{
+  "entrypoint": "solve",
+  "id": "bugsinpy_case_sensitive_count",
+  "language": "python",
+  "metadata": {
+    "dataset": "bugsinpy",
+    "original_id": "bugsinpy_case_sensitive_count",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> int:\n    return text.count('a')\n",
+    "split": "test"
+  },
+  "path": "bugsinpy_case_sensitive_count/solution.py",
+  "tests": [
+    {
+      "args": [
+        "Aardvark"
+      ],
+      "expected": 3
+    }
+  ]
+}

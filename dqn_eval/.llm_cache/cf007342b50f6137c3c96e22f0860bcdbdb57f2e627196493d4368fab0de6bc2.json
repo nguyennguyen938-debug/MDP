@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 75,
+  "key": "cf007342b50f6137c3c96e22f0860bcdbdb57f2e627196493d4368fab0de6bc2",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Emit compact JSON test-generation instructions for solve in solution.py.",
+  "prompt_tokens": 9,
+  "provider": "gemini",
+  "text": "```json\n{\n  \"test_cases\": [\n    {\n      \"input\": {\n        \"nums\": [1, 2, 3, 4, 5],\n        \"target\": 3\n      },\n      \"expected_output\": 2\n    },\n    {\n      \"input\": {\n        \"nums\": [1, 2, 3, 4, 5],\n        \"target\": 6\n      },\n      \"expected_output\": -1\n    },\n    {\n      \"input\": {\n        \"nums\": [5, 1, 2, 3, 4],\n        \"target\": 3\n      },\n      \"expected_output\": 3\n    },\n    {\n      \"input\": {\n        \"nums\": [1],\n        \"target\": 1\n      },\n      \"expected_output\": 0\n    },\n    {\n      \"input\": {\n        \"nums\": [1],\n        \"target\": 0\n      },\n      \"expected_output\": -1\n    },\n    {\n      \"input\": {\n        \"nums"
+}

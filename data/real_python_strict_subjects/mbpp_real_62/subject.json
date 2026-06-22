@@ -1,0 +1,25 @@
+{
+  "entrypoint": "smallest_num",
+  "id": "mbpp_real_62",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    smallest_num = candidate\n    assert smallest_num([10, 20, 1, 45, 99]) == 1\n    assert smallest_num([1, 2, 3]) == 1\n    assert smallest_num([45, 46, 50, 60]) == 45\n",
+    "oracle_type": "callable_check",
+    "original_id": 62,
+    "profile": "real_python",
+    "prompt": "Write a python function to find smallest number in a list.",
+    "source": "google_research_mbpp",
+    "source_code": "def smallest_num(xs):\n  return min(xs)\n",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_62/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

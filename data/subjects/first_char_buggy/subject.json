@@ -1,0 +1,18 @@
+{
+  "entrypoint": "solve",
+  "id": "first_char_buggy",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "train"
+  },
+  "path": "first_char_buggy/solution.py",
+  "tests": [
+    {
+      "args": [
+        ""
+      ],
+      "expected": ""
+    }
+  ]
+}

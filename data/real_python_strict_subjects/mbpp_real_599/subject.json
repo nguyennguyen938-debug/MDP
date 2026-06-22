@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sum_average",
+  "id": "mbpp_real_599",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sum_average = candidate\n    assert sum_average(10)==(55, 5.5)\n    assert sum_average(15)==(120, 8.0)\n    assert sum_average(20)==(210, 10.5)\n",
+    "oracle_type": "callable_check",
+    "original_id": 599,
+    "profile": "real_python",
+    "prompt": "Write a function to find sum and average of first n natural numbers.",
+    "source": "google_research_mbpp",
+    "source_code": "def sum_average(number):\n total = 0\n for value in range(1, number + 1):\n    total = total + value\n average = total / number\n return (total,average)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_599/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

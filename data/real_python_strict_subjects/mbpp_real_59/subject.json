@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_octagonal",
+  "id": "mbpp_real_59",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_octagonal = candidate\n    assert is_octagonal(5) == 65\n    assert is_octagonal(10) == 280\n    assert is_octagonal(15) == 645\n",
+    "oracle_type": "callable_check",
+    "original_id": 59,
+    "profile": "real_python",
+    "prompt": "Write a function to find the nth octagonal number.",
+    "source": "google_research_mbpp",
+    "source_code": "def is_octagonal(n): \n\treturn 3 * n * n - 2 * n ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_59/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

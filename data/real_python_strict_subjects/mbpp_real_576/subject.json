@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_Sub_Array",
+  "id": "mbpp_real_576",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_Sub_Array = candidate\n    assert is_Sub_Array([1,4,3,5],[1,2]) == False\n    assert is_Sub_Array([1,2,1],[1,2,1]) == True\n    assert is_Sub_Array([1,0,2,2],[2,2,0]) ==False\n",
+    "oracle_type": "callable_check",
+    "original_id": 576,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether a list is sublist of another or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def is_Sub_Array(A,B): \n    n = len(A)\n    m = len(B)\n    i = 0; j = 0; \n    while (i < n and j < m):  \n        if (A[i] == B[j]): \n            i += 1; \n            j += 1; \n            if (j == m): \n                return True;  \n        else: \n            i = i - j + 1; \n            j = 0;       \n    return False; ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_576/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

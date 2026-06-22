@@ -1,0 +1,29 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_filter_by_substring",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "filter_by_substring",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(strings: list[str], substring: str) -> list[str]:\n    return [s for s in strings if substring in s]\n",
+    "split": "train"
+  },
+  "path": "humaneval_filter_by_substring/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          "abc",
+          "def",
+          "cab"
+        ],
+        "ab"
+      ],
+      "expected": [
+        "abc"
+      ]
+    }
+  ]
+}

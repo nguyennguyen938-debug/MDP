@@ -1,0 +1,25 @@
+{
+  "entrypoint": "count_list",
+  "id": "mbpp_real_792",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    count_list = candidate\n    assert count_list([[1, 3], [5, 7], [9, 11], [13, 15, 17]]) == 4\n    assert count_list([[1,2],[2,3],[4,5]]) == 3\n    assert count_list([[1,0],[2,0]]) == 2\n",
+    "oracle_type": "callable_check",
+    "original_id": 792,
+    "profile": "real_python",
+    "prompt": "Write a python function to count the number of lists in a given number of lists.",
+    "source": "google_research_mbpp",
+    "source_code": "def count_list(input_list): \n    return len(input_list)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_792/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

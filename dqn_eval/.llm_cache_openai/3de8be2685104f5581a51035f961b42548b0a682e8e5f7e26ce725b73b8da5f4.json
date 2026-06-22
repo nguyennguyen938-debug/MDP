@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 114,
+  "key": "3de8be2685104f5581a51035f961b42548b0a682e8e5f7e26ce725b73b8da5f4",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Emit compact JSON test-generation instructions for solve in solution.py.",
+  "prompt_tokens": 9,
+  "provider": "openai",
+  "text": "Here are compact JSON test-generation instructions for a hypothetical function `solve` in `solution.py`. This JSON structure includes test cases with inputs and expected outputs.\n\n```json\n{\n  \"tests\": [\n    {\n      \"input\": \"3 5\\n1 2 3\\n4 5 6\\n\",\n      \"expected_output\": \"21\\n\"\n    },\n    {\n      \"input\": \"2 2\\n7 8\\n9 10\\n\",\n      \"expected_output\": \"34\\n\"\n    },\n    {\n      \"input\": \"1 1\\n0\\n\",\n      \"expected_output\": \"0\\n\"\n    },\n    {\n      \"input\": \"4 4\\n1 1 1 1\\n2 2 2 2\\n\",\n      \"expected_output\": \"12\\n\"\n    },\n    {\n      \"input\": \"5 3\\n1 2 3 4 5\\n5 4 3\\n\",\n      \"expected_output\": \"45\\n\"\n    }\n  ]\n}\n```\n\n### Explanation:\n- Each test case consists of:\n  - `input`: A string representing the input to the `solve` function.\n  - `expected_output`: A string representing the expected output from the function"
+}

@@ -1,0 +1,18 @@
+{
+  "entrypoint": "solve",
+  "id": "square",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "test"
+  },
+  "path": "square/solution.py",
+  "tests": [
+    {
+      "args": [
+        3
+      ],
+      "expected": 9
+    }
+  ]
+}

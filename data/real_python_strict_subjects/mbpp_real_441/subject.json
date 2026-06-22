@@ -1,0 +1,25 @@
+{
+  "entrypoint": "surfacearea_cube",
+  "id": "mbpp_real_441",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    surfacearea_cube = candidate\n    assert surfacearea_cube(5)==150\n    assert surfacearea_cube(3)==54\n    assert surfacearea_cube(10)==600\n",
+    "oracle_type": "callable_check",
+    "original_id": 441,
+    "profile": "real_python",
+    "prompt": "Write a function to find the surface area of a cube of a given size.",
+    "source": "google_research_mbpp",
+    "source_code": "def surfacearea_cube(l):\n  surfacearea= 6*l*l\n  return surfacearea",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_441/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_balanced_brackets",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_balanced_brackets",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> bool:\n    depth = 0\n    for ch in text:\n        if ch == '(':\n            depth += 1\n        elif ch == ')':\n            depth -= 1\n            if depth < 0:\n                return False\n    return depth == 0\n",
+    "split": "test"
+  },
+  "path": "mbpp_balanced_brackets/solution.py",
+  "tests": [
+    {
+      "args": [
+        "(())"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "(()"
+      ],
+      "expected": false
+    }
+  ]
+}

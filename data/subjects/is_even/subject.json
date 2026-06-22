@@ -1,0 +1,24 @@
+{
+  "entrypoint": "solve",
+  "id": "is_even",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "train"
+  },
+  "path": "is_even/solution.py",
+  "tests": [
+    {
+      "args": [
+        2
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        3
+      ],
+      "expected": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "my_dict",
+  "id": "mbpp_real_582",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    my_dict = candidate\n    assert my_dict({10})==False\n    assert my_dict({11})==False\n    assert my_dict({})==True\n",
+    "oracle_type": "callable_check",
+    "original_id": 582,
+    "profile": "real_python",
+    "prompt": "Write a function to check if a dictionary is empty",
+    "source": "google_research_mbpp",
+    "source_code": "def my_dict(dict1):\n  if bool(dict1):\n     return False\n  else:\n     return True",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_582/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

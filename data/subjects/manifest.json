@@ -1,0 +1,418 @@
+[
+  {
+    "entrypoint": "solve",
+    "id": "abs_val",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "abs_val/solution.py",
+    "tests": [
+      {
+        "args": [
+          1
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          -2
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "is_even",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "is_even/solution.py",
+    "tests": [
+      {
+        "args": [
+          2
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          3
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "max2",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "max2/solution.py",
+    "tests": [
+      {
+        "args": [
+          1,
+          2
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "min2",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "min2/solution.py",
+    "tests": [
+      {
+        "args": [
+          1,
+          2
+        ],
+        "expected": 1
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "clamp10",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "clamp10/solution.py",
+    "tests": [
+      {
+        "args": [
+          -1
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          11
+        ],
+        "expected": 10
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "factorial_buggy",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "factorial_buggy/solution.py",
+    "tests": [
+      {
+        "args": [
+          3
+        ],
+        "expected": 6
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "reverse",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "reverse/solution.py",
+    "tests": [
+      {
+        "args": [
+          "ab"
+        ],
+        "expected": "ba"
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "palindrome",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "palindrome/solution.py",
+    "tests": [
+      {
+        "args": [
+          "aba"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "abc"
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "count_a",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "count_a/solution.py",
+    "tests": [
+      {
+        "args": [
+          "banana"
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "first_char_buggy",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "first_char_buggy/solution.py",
+    "tests": [
+      {
+        "args": [
+          ""
+        ],
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "safe_div",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "safe_div/solution.py",
+    "tests": [
+      {
+        "args": [
+          4,
+          2
+        ],
+        "expected": 2
+      },
+      {
+        "args": [
+          4,
+          0
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "sum_list",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "train"
+    },
+    "path": "sum_list/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "len_list",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "val"
+    },
+    "path": "len_list/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "contains_zero",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "val"
+    },
+    "path": "contains_zero/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            0
+          ]
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "sort_list",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "val"
+    },
+    "path": "sort_list/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            2,
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "dedupe_buggy",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "val"
+    },
+    "path": "dedupe_buggy/solution.py",
+    "tests": [
+      {
+        "args": [
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "sign",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "test"
+    },
+    "path": "sign/solution.py",
+    "tests": [
+      {
+        "args": [
+          0
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "square",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "test"
+    },
+    "path": "square/solution.py",
+    "tests": [
+      {
+        "args": [
+          3
+        ],
+        "expected": 9
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "starts_with_a",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "test"
+    },
+    "path": "starts_with_a/solution.py",
+    "tests": [
+      {
+        "args": [
+          "abc"
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "entrypoint": "solve",
+    "id": "middle_buggy",
+    "language": "python",
+    "metadata": {
+      "dataset": "toy",
+      "split": "test"
+    },
+    "path": "middle_buggy/solution.py",
+    "tests": [
+      {
+        "args": [
+          []
+        ],
+        "expected": 0
+      }
+    ]
+  }
+]

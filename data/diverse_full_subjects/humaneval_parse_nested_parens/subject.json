@@ -1,0 +1,25 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_parse_nested_parens",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "parse_nested_parens",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(paren_string: str) -> list[int]:\n    out = []\n    depth = 0\n    best = 0\n    for ch in paren_string:\n        if ch == '(':\n            depth += 1\n            best = max(best, depth)\n        elif ch == ')':\n            depth -= 1\n            if depth == 0:\n                out.append(best)\n                best = 0\n    return out\n",
+    "split": "train"
+  },
+  "path": "humaneval_parse_nested_parens/solution.py",
+  "tests": [
+    {
+      "args": [
+        "(()()) ((()))"
+      ],
+      "expected": [
+        2,
+        3
+      ]
+    }
+  ]
+}

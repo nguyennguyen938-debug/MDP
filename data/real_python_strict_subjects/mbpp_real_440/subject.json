@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_adverb_position",
+  "id": "mbpp_real_440",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_adverb_position = candidate\n    assert find_adverb_position(\"clearly!! we can see the sky\")==(0, 7, 'clearly')\n    assert find_adverb_position(\"seriously!! there are many roses\")==(0, 9, 'seriously')\n    assert find_adverb_position(\"unfortunately!! sita is going to home\")==(0, 13, 'unfortunately')\n",
+    "oracle_type": "callable_check",
+    "original_id": 440,
+    "profile": "real_python",
+    "prompt": "Write a function to find the first adverb and their positions in a given sentence.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef find_adverb_position(text):\n for m in re.finditer(r\"\\w+ly\", text):\n    return (m.start(), m.end(), m.group(0))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_440/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "entrypoint": "solve",
+  "id": "min2",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "train"
+  },
+  "path": "min2/solution.py",
+  "tests": [
+    {
+      "args": [
+        1,
+        2
+      ],
+      "expected": 1
+    }
+  ]
+}

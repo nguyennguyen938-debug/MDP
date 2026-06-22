@@ -1,0 +1,25 @@
+{
+  "entrypoint": "issort_list",
+  "id": "mbpp_real_567",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    issort_list = candidate\n    assert issort_list([1,2,4,6,8,10,12,14,16,17])==True\n    assert issort_list([1, 2, 4, 6, 8, 10, 12, 14, 20, 17])==False\n    assert issort_list([1, 2, 4, 6, 8, 10,15,14,20])==False\n",
+    "oracle_type": "callable_check",
+    "original_id": 567,
+    "profile": "real_python",
+    "prompt": "Write a function to check whether a specified list is sorted or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def issort_list(list1):\n    result = all(list1[i] <= list1[i+1] for i in range(len(list1)-1))\n    return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_567/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_closest_pair",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_closest_pair",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int], target: int) -> list[int] | None:\n    best = None\n    best_dist = None\n    for i in range(len(items)):\n        for j in range(i + 1, len(items)):\n            dist = abs(items[i] + items[j] - target)\n            if best_dist is None or dist < best_dist:\n                best = [items[i], items[j]]\n                best_dist = dist\n    return best\n",
+    "split": "test"
+  },
+  "path": "mbpp_closest_pair/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          4,
+          7
+        ],
+        8
+      ],
+      "expected": [
+        1,
+        7
+      ]
+    }
+  ]
+}

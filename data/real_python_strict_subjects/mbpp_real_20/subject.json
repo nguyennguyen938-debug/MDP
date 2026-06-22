@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_woodall",
+  "id": "mbpp_real_20",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_woodall = candidate\n    assert is_woodall(383) == True\n    assert is_woodall(254) == False\n    assert is_woodall(200) == False\n",
+    "oracle_type": "callable_check",
+    "original_id": 20,
+    "profile": "real_python",
+    "prompt": "Write a function to check if the given number is woodball or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def is_woodall(x): \n\tif (x % 2 == 0): \n\t\treturn False\n\tif (x == 1): \n\t\treturn True\n\tx = x + 1 \n\tp = 0\n\twhile (x % 2 == 0): \n\t\tx = x/2\n\t\tp = p + 1\n\t\tif (p == x): \n\t\t\treturn True\n\treturn False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_20/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

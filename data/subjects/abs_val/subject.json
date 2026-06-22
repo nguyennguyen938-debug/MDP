@@ -1,0 +1,24 @@
+{
+  "entrypoint": "solve",
+  "id": "abs_val",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "train"
+  },
+  "path": "abs_val/solution.py",
+  "tests": [
+    {
+      "args": [
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        -2
+      ],
+      "expected": 2
+    }
+  ]
+}

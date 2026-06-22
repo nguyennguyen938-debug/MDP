@@ -1,0 +1,25 @@
+{
+  "entrypoint": "first_repeated_char",
+  "id": "mbpp_real_602",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    first_repeated_char = candidate\n    assert first_repeated_char(\"abcabc\") == \"a\"\n    assert first_repeated_char(\"abc\") == None\n    assert first_repeated_char(\"123123\") == \"1\"\n",
+    "oracle_type": "callable_check",
+    "original_id": 602,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the first repeated character in a given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def first_repeated_char(str1):\n  for index,c in enumerate(str1):\n    if str1[:index+1].count(c) > 1:\n      return c",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_602/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

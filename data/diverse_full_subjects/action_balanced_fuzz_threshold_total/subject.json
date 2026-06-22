@@ -1,0 +1,60 @@
+{
+  "entrypoint": "solve",
+  "id": "action_balanced_fuzz_threshold_total",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          []
+        ]
+      },
+      {
+        "args": [
+          [
+            1
+          ]
+        ]
+      }
+    ],
+    "dataset": "action_balanced",
+    "fuzz_cases": [
+      {
+        "args": [
+          [
+            4,
+            4,
+            4
+          ]
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          [
+            10
+          ]
+        ],
+        "expected": true
+      }
+    ],
+    "original_id": "fuzz_threshold_total",
+    "profile": "action_balanced",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int]) -> bool:\n    return sum(items) < 10\n",
+    "split": "test",
+    "stress_category": "fuzz"
+  },
+  "path": "action_balanced_fuzz_threshold_total/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

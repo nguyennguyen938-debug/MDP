@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 62,
+  "key": "3c4b8f1549d257b5408c624f715522aa87db6dd9875b6d4993bad9227044e3fc",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_is_prime:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_is_prime.solve`, categorized for clarity:\n\n**Basic Cases:**\n\n*   `assert not mbpp_is_prime.solve(0)`\n*   `assert not mbpp_is_prime.solve(1)`\n*   `assert mbpp_is_prime.solve(2)`\n*   `assert mbpp_is_prime.solve(3)`\n\n**Small Primes:**\n\n*   `assert mbpp_is_prime.solve(5)`\n*   `assert mbpp_is_prime.solve(7)`\n*   `assert mbpp_is_prime.solve(11)`\n*   `assert mbpp_is_prime.solve(13)`\n\n**Small Composites:**\n\n*   `assert not mbpp_is_prime.solve(4)`\n*   `assert not mbpp_is_prime.solve(6)`\n*   `assert not mbpp_is_prime.solve(8)`\n*   `assert not mbpp_is_prime.solve(9)`\n*   `assert not mbpp_is_prime.solve(10)`\n*"
+}

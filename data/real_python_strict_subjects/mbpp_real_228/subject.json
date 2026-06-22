@@ -1,0 +1,25 @@
+{
+  "entrypoint": "all_Bits_Set_In_The_Given_Range",
+  "id": "mbpp_real_228",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    all_Bits_Set_In_The_Given_Range = candidate\n    assert all_Bits_Set_In_The_Given_Range(4,1,2) == True\n    assert all_Bits_Set_In_The_Given_Range(17,2,4) == True\n    assert all_Bits_Set_In_The_Given_Range(39,4,6) == False\n",
+    "oracle_type": "callable_check",
+    "original_id": 228,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether all the bits are unset in the given range or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def all_Bits_Set_In_The_Given_Range(n,l,r):  \n    num = (((1 << r) - 1) ^ ((1 << (l - 1)) - 1)) \n    new_num = n & num\n    if (new_num == 0): \n        return True\n    return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_228/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

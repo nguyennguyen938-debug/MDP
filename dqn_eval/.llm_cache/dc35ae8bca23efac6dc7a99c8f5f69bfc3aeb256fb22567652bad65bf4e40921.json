@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 98,
+  "key": "dc35ae8bca23efac6dc7a99c8f5f69bfc3aeb256fb22567652bad65bf4e40921",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_sort_numbers:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_sort_numbers.solve`, focusing on different aspects of the problem:\n\n**Basic Functionality:**\n\n*   `assert solve([3, 1, 2]) == [1, 2, 3]`\n*   `assert solve([5, 4, 3, 2, 1]) == [1, 2, 3, 4, 5]`\n*   `assert solve([1, 2, 3]) == [1, 2, 3]`\n\n**Edge Cases:**\n\n*   `assert solve([]) == []` (Empty list)\n*   `assert solve([5]) == [5]` (Single element list)\n*   `assert solve([0, 0, 0]) == [0, 0, 0]` (All zeros)\n*   `assert solve([-1, -5, 0, 2]) == [-5, -1, 0, 2]` (Negative numbers)\n*   `assert solve([100, 1, 10]) == [1, 10, 100]` (Varying magnitudes)\n\n"
+}

@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 97,
+  "key": "9ef716e1d8a97252ee8d74aeec7049edf5583281e26335db375f486e4975e0de",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_count_distinct_characters:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_count_distinct_characters.solve`:\n\n**Basic Cases:**\n\n*   `assert solve(\"abc\") == 3`\n*   `assert solve(\"aabc\") == 3`\n*   `assert solve(\"aabbcc\") == 3`\n*   `assert solve(\"aaaaa\") == 1`\n*   `assert solve(\"\") == 0`\n\n**Edge Cases/Variations:**\n\n*   `assert solve(\" \") == 1` (single space)\n*   `assert solve(\"  \") == 1` (multiple spaces)\n*   `assert solve(\"a b c\") == 5` (spaces between characters)\n*   `assert solve(\"AaBbCc\") == 6` (case sensitivity)\n*   `assert solve(\"!@#$%^\") == 6` (special characters)\n*   `assert solve(\"12345\") == 5` (digits)\n*   `assert solve(\"a1b2c3\") == 6` (mixed characters)\n*   `assert solve(\"aba\") == 2`\n*   `assert solve(\"abcabc\") == "
+}

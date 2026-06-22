@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 89,
+  "key": "84686d4e0e5063bacfc8ff545d49e3f939e0e42a872340f196b51cc3c24c1d74",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for action_balanced_clean_join:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `action_balanced_clean_join:solve`, categorized for clarity:\n\n**Core Functionality:**\n\n*   `assert_true(result.is_successful)`: The join operation completed without errors.\n*   `assert_equal(len(result.output_data), expected_rows)`: The correct number of rows were produced.\n*   `assert_true(result.output_data.equals(expected_data))`: The output data matches the expected content.\n\n**Data Integrity & Correctness:**\n\n*   `assert_true(result.output_data.is_unique_on(join_keys))`: Duplicate rows based on join keys are not present (if applicable).\n*   `assert_true(result.output_data.contains_all(expected_data))`: All expected rows are present in the output.\n*   `assert_true(result.output_data.schema_matches(expected_schema))`: The output schema is as expected.\n\n**Edge Cases & Specific Scenarios:**\n\n*   `assert_true(result.output_data.is_empty() if no_matching_rows)`: Handles cases where no join matches occur"
+}

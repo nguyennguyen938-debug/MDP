@@ -1,0 +1,25 @@
+{
+  "entrypoint": "pack_consecutive_duplicates",
+  "id": "mbpp_real_778",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    pack_consecutive_duplicates = candidate\n    assert pack_consecutive_duplicates([0, 0, 1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4])==[[0, 0], [1], [2], [3], [4, 4], [5], [6, 6, 6], [7], [8], [9], [4, 4]]\n    assert pack_consecutive_duplicates([10, 10, 15, 19, 18, 18, 17, 26, 26, 17, 18, 10])==[[10, 10], [15], [19], [18, 18], [17], [26, 26], [17], [18], [10]]\n    assert pack_consecutive_duplicates(['a', 'a', 'b', 'c', 'd', 'd'])==[['a', 'a'], ['b'], ['c'], ['d', 'd']]\n",
+    "oracle_type": "callable_check",
+    "original_id": 778,
+    "profile": "real_python",
+    "prompt": "Write a function to pack consecutive duplicates of a given list elements into sublists.",
+    "source": "google_research_mbpp",
+    "source_code": "from itertools import groupby\ndef pack_consecutive_duplicates(list1):\n    return [list(group) for key, group in groupby(list1)]",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_778/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

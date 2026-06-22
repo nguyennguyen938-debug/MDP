@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 112,
+  "key": "68dd0540eba356cf248707563a41390137074ab0a12dc9317890b2aca9a0e89a",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_sum_product:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_sum_product.solve`, focusing on the core functionality:\n\n**Basic Cases:**\n\n*   `assert solve([1, 2, 3]) == 6`  (Sum)\n*   `assert solve([1, 2, 3, 4]) == 24` (Product)\n*   `assert solve([1]) == 1` (Single element, sum and product are the same)\n*   `assert solve([0]) == 0` (Single element, zero)\n\n**Edge Cases:**\n\n*   `assert solve([]) == 1` (Empty list, product identity)\n*   `assert solve([0, 1, 2]) == 0` (Zero in the list, product becomes zero)\n*   `assert solve([1, 1, 1]) == 1` (All ones)\n*   `assert solve([-1, 2, 3]) == -6` (Negative numbers)\n*   `assert solve([-1, -2, 3]) == 6` (Multiple negative numbers)\n\n**Mixed Operations (Implicitly tested by the problem statement):**\n\n"
+}

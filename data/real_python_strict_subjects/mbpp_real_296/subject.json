@@ -1,0 +1,25 @@
+{
+  "entrypoint": "get_Inv_Count",
+  "id": "mbpp_real_296",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    get_Inv_Count = candidate\n    assert get_Inv_Count([1,20,6,4,5]) == 5\n    assert get_Inv_Count([1,2,1]) == 1\n    assert get_Inv_Count([1,2,5,6,1]) == 3\n",
+    "oracle_type": "callable_check",
+    "original_id": 296,
+    "profile": "real_python",
+    "prompt": "Write a python function to count inversions in an array.",
+    "source": "google_research_mbpp",
+    "source_code": "def get_Inv_Count(arr): \n    inv_count = 0\n    for i in range(len(arr)): \n        for j in range(i + 1, len(arr)): \n            if (arr[i] > arr[j]): \n                inv_count += 1\n    return inv_count ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_296/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

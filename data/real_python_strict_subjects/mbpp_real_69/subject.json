@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_sublist",
+  "id": "mbpp_real_69",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_sublist = candidate\n    assert is_sublist([2,4,3,5,7],[3,7])==False\n    assert is_sublist([2,4,3,5,7],[4,3])==True\n    assert is_sublist([2,4,3,5,7],[1,6])==False\n",
+    "oracle_type": "callable_check",
+    "original_id": 69,
+    "profile": "real_python",
+    "prompt": "Write a function to check whether a list contains the given sublist or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def is_sublist(l, s):\n\tsub_set = False\n\tif s == []:\n\t\tsub_set = True\n\telif s == l:\n\t\tsub_set = True\n\telif len(s) > len(l):\n\t\tsub_set = False\n\telse:\n\t\tfor i in range(len(l)):\n\t\t\tif l[i] == s[0]:\n\t\t\t\tn = 1\n\t\t\t\twhile (n < len(s)) and (l[i+n] == s[n]):\n\t\t\t\t\tn += 1\t\t\t\t\n\t\t\t\tif n == len(s):\n\t\t\t\t\tsub_set = True\n\treturn sub_set",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_69/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

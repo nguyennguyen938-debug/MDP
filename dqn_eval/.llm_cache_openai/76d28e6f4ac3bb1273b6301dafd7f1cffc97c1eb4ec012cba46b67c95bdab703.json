@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 109,
+  "key": "76d28e6f4ac3bb1273b6301dafd7f1cffc97c1eb4ec012cba46b67c95bdab703",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_sum_even:solve.",
+  "prompt_tokens": 5,
+  "provider": "openai",
+  "text": "Here are some concise assertions for the function `mbpp_sum_even:solve`:\n\n1. **Basic Functionality**: \n   - `assert mbpp_sum_even.solve([1, 2, 3, 4]) == 6`  # Sum of even numbers: 2 + 4\n   - `assert mbpp_sum_even.solve([0, -2, -4, 5]) == -6`  # Sum of even numbers: 0 + (-2) + (-4)\n\n2. **Empty List**: \n   - `assert mbpp_sum_even.solve([]) == 0`  # No numbers to sum\n\n3. **All Odd Numbers**: \n   - `assert mbpp_sum_even.solve([1, 3, 5, 7]) == 0`  # No even numbers\n\n4. **Single Even Number**: \n   - `assert mbpp_sum_even.solve([2]) == 2`  # Only one even number\n\n5. **Single Odd Number**: \n   - `assert mbpp_sum_even.solve([3]) == 0`  # Only one odd number\n\n6. **Mixed Numbers**: \n   - `assert mbpp_sum_even"
+}

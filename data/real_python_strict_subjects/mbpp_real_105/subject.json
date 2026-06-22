@@ -1,0 +1,25 @@
+{
+  "entrypoint": "count",
+  "id": "mbpp_real_105",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    count = candidate\n    assert count([True,False,True]) == 2\n    assert count([False,False]) == 0\n    assert count([True,True,True]) == 3\n",
+    "oracle_type": "callable_check",
+    "original_id": 105,
+    "profile": "real_python",
+    "prompt": "Write a python function to count true booleans in the given list.",
+    "source": "google_research_mbpp",
+    "source_code": "def count(lst):   \n    return sum(lst) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_105/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

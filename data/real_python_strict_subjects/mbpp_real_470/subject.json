@@ -1,0 +1,25 @@
+{
+  "entrypoint": "add_pairwise",
+  "id": "mbpp_real_470",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    add_pairwise = candidate\n    assert add_pairwise((1, 5, 7, 8, 10)) == (6, 12, 15, 18)\n    assert add_pairwise((2, 6, 8, 9, 11)) == (8, 14, 17, 20)\n    assert add_pairwise((3, 7, 9, 10, 12)) == (10, 16, 19, 22)\n",
+    "oracle_type": "callable_check",
+    "original_id": 470,
+    "profile": "real_python",
+    "prompt": "Write a function to find the pairwise addition of the neighboring elements of the given tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "def add_pairwise(test_tup):\n  res = tuple(i + j for i, j in zip(test_tup, test_tup[1:]))\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_470/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

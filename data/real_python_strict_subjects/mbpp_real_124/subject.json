@@ -1,0 +1,25 @@
+{
+  "entrypoint": "angle_complex",
+  "id": "mbpp_real_124",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "import math\n\ndef check(candidate):\n    angle_complex = candidate\n    assert math.isclose(angle_complex(0,1j), 1.5707963267948966, rel_tol=0.001)\n    assert math.isclose(angle_complex(2,1j), 0.4636476090008061, rel_tol=0.001)\n    assert math.isclose(angle_complex(0,2j), 1.5707963267948966, rel_tol=0.001)\n",
+    "oracle_type": "callable_check",
+    "original_id": 124,
+    "profile": "real_python",
+    "prompt": "Write a function to get the angle of a complex number.",
+    "source": "google_research_mbpp",
+    "source_code": "import cmath\ndef angle_complex(a,b):\n  cn=complex(a,b)\n  angle=cmath.phase(a+b)\n  return angle",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_124/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

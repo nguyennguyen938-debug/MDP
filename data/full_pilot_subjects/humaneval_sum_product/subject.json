@@ -1,0 +1,37 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_sum_product",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "sum_product",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(numbers: list[int]) -> list[int]:\n    total = 0\n    product = 1\n    for number in numbers:\n        total += number\n        product *= number\n    return [total, product]\n",
+    "split": "train"
+  },
+  "path": "humaneval_sum_product/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        6,
+        6
+      ]
+    },
+    {
+      "args": [
+        []
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    }
+  ]
+}

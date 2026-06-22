@@ -1,0 +1,25 @@
+{
+  "entrypoint": "text_match_zero_one",
+  "id": "mbpp_real_756",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    text_match_zero_one = candidate\n    assert text_match_zero_one(\"ac\")==False\n    assert text_match_zero_one(\"dc\")==False\n    assert text_match_zero_one(\"abbbba\")==True\n    assert text_match_zero_one(\"dsabbbba\")==True\n    assert text_match_zero_one(\"asbbbba\")==False\n    assert text_match_zero_one(\"abaaa\")==True\n",
+    "oracle_type": "callable_check",
+    "original_id": 756,
+    "profile": "real_python",
+    "prompt": "Write a function that matches a string that has an 'a' followed by one or more 'b's. https://www.w3resource.com/python-exercises/re/python-re-exercise-3.php",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef text_match_zero_one(text):\n        patterns = 'ab+?'\n        if re.search(patterns,  text):\n                return True\n        else:\n                return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_756/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

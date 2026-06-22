@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 119,
+  "key": "b8cc0d1758509c55107240e8888059b65e12da9930dab124d71d10d8469f8460",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for stress_counterexample_clamp:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `stress_counterexample_clamp:solve`, categorized for clarity. These assume `solve` is a function that takes some input and aims to find a solution, and `stress_counterexample_clamp` is a context or module where this function is being tested, likely with an emphasis on edge cases or \"stressful\" inputs.\n\n**General Correctness & Properties:**\n\n*   `assert solve(input) == expected_output` (The most fundamental assertion)\n*   `assert is_valid_solution(solve(input))` (Checks if the output adheres to solution properties)\n*   `assert solve(input) is not None` (Ensures a solution is always found)\n*   `assert solve(input) is not an_invalid_value` (Checks for specific invalid return types/values)\n\n**Input-Specific Assertions (Focus on \"Stress\"):**\n\n*   `assert solve(edge_case_input) == expected_edge_case_output`\n*   `assert solve(boundary_input) == expected_boundary_output`\n*   `assert solve(large_input) == expected_large_output`\n*   `assert solve(small_"
+}

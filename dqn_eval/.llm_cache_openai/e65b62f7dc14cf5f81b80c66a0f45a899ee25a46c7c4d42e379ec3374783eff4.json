@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 107,
+  "key": "e65b62f7dc14cf5f81b80c66a0f45a899ee25a46c7c4d42e379ec3374783eff4",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Suggest concise assertions for bugsinpy_sorted_desc:solve.",
+  "prompt_tokens": 5,
+  "provider": "openai",
+  "text": "Here are some concise assertions you can use for testing the `solve` function in the `bugsinpy_sorted_desc` module:\n\n1. **Test for Empty Input:**\n   ```python\n   assert solve([]) == []\n   ```\n\n2. **Test for Single Element:**\n   ```python\n   assert solve([5]) == [5]\n   ```\n\n3. **Test for Already Sorted Descending:**\n   ```python\n   assert solve([5, 4, 3, 2, 1]) == [5, 4, 3, 2, 1]\n   ```\n\n4. **Test for Sorted Ascending Input:**\n   ```python\n   assert solve([1, 2, 3, 4, 5]) == [5, 4, 3, 2, 1]\n   ```\n\n5. **Test for Mixed Values:**\n   ```python\n   assert solve([3, 1, 4, 2, 5]) == [5, 4, 3, 2, 1]\n   ```\n\n6. **Test for Duplicates:**\n   ```python\n   assert solve([3, 1, 2, "
+}

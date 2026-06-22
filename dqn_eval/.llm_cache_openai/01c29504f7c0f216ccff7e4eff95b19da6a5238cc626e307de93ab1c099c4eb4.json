@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 124,
+  "key": "01c29504f7c0f216ccff7e4eff95b19da6a5238cc626e307de93ab1c099c4eb4",
+  "model": "gpt-4o-mini",
+  "params": {},
+  "prompt": "Suggest concise assertions for bugsinpy_zero_is_positive:solve.",
+  "prompt_tokens": 5,
+  "provider": "openai",
+  "text": "Here are some concise assertions you can use for testing the `solve` function in the `bugsinpy_zero_is_positive` module:\n\n1. **Test Zero as Positive**:\n   ```python\n   assert solve(0) == True, \"Expected 0 to be considered positive\"\n   ```\n\n2. **Test Positive Number**:\n   ```python\n   assert solve(5) == True, \"Expected 5 to be considered positive\"\n   ```\n\n3. **Test Negative Number**:\n   ```python\n   assert solve(-3) == False, \"Expected -3 to be considered not positive\"\n   ```\n\n4. **Test Positive Float**:\n   ```python\n   assert solve(2.5) == True, \"Expected 2.5 to be considered positive\"\n   ```\n\n5. **Test Negative Float**:\n   ```python\n   assert solve(-1.5) == False, \"Expected -1.5 to be considered not positive\"\n   ```\n\n6. **Test Large Positive Number**:\n   ```python\n   assert solve(1000000) == True, \"Expected 1000000 to be considered positive\"\n   ```\n\n7. **Test Large Negative Number**:\n   ```python\n   assert"
+}

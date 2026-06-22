@@ -1,0 +1,2224 @@
+{
+  "subjects": [
+    {
+      "entrypoint": "separate_paren_groups",
+      "id": "humaneval_real_HumanEval_1",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/1",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_1/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "below_zero",
+      "id": "humaneval_real_HumanEval_3",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/3",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_3/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "mean_absolute_deviation",
+      "id": "humaneval_real_HumanEval_4",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/4",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_4/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "intersperse",
+      "id": "humaneval_real_HumanEval_5",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/5",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_5/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "parse_nested_parens",
+      "id": "humaneval_real_HumanEval_6",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/6",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_6/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "filter_by_substring",
+      "id": "humaneval_real_HumanEval_7",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/7",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc",
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_7/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "sum_product",
+      "id": "humaneval_real_HumanEval_8",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/8",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_8/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "rolling_max",
+      "id": "humaneval_real_HumanEval_9",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/9",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_9/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "make_palindrome",
+      "id": "humaneval_real_HumanEval_10",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/10",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_10/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "string_xor",
+      "id": "humaneval_real_HumanEval_11",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/11",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc",
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_11/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "longest",
+      "id": "humaneval_real_HumanEval_12",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/12",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_12/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "greatest_common_divisor",
+      "id": "humaneval_real_HumanEval_13",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/13",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_13/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "all_prefixes",
+      "id": "humaneval_real_HumanEval_14",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/14",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_14/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "string_sequence",
+      "id": "humaneval_real_HumanEval_15",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/15",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_15/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "count_distinct_characters",
+      "id": "humaneval_real_HumanEval_16",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/16",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_16/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "parse_music",
+      "id": "humaneval_real_HumanEval_17",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/17",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_17/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "how_many_times",
+      "id": "humaneval_real_HumanEval_18",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/18",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc",
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_18/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "sort_numbers",
+      "id": "humaneval_real_HumanEval_19",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/19",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_19/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "find_closest_elements",
+      "id": "humaneval_real_HumanEval_20",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/20",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_20/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "rescale_to_unit",
+      "id": "humaneval_real_HumanEval_21",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/21",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_21/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "filter_integers",
+      "id": "humaneval_real_HumanEval_22",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/22",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_22/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "strlen",
+      "id": "humaneval_real_HumanEval_23",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/23",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_23/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "largest_divisor",
+      "id": "humaneval_real_HumanEval_24",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/24",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_24/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "factorize",
+      "id": "humaneval_real_HumanEval_25",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/25",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_25/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "remove_duplicates",
+      "id": "humaneval_real_HumanEval_26",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/26",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_26/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "flip_case",
+      "id": "humaneval_real_HumanEval_27",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/27",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_27/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "concatenate",
+      "id": "humaneval_real_HumanEval_28",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/28",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_28/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "filter_by_prefix",
+      "id": "humaneval_real_HumanEval_29",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/29",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc",
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_29/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "get_positive",
+      "id": "humaneval_real_HumanEval_30",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/30",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_30/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "is_prime",
+      "id": "humaneval_real_HumanEval_31",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/31",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_31/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "find_zero",
+      "id": "humaneval_real_HumanEval_32",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/32",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_32/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "sort_third",
+      "id": "humaneval_real_HumanEval_33",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/33",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_33/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "unique",
+      "id": "humaneval_real_HumanEval_34",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/34",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_34/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "max_element",
+      "id": "humaneval_real_HumanEval_35",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/35",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_35/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "fizz_buzz",
+      "id": "humaneval_real_HumanEval_36",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/36",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_36/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "sort_even",
+      "id": "humaneval_real_HumanEval_37",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/37",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_37/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "decode_cyclic",
+      "id": "humaneval_real_HumanEval_38",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/38",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_38/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "prime_fib",
+      "id": "humaneval_real_HumanEval_39",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/39",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_39/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "triples_sum_to_zero",
+      "id": "humaneval_real_HumanEval_40",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/40",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_40/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "car_race_collision",
+      "id": "humaneval_real_HumanEval_41",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/41",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_41/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "incr_list",
+      "id": "humaneval_real_HumanEval_42",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/42",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_42/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "pairs_sum_to_zero",
+      "id": "humaneval_real_HumanEval_43",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/43",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_43/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "change_base",
+      "id": "humaneval_real_HumanEval_44",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/44",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_44/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "triangle_area",
+      "id": "humaneval_real_HumanEval_45",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/45",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_45/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "fib4",
+      "id": "humaneval_real_HumanEval_46",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/46",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_46/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "median",
+      "id": "humaneval_real_HumanEval_47",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/47",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_47/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "is_palindrome",
+      "id": "humaneval_real_HumanEval_48",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/48",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_48/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "modp",
+      "id": "humaneval_real_HumanEval_49",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/49",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_49/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "decode_shift",
+      "id": "humaneval_real_HumanEval_50",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/50",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_50/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "remove_vowels",
+      "id": "humaneval_real_HumanEval_51",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/51",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_51/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "below_threshold",
+      "id": "humaneval_real_HumanEval_52",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/52",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_52/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "add",
+      "id": "humaneval_real_HumanEval_53",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/53",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_53/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "same_chars",
+      "id": "humaneval_real_HumanEval_54",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/54",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc",
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_54/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "fib",
+      "id": "humaneval_real_HumanEval_55",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/55",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_55/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "correct_bracketing",
+      "id": "humaneval_real_HumanEval_56",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/56",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_56/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "monotonic",
+      "id": "humaneval_real_HumanEval_57",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/57",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_57/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "common",
+      "id": "humaneval_real_HumanEval_58",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/58",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_58/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "largest_prime_factor",
+      "id": "humaneval_real_HumanEval_59",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/59",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_59/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "sum_to_n",
+      "id": "humaneval_real_HumanEval_60",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/60",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_60/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "correct_bracketing",
+      "id": "humaneval_real_HumanEval_61",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/61",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_61/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "derivative",
+      "id": "humaneval_real_HumanEval_62",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/62",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_62/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "fibfib",
+      "id": "humaneval_real_HumanEval_63",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/63",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_63/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "vowels_count",
+      "id": "humaneval_real_HumanEval_64",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/64",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_64/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "circular_shift",
+      "id": "humaneval_real_HumanEval_65",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/65",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_65/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "digitSum",
+      "id": "humaneval_real_HumanEval_66",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/66",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_66/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "fruit_distribution",
+      "id": "humaneval_real_HumanEval_67",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/67",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc",
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_67/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "pluck",
+      "id": "humaneval_real_HumanEval_68",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/68",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_68/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "search",
+      "id": "humaneval_real_HumanEval_69",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/69",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_69/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "strange_sort_list",
+      "id": "humaneval_real_HumanEval_70",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/70",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_70/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "triangle_area",
+      "id": "humaneval_real_HumanEval_71",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/71",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_71/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "will_it_fly",
+      "id": "humaneval_real_HumanEval_72",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/72",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_72/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "smallest_change",
+      "id": "humaneval_real_HumanEval_73",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/73",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_73/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "total_match",
+      "id": "humaneval_real_HumanEval_74",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/74",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_74/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "is_multiply_prime",
+      "id": "humaneval_real_HumanEval_75",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/75",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_75/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "is_simple_power",
+      "id": "humaneval_real_HumanEval_76",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/76",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_76/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "iscube",
+      "id": "humaneval_real_HumanEval_77",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/77",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_77/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "hex_key",
+      "id": "humaneval_real_HumanEval_78",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/78",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_78/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "decimal_to_binary",
+      "id": "humaneval_real_HumanEval_79",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/79",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_79/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "is_happy",
+      "id": "humaneval_real_HumanEval_80",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/80",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_80/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "numerical_letter_grade",
+      "id": "humaneval_real_HumanEval_81",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/81",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_81/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "prime_length",
+      "id": "humaneval_real_HumanEval_82",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/82",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_82/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "starts_one_ends",
+      "id": "humaneval_real_HumanEval_83",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/83",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_83/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "solve",
+      "id": "humaneval_real_HumanEval_84",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/84",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_84/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "add",
+      "id": "humaneval_real_HumanEval_85",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/85",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_85/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "anti_shuffle",
+      "id": "humaneval_real_HumanEval_86",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/86",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_86/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "get_row",
+      "id": "humaneval_real_HumanEval_87",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/87",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_87/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "sort_array",
+      "id": "humaneval_real_HumanEval_88",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/88",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_88/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "encrypt",
+      "id": "humaneval_real_HumanEval_89",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/89",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_89/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "next_smallest",
+      "id": "humaneval_real_HumanEval_90",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/90",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_90/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "is_bored",
+      "id": "humaneval_real_HumanEval_91",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/91",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_91/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "any_int",
+      "id": "humaneval_real_HumanEval_92",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/92",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_92/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "encode",
+      "id": "humaneval_real_HumanEval_93",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/93",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_93/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "skjkasdkd",
+      "id": "humaneval_real_HumanEval_94",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/94",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_94/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "check_dict_case",
+      "id": "humaneval_real_HumanEval_95",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/95",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_95/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "count_up_to",
+      "id": "humaneval_real_HumanEval_96",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/96",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_96/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "multiply",
+      "id": "humaneval_real_HumanEval_97",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/97",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1,
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_97/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "count_upper",
+      "id": "humaneval_real_HumanEval_98",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/98",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_98/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "closest_integer",
+      "id": "humaneval_real_HumanEval_99",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/99",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_99/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "make_a_pile",
+      "id": "humaneval_real_HumanEval_100",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/100",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            1
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_100/source.py",
+      "target_language": "java",
+      "target_path": null
+    },
+    {
+      "entrypoint": "words_string",
+      "id": "humaneval_real_HumanEval_101",
+      "metadata": {
+        "dataset": "humaneval_real",
+        "original_id": "HumanEval/101",
+        "profile": "real_cross_language"
+      },
+      "oracle_policy": "differential",
+      "seed_tests": [
+        {
+          "args": [
+            "abc"
+          ]
+        }
+      ],
+      "source_language": "python",
+      "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_101/source.py",
+      "target_language": "java",
+      "target_path": null
+    }
+  ]
+}

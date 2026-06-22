@@ -1,0 +1,25 @@
+{
+  "entrypoint": "eulerian_num",
+  "id": "mbpp_real_103",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    eulerian_num = candidate\n    assert eulerian_num(3, 1) == 4\n    assert eulerian_num(4, 1) == 11\n    assert eulerian_num(5, 3) == 26\n",
+    "oracle_type": "callable_check",
+    "original_id": 103,
+    "profile": "real_python",
+    "prompt": "Write a function to find the Eulerian number a(n, m).",
+    "source": "google_research_mbpp",
+    "source_code": "def eulerian_num(n, m): \n\tif (m >= n or n == 0): \n\t\treturn 0 \n\tif (m == 0): \n\t\treturn 1 \n\treturn ((n - m) * eulerian_num(n - 1, m - 1) +(m + 1) * eulerian_num(n - 1, m))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_103/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

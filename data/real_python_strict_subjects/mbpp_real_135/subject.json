@@ -1,0 +1,25 @@
+{
+  "entrypoint": "hexagonal_num",
+  "id": "mbpp_real_135",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    hexagonal_num = candidate\n    assert hexagonal_num(10) == 190\n    assert hexagonal_num(5) == 45\n    assert hexagonal_num(7) == 91\n",
+    "oracle_type": "callable_check",
+    "original_id": 135,
+    "profile": "real_python",
+    "prompt": "Write a function to find the nth hexagonal number.",
+    "source": "google_research_mbpp",
+    "source_code": "def hexagonal_num(n): \n\treturn n*(2*n - 1) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_135/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

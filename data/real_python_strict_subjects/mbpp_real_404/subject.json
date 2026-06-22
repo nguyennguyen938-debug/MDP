@@ -1,0 +1,25 @@
+{
+  "entrypoint": "minimum",
+  "id": "mbpp_real_404",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    minimum = candidate\n    assert minimum(1,2) == 1\n    assert minimum(-5,-4) == -5\n    assert minimum(0,0) == 0\n",
+    "oracle_type": "callable_check",
+    "original_id": 404,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the minimum of two numbers.",
+    "source": "google_research_mbpp",
+    "source_code": "def minimum(a,b):   \n    if a <= b: \n        return a \n    else: \n        return b ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_404/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

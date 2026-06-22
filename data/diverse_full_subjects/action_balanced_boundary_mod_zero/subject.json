@@ -1,0 +1,40 @@
+{
+  "entrypoint": "solve",
+  "id": "action_balanced_boundary_mod_zero",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          0
+        ]
+      },
+      {
+        "args": [
+          1
+        ]
+      },
+      {
+        "args": [
+          -1
+        ]
+      }
+    ],
+    "dataset": "action_balanced",
+    "original_id": "boundary_mod_zero",
+    "profile": "action_balanced",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(x: int) -> int:\n    return 100 % x\n",
+    "split": "test",
+    "stress_category": "boundary"
+  },
+  "path": "action_balanced_boundary_mod_zero/solution.py",
+  "tests": [
+    {
+      "args": [
+        4
+      ],
+      "expected": 0
+    }
+  ]
+}

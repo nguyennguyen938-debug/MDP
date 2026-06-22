@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_substring",
+  "id": "mbpp_real_91",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_substring = candidate\n    assert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ack\")==True\n    assert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"abc\")==False\n    assert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ange\")==True\n",
+    "oracle_type": "callable_check",
+    "original_id": 91,
+    "profile": "real_python",
+    "prompt": "Write a function to check if a string is present as a substring in a given list of string values.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_substring(str1, sub_str):\n   if any(sub_str in s for s in str1):\n       return True\n   return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_91/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sort_matrix",
+  "id": "mbpp_real_12",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sort_matrix = candidate\n    assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]\n    assert sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])==[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]\n    assert sort_matrix([[5,8,9],[6,4,3],[2,1,4]])==[[2, 1, 4], [6, 4, 3], [5, 8, 9]]\n",
+    "oracle_type": "callable_check",
+    "original_id": 12,
+    "profile": "real_python",
+    "prompt": "Write a function to sort a given matrix in ascending order according to the sum of its rows.",
+    "source": "google_research_mbpp",
+    "source_code": "def sort_matrix(M):\n    result = sorted(M, key=sum)\n    return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_12/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

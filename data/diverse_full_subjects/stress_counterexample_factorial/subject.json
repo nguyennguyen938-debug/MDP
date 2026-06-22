@@ -1,0 +1,43 @@
+{
+  "entrypoint": "solve",
+  "id": "stress_counterexample_factorial",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          0
+        ]
+      },
+      {
+        "args": [
+          1
+        ]
+      }
+    ],
+    "counterexample_cases": [
+      {
+        "args": [
+          4
+        ],
+        "expected": 24
+      }
+    ],
+    "dataset": "stress",
+    "original_id": "counterexample_factorial",
+    "profile": "stress",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(n: int) -> int:\n    out = 1\n    for i in range(1, n):\n        out *= i\n    return out\n",
+    "split": "test",
+    "stress_category": "counterexample"
+  },
+  "path": "stress_counterexample_factorial/solution.py",
+  "tests": [
+    {
+      "args": [
+        2
+      ],
+      "expected": 2
+    }
+  ]
+}

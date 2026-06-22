@@ -1,0 +1,31 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_matrix_trace",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_matrix_trace",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(matrix: list[list[int]]) -> int:\n    return sum(matrix[i][i] for i in range(min(len(matrix), len(matrix[0]) if matrix else 0)))\n",
+    "split": "val"
+  },
+  "path": "mbpp_matrix_trace/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "expected": 5
+    }
+  ]
+}

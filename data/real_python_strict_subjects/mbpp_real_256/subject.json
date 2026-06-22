@@ -1,0 +1,25 @@
+{
+  "entrypoint": "count_Primes_nums",
+  "id": "mbpp_real_256",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    count_Primes_nums = candidate\n    assert count_Primes_nums(5) == 2\n    assert count_Primes_nums(10) == 4\n    assert count_Primes_nums(100) == 25\n",
+    "oracle_type": "callable_check",
+    "original_id": 256,
+    "profile": "real_python",
+    "prompt": "Write a python function that takes in a non-negative number and returns the number of prime numbers less than the given non-negative number.",
+    "source": "google_research_mbpp",
+    "source_code": "def count_Primes_nums(n):\n    ctr = 0\n    for num in range(n):\n        if num <= 1:\n            continue\n        for i in range(2,num):\n            if (num % i) == 0:\n                break\n        else:\n            ctr += 1\n    return ctr",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_256/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

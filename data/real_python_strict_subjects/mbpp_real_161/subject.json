@@ -1,0 +1,25 @@
+{
+  "entrypoint": "remove_elements",
+  "id": "mbpp_real_161",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    remove_elements = candidate\n    assert remove_elements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [2, 4, 6, 8]) == [1, 3, 5, 7, 9, 10]\n    assert remove_elements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [1, 3, 5, 7]) == [2, 4, 6, 8, 9, 10]\n    assert remove_elements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [5, 7]) == [1, 2, 3, 4, 6, 8, 9, 10]\n",
+    "oracle_type": "callable_check",
+    "original_id": 161,
+    "profile": "real_python",
+    "prompt": "Write a function to remove all elements from a given list present in another list.",
+    "source": "google_research_mbpp",
+    "source_code": "def remove_elements(list1, list2):\n    result = [x for x in list1 if x not in list2]\n    return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_161/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

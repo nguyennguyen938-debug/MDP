@@ -1,0 +1,25 @@
+{
+  "entrypoint": "text_lowercase_underscore",
+  "id": "mbpp_real_16",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    text_lowercase_underscore = candidate\n    assert text_lowercase_underscore(\"aab_cbbbc\")==(True)\n    assert text_lowercase_underscore(\"aab_Abbbc\")==(False)\n    assert text_lowercase_underscore(\"Aaab_abbbc\")==(False)\n",
+    "oracle_type": "callable_check",
+    "original_id": 16,
+    "profile": "real_python",
+    "prompt": "Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef text_lowercase_underscore(text):\n        patterns = '^[a-z]+_[a-z]+$'\n        if re.search(patterns,  text):\n                return True\n        else:\n                return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_16/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

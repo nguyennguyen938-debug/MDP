@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_kth",
+  "id": "mbpp_real_597",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_kth = candidate\n    assert find_kth([2, 3, 6, 7, 9], [1, 4, 8, 10], 5) == 6\n    assert find_kth([100, 112, 256, 349, 770], [72, 86, 113, 119, 265, 445, 892], 7) == 256\n    assert find_kth([3, 4, 7, 8, 10], [2, 5, 9, 11], 6) == 8\n",
+    "oracle_type": "callable_check",
+    "original_id": 597,
+    "profile": "real_python",
+    "prompt": "Write a function to find kth element from the given two sorted arrays.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_kth(arr1, arr2, k):\n\tm = len(arr1)\n\tn = len(arr2)\n\tsorted1 = [0] * (m + n)\n\ti = 0\n\tj = 0\n\td = 0\n\twhile (i < m and j < n):\n\t\tif (arr1[i] < arr2[j]):\n\t\t\tsorted1[d] = arr1[i]\n\t\t\ti += 1\n\t\telse:\n\t\t\tsorted1[d] = arr2[j]\n\t\t\tj += 1\n\t\td += 1\n\twhile (i < m):\n\t\tsorted1[d] = arr1[i]\n\t\td += 1\n\t\ti += 1\n\twhile (j < n):\n\t\tsorted1[d] = arr2[j]\n\t\td += 1\n\t\tj += 1\n\treturn sorted1[k - 1]",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_597/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

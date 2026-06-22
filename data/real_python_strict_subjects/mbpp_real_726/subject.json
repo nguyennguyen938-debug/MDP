@@ -1,0 +1,25 @@
+{
+  "entrypoint": "multiply_elements",
+  "id": "mbpp_real_726",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    multiply_elements = candidate\n    assert multiply_elements((1, 5, 7, 8, 10)) == (5, 35, 56, 80)\n    assert multiply_elements((2, 4, 5, 6, 7)) == (8, 20, 30, 42)\n    assert multiply_elements((12, 13, 14, 9, 15)) == (156, 182, 126, 135)\n    assert multiply_elements((12,)) == ()\n",
+    "oracle_type": "callable_check",
+    "original_id": 726,
+    "profile": "real_python",
+    "prompt": "Write a function that takes as input a tuple of numbers (t_1,...,t_{N+1}) and returns a tuple of length N where the i-th element of the tuple is equal to t_i * t_{i+1}.",
+    "source": "google_research_mbpp",
+    "source_code": "def multiply_elements(test_tup):\n  res = tuple(i * j for i, j in zip(test_tup, test_tup[1:]))\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_726/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

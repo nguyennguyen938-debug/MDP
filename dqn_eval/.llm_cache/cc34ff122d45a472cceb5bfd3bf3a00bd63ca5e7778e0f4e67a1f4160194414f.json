@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 102,
+  "key": "cc34ff122d45a472cceb5bfd3bf3a00bd63ca5e7778e0f4e67a1f4160194414f",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for stress_fuzz_repeated_items:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `stress_fuzz_repeated_items:solve`, categorized for clarity:\n\n**Core Functionality & Correctness:**\n\n*   `assert solve(items) == expected_result` (The most fundamental assertion)\n*   `assert solve(items) is not None`\n*   `assert isinstance(solve(items), list)`\n*   `assert len(solve(items)) == expected_length`\n*   `assert all(item in solve(items) for item in expected_result)` (Ensures all expected items are present)\n*   `assert all(item in expected_result for item in solve(items))` (Ensures no unexpected items are present)\n*   `assert sorted(solve(items)) == sorted(expected_result)` (Order-agnostic correctness)\n\n**Handling of Repeated Items:**\n\n*   `assert solve(repeated_items) == expected_repeated_result`\n*   `assert solve(repeated_items).count(repeated_item) == expected_count`\n*   `assert solve(repeated_items).count(unique_item) == 1` (If unique items should appear once)\n*   `assert solve"
+}

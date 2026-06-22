@@ -1,0 +1,25 @@
+{
+  "entrypoint": "upper_ctr",
+  "id": "mbpp_real_461",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    upper_ctr = candidate\n    assert upper_ctr('PYthon') == 1\n    assert upper_ctr('BigData') == 1\n    assert upper_ctr('program') == 0\n",
+    "oracle_type": "callable_check",
+    "original_id": 461,
+    "profile": "real_python",
+    "prompt": "Write a python function to count the upper case characters in a given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def upper_ctr(str):\n    upper_ctr = 0\n    for i in range(len(str)):\n          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1\n          return upper_ctr",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_461/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

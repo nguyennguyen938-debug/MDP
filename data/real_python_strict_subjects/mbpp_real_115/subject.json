@@ -1,0 +1,25 @@
+{
+  "entrypoint": "empty_dit",
+  "id": "mbpp_real_115",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    empty_dit = candidate\n    assert empty_dit([{},{},{}])==True\n    assert empty_dit([{1,2},{},{}])==False\n    assert empty_dit({})==True\n",
+    "oracle_type": "callable_check",
+    "original_id": 115,
+    "profile": "real_python",
+    "prompt": "Write a function to check whether all dictionaries in a list are empty or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def empty_dit(list1):\n empty_dit=all(not d for d in list1)\n return empty_dit",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_115/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

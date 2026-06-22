@@ -1,0 +1,32 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_rolling_max",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "rolling_max",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(numbers: list[int]) -> list[int]:\n    best = None\n    out = []\n    for number in numbers:\n        best = number if best is None else max(best, number)\n        out.append(best)\n    return out\n",
+    "split": "train"
+  },
+  "path": "humaneval_rolling_max/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          3,
+          2,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        3,
+        3,
+        5
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "extract_string",
+  "id": "mbpp_real_450",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    extract_string = candidate\n    assert extract_string(['Python', 'list', 'exercises', 'practice', 'solution'] ,8)==['practice', 'solution']\n    assert extract_string(['Python', 'list', 'exercises', 'practice', 'solution'] ,6)==['Python']\n    assert extract_string(['Python', 'list', 'exercises', 'practice', 'solution'] ,9)==['exercises']\n",
+    "oracle_type": "callable_check",
+    "original_id": 450,
+    "profile": "real_python",
+    "prompt": "Write a function to extract specified size of strings from a given list of string values.",
+    "source": "google_research_mbpp",
+    "source_code": "def extract_string(str, l):\n    result = [e for e in str if len(e) == l] \n    return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_450/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

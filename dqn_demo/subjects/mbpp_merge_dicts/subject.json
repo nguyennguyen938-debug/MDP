@@ -1,0 +1,31 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_merge_dicts",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_merge_dicts",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(a: dict[str, int], b: dict[str, int]) -> dict[str, int]:\n    out = dict(a)\n    for key, value in b.items():\n        out[key] = out.get(key, 0) + value\n    return out\n",
+    "split": "val"
+  },
+  "path": "mbpp_merge_dicts/solution.py",
+  "tests": [
+    {
+      "args": [
+        {
+          "a": 1
+        },
+        {
+          "a": 2,
+          "b": 3
+        }
+      ],
+      "expected": {
+        "a": 3,
+        "b": 3
+      }
+    }
+  ]
+}

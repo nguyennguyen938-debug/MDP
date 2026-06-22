@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_lists",
+  "id": "mbpp_real_143",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_lists = candidate\n    assert find_lists(([1, 2, 3, 4], [5, 6, 7, 8])) == 2\n    assert find_lists(([1, 2], [3, 4], [5, 6]))  == 3\n    assert find_lists(([9, 8, 7, 6, 5, 4, 3, 2, 1])) == 1\n",
+    "oracle_type": "callable_check",
+    "original_id": 143,
+    "profile": "real_python",
+    "prompt": "Write a function to find number of lists present in the given tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_lists(Input): \n\tif isinstance(Input, list): \n\t\treturn 1\n\telse: \n\t\treturn len(Input) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_143/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

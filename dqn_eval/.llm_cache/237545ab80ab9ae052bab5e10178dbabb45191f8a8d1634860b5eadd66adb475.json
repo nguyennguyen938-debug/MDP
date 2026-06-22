@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 99,
+  "key": "237545ab80ab9ae052bab5e10178dbabb45191f8a8d1634860b5eadd66adb475",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_count_vowels:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_count_vowels:solve`, categorized for clarity:\n\n**Basic Cases:**\n\n*   `assert solve(\"hello\") == 2`\n*   `assert solve(\"world\") == 1`\n*   `assert solve(\"aeiou\") == 5`\n*   `assert solve(\"AEIOU\") == 5`\n\n**Edge Cases:**\n\n*   `assert solve(\"\") == 0` (Empty string)\n*   `assert solve(\"bcdfg\") == 0` (No vowels)\n*   `assert solve(\"a\") == 1` (Single vowel)\n*   `assert solve(\"b\") == 0` (Single consonant)\n\n**Mixed Cases:**\n\n*   `assert solve(\"Programming is fun\") == 5`\n*   `assert solve(\"Python\") == 1`\n*   `assert solve(\"AaEeIiOoUu\") == 10`\n*   `assert solve(\"12345\") == 0` (No letters)\n*   `assert solve(\"!@#$%^\") == 0` (Special characters)\n*   `assert solve(\"Hello World!\") =="
+}

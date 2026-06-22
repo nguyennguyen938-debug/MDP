@@ -1,0 +1,25 @@
+{
+  "entrypoint": "volume_cone",
+  "id": "mbpp_real_312",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "import math\n\ndef check(candidate):\n    volume_cone = candidate\n    assert math.isclose(volume_cone(5,12), 314.15926535897927, rel_tol=0.001)\n    assert math.isclose(volume_cone(10,15), 1570.7963267948965, rel_tol=0.001)\n    assert math.isclose(volume_cone(19,17), 6426.651371693521, rel_tol=0.001)\n",
+    "oracle_type": "callable_check",
+    "original_id": 312,
+    "profile": "real_python",
+    "prompt": "Write a function to find the volume of a cone.",
+    "source": "google_research_mbpp",
+    "source_code": "import math\ndef volume_cone(r,h):\n  volume = (1.0/3) * math.pi * r * r * h\n  return volume",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_312/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

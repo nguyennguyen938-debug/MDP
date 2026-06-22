@@ -1,0 +1,25 @@
+{
+  "entrypoint": "common_element",
+  "id": "mbpp_real_431",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    common_element = candidate\n    assert common_element([1,2,3,4,5], [5,6,7,8,9])==True\n    assert common_element([1,2,3,4,5], [6,7,8,9])==None\n    assert common_element(['a','b','c'], ['d','b','e'])==True\n",
+    "oracle_type": "callable_check",
+    "original_id": 431,
+    "profile": "real_python",
+    "prompt": "Write a function that takes two lists and returns true if they have at least one common element.",
+    "source": "google_research_mbpp",
+    "source_code": "def common_element(list1, list2):\n     result = False\n     for x in list1:\n         for y in list2:\n             if x == y:\n                 result = True\n                 return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_431/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

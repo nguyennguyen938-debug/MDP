@@ -1,0 +1,25 @@
+{
+  "entrypoint": "last",
+  "id": "mbpp_real_793",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    last = candidate\n    assert last([1,2,3],1) == 0\n    assert last([1,1,1,2,3,4],1) == 2\n    assert last([2,3,2,3,6,8,9],3) == 3\n",
+    "oracle_type": "callable_check",
+    "original_id": 793,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the last position of an element in a sorted array.",
+    "source": "google_research_mbpp",
+    "source_code": "def last(arr,x):\n    n = len(arr)\n    low = 0\n    high = n - 1\n    res = -1  \n    while (low <= high):\n        mid = (low + high) // 2 \n        if arr[mid] > x:\n            high = mid - 1\n        elif arr[mid] < x:\n            low = mid + 1\n        else:\n            res = mid\n            low = mid + 1\n    return res",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_793/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

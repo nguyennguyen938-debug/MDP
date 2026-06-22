@@ -1,0 +1,25 @@
+{
+  "entrypoint": "check_monthnumb_number",
+  "id": "mbpp_real_455",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    check_monthnumb_number = candidate\n    assert check_monthnumb_number(5)==True\n    assert check_monthnumb_number(2)==False\n    assert check_monthnumb_number(6)==False\n",
+    "oracle_type": "callable_check",
+    "original_id": 455,
+    "profile": "real_python",
+    "prompt": "Write a function to check whether the given month number contains 31 days or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def check_monthnumb_number(monthnum2):\n  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==12):\n    return True\n  else:\n    return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_455/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

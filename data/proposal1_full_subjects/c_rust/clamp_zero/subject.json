@@ -1,0 +1,21 @@
+{
+  "id": "c_real_curated_clamp_zero",
+  "source_language": "c",
+  "target_language": "rust",
+  "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust/clamp_zero/source.c",
+  "target_path": null,
+  "entrypoint": "solve",
+  "seed_tests": [
+    {
+      "args": [
+        -1
+      ]
+    }
+  ],
+  "metadata": {
+    "dataset": "c_real_curated",
+    "profile": "secondary_pilot",
+    "original_id": "clamp_zero"
+  },
+  "oracle_policy": "differential"
+}

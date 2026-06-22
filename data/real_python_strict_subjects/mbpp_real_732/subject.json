@@ -1,0 +1,25 @@
+{
+  "entrypoint": "replace_specialchar",
+  "id": "mbpp_real_732",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    replace_specialchar = candidate\n    assert replace_specialchar('Python language, Programming language.')==('Python:language::Programming:language:')\n    assert replace_specialchar('a b c,d e f')==('a:b:c:d:e:f')\n    assert replace_specialchar('ram reshma,ram rahim')==('ram:reshma:ram:rahim')\n",
+    "oracle_type": "callable_check",
+    "original_id": 732,
+    "profile": "real_python",
+    "prompt": "Write a function to replace all occurrences of spaces, commas, or dots with a colon.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef replace_specialchar(text):\n return (re.sub(\"[ ,.]\", \":\", text))\n",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_732/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

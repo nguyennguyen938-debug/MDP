@@ -1,0 +1,25 @@
+{
+  "entrypoint": "max_product",
+  "id": "mbpp_real_468",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    max_product = candidate\n    assert max_product([3, 100, 4, 5, 150, 6]) == 3000\n    assert max_product([4, 42, 55, 68, 80]) == 50265600\n    assert max_product([10, 22, 9, 33, 21, 50, 41, 60]) == 2460\n",
+    "oracle_type": "callable_check",
+    "original_id": 468,
+    "profile": "real_python",
+    "prompt": "Write a function to find the maximum product formed by multiplying numbers of an increasing subsequence of that array.",
+    "source": "google_research_mbpp",
+    "source_code": "def max_product(arr):   \n  n = len(arr)\n  mpis = arr[:]\n  for i in range(n): \n    current_prod = arr[i]\n    j = i + 1\n    while j < n:\n      if arr[j-1] > arr[j]: \n        break\n      current_prod *= arr[j]\n      if current_prod > mpis[j]:\n        mpis[j] = current_prod \n      j = j + 1\n  return max(mpis)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_468/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "colon_tuplex",
+  "id": "mbpp_real_307",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    colon_tuplex = candidate\n    assert colon_tuplex((\"HELLO\", 5, [], True) ,2,50)==(\"HELLO\", 5, [50], True)\n    assert colon_tuplex((\"HELLO\", 5, [], True) ,2,100)==((\"HELLO\", 5, [100],True))\n    assert colon_tuplex((\"HELLO\", 5, [], True) ,2,500)==(\"HELLO\", 5, [500], True)\n",
+    "oracle_type": "callable_check",
+    "original_id": 307,
+    "profile": "real_python",
+    "prompt": "Write a function to get a colon of a tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "from copy import deepcopy\ndef colon_tuplex(tuplex,m,n):\n  tuplex_colon = deepcopy(tuplex)\n  tuplex_colon[m].append(n)\n  return tuplex_colon",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_307/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

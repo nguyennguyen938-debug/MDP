@@ -1,0 +1,25 @@
+{
+  "entrypoint": "prime_num",
+  "id": "mbpp_real_605",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    prime_num = candidate\n    assert prime_num(13)==True\n    assert prime_num(7)==True\n    assert prime_num(-1010)==False\n",
+    "oracle_type": "callable_check",
+    "original_id": 605,
+    "profile": "real_python",
+    "prompt": "Write a function to check if the given integer is a prime number.",
+    "source": "google_research_mbpp",
+    "source_code": "def prime_num(num):\n  if num >=1:\n   for i in range(2, num//2):\n     if (num % i) == 0:\n                return False\n     else:\n                return True\n  else:\n          return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_605/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

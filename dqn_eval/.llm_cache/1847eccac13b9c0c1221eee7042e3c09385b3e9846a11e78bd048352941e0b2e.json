@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 108,
+  "key": "1847eccac13b9c0c1221eee7042e3c09385b3e9846a11e78bd048352941e0b2e",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for bugsinpy_rounding_division:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `bugsinpy_rounding_division.solve`, categorized by the type of behavior they aim to test:\n\n**Basic Correctness & Edge Cases:**\n\n*   `assert solve(10, 3) == 3`  (Standard integer division)\n*   `assert solve(10, 2) == 5`  (Exact division)\n*   `assert solve(7, 3) == 2`   (Rounding down)\n*   `assert solve(8, 3) == 3`   (Rounding up)\n*   `assert solve(0, 5) == 0`   (Zero numerator)\n*   `assert solve(5, 1) == 5`   (Division by one)\n*   `assert solve(1, 1) == 1`   (One divided by one)\n*   `assert solve(-10, 3) == -3` (Negative numerator, rounding down)\n*   `assert solve(-7, 3) == -2`  (Negative numerator, rounding up)\n*   `assert solve(10, -3) == -3` (Negative"
+}

@@ -1,0 +1,1 @@
+int solve(const char *s) { int score = 0; for (int i = 0; s[i]; i++) { char c = s[i]; if (c >= 'a' && c <= 'z') c -= 32; if (c == 'Q' || c == 'Z') score += 10; else if (c == 'J' || c == 'X') score += 8; else if (c >= 'A' && c <= 'Z') score += 1; } return score; }

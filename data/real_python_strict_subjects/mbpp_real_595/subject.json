@@ -1,0 +1,25 @@
+{
+  "entrypoint": "min_Swaps",
+  "id": "mbpp_real_595",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    min_Swaps = candidate\n    assert min_Swaps(\"1101\",\"1110\") == 1\n    assert min_Swaps(\"111\",\"000\") == \"Not Possible\"\n    assert min_Swaps(\"111\",\"110\") == \"Not Possible\"\n",
+    "oracle_type": "callable_check",
+    "original_id": 595,
+    "profile": "real_python",
+    "prompt": "Write a python function to count minimum number of swaps required to convert one binary number represented as a string to another.",
+    "source": "google_research_mbpp",
+    "source_code": "def min_Swaps(str1,str2) : \n    count = 0\n    for i in range(len(str1)) :  \n        if str1[i] != str2[i] : \n            count += 1\n    if count % 2 == 0 : \n        return (count // 2) \n    else : \n        return (\"Not Possible\") ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_595/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

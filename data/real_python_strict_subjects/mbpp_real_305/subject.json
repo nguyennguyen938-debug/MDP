@@ -1,0 +1,25 @@
+{
+  "entrypoint": "start_withp",
+  "id": "mbpp_real_305",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    start_withp = candidate\n    assert start_withp([\"Python PHP\", \"Java JavaScript\", \"c c++\"])==('Python', 'PHP')\n    assert start_withp([\"Python Programming\",\"Java Programming\"])==('Python','Programming')\n    assert start_withp([\"Pqrst Pqr\",\"qrstuv\"])==('Pqrst','Pqr')\n",
+    "oracle_type": "callable_check",
+    "original_id": 305,
+    "profile": "real_python",
+    "prompt": "Write a function to return two words from a list of words starting with letter 'p'.",
+    "source": "google_research_mbpp",
+    "source_code": "import re\ndef start_withp(words):\n for w in words:\n        m = re.match(\"(P\\w+)\\W(P\\w+)\", w)\n        if m:\n            return m.groups()",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_305/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

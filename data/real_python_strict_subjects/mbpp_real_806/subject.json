@@ -1,0 +1,25 @@
+{
+  "entrypoint": "max_run_uppercase",
+  "id": "mbpp_real_806",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    max_run_uppercase = candidate\n    assert max_run_uppercase('GeMKSForGERksISBESt') == 5\n    assert max_run_uppercase('PrECIOusMOVemENTSYT') == 6\n    assert max_run_uppercase('GooGLEFluTTER') == 4\n",
+    "oracle_type": "callable_check",
+    "original_id": 806,
+    "profile": "real_python",
+    "prompt": "Write a function to find maximum run of uppercase characters in the given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def max_run_uppercase(test_str):\n  cnt = 0\n  res = 0\n  for idx in range(0, len(test_str)):\n    if test_str[idx].isupper():\n      cnt += 1\n    else:\n      res = cnt\n      cnt = 0\n  if test_str[len(test_str) - 1].isupper():\n    res = cnt\n  return (res)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_806/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

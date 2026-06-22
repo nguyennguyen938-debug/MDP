@@ -1,0 +1,30 @@
+{
+  "entrypoint": "solve",
+  "id": "c_rust_v2_A_shift_at_width",
+  "metadata": {
+    "category": "A_integer",
+    "dataset": "c_rust_v2",
+    "license": "authored_for_this_paper",
+    "original_id": "A_shift_at_width",
+    "signature": {
+      "params": [
+        "int",
+        "int"
+      ],
+      "return": "int"
+    }
+  },
+  "oracle_policy": "differential",
+  "seed_tests": [
+    {
+      "args": [
+        1,
+        32
+      ]
+    }
+  ],
+  "source_language": "c",
+  "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_A_shift_at_width/source.c",
+  "target_language": "rust",
+  "target_path": null
+}

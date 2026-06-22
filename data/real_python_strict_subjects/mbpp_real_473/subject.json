@@ -1,0 +1,25 @@
+{
+  "entrypoint": "tuple_intersection",
+  "id": "mbpp_real_473",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    tuple_intersection = candidate\n    assert tuple_intersection([(3, 4), (5, 6), (9, 10), (4, 5)] , [(5, 4), (3, 4), (6, 5), (9, 11)]) == {(4, 5), (3, 4), (5, 6)}\n    assert tuple_intersection([(4, 1), (7, 4), (11, 13), (17, 14)] , [(1, 4), (7, 4), (16, 12), (10, 13)]) == {(4, 7), (1, 4)}\n    assert tuple_intersection([(2, 1), (3, 2), (1, 3), (1, 4)] , [(11, 2), (2, 3), (6, 2), (1, 3)]) == {(1, 3), (2, 3)}\n",
+    "oracle_type": "callable_check",
+    "original_id": 473,
+    "profile": "real_python",
+    "prompt": "Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order.",
+    "source": "google_research_mbpp",
+    "source_code": "def tuple_intersection(test_list1, test_list2):\n  res = set([tuple(sorted(ele)) for ele in test_list1]) & set([tuple(sorted(ele)) for ele in test_list2])\n  return (res)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_473/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

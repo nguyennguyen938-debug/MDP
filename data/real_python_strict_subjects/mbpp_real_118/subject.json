@@ -1,0 +1,25 @@
+{
+  "entrypoint": "string_to_list",
+  "id": "mbpp_real_118",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    string_to_list = candidate\n    assert string_to_list(\"python programming\")==['python','programming']\n    assert string_to_list(\"lists tuples strings\")==['lists','tuples','strings']\n    assert string_to_list(\"write a program\")==['write','a','program']\n",
+    "oracle_type": "callable_check",
+    "original_id": 118,
+    "profile": "real_python",
+    "prompt": "Write a function to convert a string to a list of strings split on the space character.",
+    "source": "google_research_mbpp",
+    "source_code": "def string_to_list(string): \n    lst = list(string.split(\" \")) \n    return lst",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_118/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "entrypoint": "solve",
+  "id": "c_rust_100_exercism_grains_4",
+  "metadata": {
+    "dataset": "c_rust_100",
+    "license": "MIT",
+    "original_id": "exercism_grains_4",
+    "profile": "exercise_derived",
+    "signature": {
+      "params": [
+        "int"
+      ],
+      "return": "int"
+    },
+    "source_url": "https://github.com/exercism/c"
+  },
+  "oracle_policy": "differential",
+  "seed_tests": [
+    {
+      "args": [
+        16
+      ]
+    }
+  ],
+  "source_language": "c",
+  "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/c_rust_100/c_rust_100_exercism_grains_4/source.c",
+  "target_language": "rust",
+  "target_path": null
+}

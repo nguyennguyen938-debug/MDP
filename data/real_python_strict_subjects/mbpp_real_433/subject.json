@@ -1,0 +1,25 @@
+{
+  "entrypoint": "check_greater",
+  "id": "mbpp_real_433",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    check_greater = candidate\n    assert check_greater([1, 2, 3, 4, 5], 4) == False\n    assert check_greater([2, 3, 4, 5, 6], 8) == True\n    assert check_greater([9, 7, 4, 8, 6, 1], 11) == True\n",
+    "oracle_type": "callable_check",
+    "original_id": 433,
+    "profile": "real_python",
+    "prompt": "Write a function to check whether the entered number is greater than the elements of the given array.",
+    "source": "google_research_mbpp",
+    "source_code": "def check_greater(arr, number):\n  arr.sort()\n  return number > arr[-1]",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_433/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

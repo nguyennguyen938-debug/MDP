@@ -1,0 +1,25 @@
+{
+  "entrypoint": "empty_list",
+  "id": "mbpp_real_568",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    empty_list = candidate\n    assert empty_list(5)==[{},{},{},{},{}]\n    assert empty_list(6)==[{},{},{},{},{},{}]\n    assert empty_list(7)==[{},{},{},{},{},{},{}]\n",
+    "oracle_type": "callable_check",
+    "original_id": 568,
+    "profile": "real_python",
+    "prompt": "Write a function to create a list of N empty dictionaries.",
+    "source": "google_research_mbpp",
+    "source_code": "def empty_list(length):\n empty_list = [{} for _ in range(length)]\n return empty_list",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_568/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sample_nam",
+  "id": "mbpp_real_639",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sample_nam = candidate\n    assert sample_nam(['sally', 'Dylan', 'rebecca', 'Diana', 'Joanne', 'keith'])==16\n    assert sample_nam([\"php\", \"res\", \"Python\", \"abcd\", \"Java\", \"aaa\"])==10\n    assert sample_nam([\"abcd\", \"Python\", \"abba\", \"aba\"])==6\n",
+    "oracle_type": "callable_check",
+    "original_id": 639,
+    "profile": "real_python",
+    "prompt": "Write a function to sum the length of the names of a given list of names after removing the names that start with a lowercase letter.",
+    "source": "google_research_mbpp",
+    "source_code": "def sample_nam(sample_names):\n  sample_names=list(filter(lambda el:el[0].isupper() and el[1:].islower(),sample_names))\n  return len(''.join(sample_names))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_639/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

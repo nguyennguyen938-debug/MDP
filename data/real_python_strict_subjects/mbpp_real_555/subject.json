@@ -1,0 +1,25 @@
+{
+  "entrypoint": "difference",
+  "id": "mbpp_real_555",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    difference = candidate\n    assert difference(3) == 30\n    assert difference(5) == 210\n    assert difference(2) == 6\n",
+    "oracle_type": "callable_check",
+    "original_id": 555,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the difference between the sum of cubes of the first n natural numbers and the sum of the first n natural numbers.",
+    "source": "google_research_mbpp",
+    "source_code": "def difference(n) :  \n    S = (n*(n + 1))//2;  \n    res = S*(S-1);  \n    return res;  ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_555/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

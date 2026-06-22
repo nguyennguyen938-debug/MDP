@@ -1,0 +1,34 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_flatten",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_flatten",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[list[int]]) -> list[int]:\n    return [x for group in items for x in group]\n",
+    "split": "val"
+  },
+  "path": "mbpp_flatten/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [],
+          [
+            3
+          ]
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

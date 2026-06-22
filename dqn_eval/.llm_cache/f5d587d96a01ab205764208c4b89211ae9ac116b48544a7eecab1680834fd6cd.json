@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 93,
+  "key": "f5d587d96a01ab205764208c4b89211ae9ac116b48544a7eecab1680834fd6cd",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_closest_pair:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_closest_pair.solve`, categorized by what they aim to test:\n\n**Basic Functionality & Edge Cases:**\n\n*   `assert solve([]) is None`  (Empty input)\n*   `assert solve([Point(0, 0)]) is None` (Single point)\n*   `assert solve([Point(0, 0), Point(1, 1)]) == (Point(0, 0), Point(1, 1))` (Two points)\n*   `assert solve([Point(0, 0), Point(0, 0)]) == (Point(0, 0), Point(0, 0))` (Identical points)\n\n**Correctness with Multiple Points:**\n\n*   `assert solve([Point(0, 0), Point(1, 1), Point(2, 2)]) == (Point(0, 0), Point(1, 1))` (Collinear, increasing distance)\n*   `assert solve([Point(0, 0), Point(2, 2), Point(1, 1)]) == (Point(1, 1), Point(2, 2))` (Col"
+}

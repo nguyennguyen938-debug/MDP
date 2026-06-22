@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_First_Missing",
+  "id": "mbpp_real_627",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_First_Missing = candidate\n    assert find_First_Missing([0,1,2,3]) == 4\n    assert find_First_Missing([0,1,2,6,9]) == 3\n    assert find_First_Missing([2,3,5,8,9]) == 0\n",
+    "oracle_type": "callable_check",
+    "original_id": 627,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the smallest missing number from a sorted list of natural numbers.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_First_Missing(array,start=0,end=None):\n    if end is None:\n      end = len(array) - 1   \n    if (start > end): \n        return end + 1\n    if (start != array[start]): \n        return start; \n    mid = int((start + end) / 2) \n    if (array[mid] == mid): \n        return find_First_Missing(array,mid+1,end) \n    return find_First_Missing(array,start,mid) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_627/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

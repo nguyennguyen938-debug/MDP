@@ -1,0 +1,1 @@
+int solve(const char *s, const char *pat) { int c = 0; int plen = 0; while (pat[plen]) plen++; for (int i = 0; s[i]; i++) { int ok = 1; for (int j = 0; j < plen; j++) { if (s[i+j] != pat[j]) { ok = 0; break; } } if (ok) c++; } return c; }

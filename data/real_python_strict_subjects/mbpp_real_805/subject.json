@@ -1,0 +1,25 @@
+{
+  "entrypoint": "max_sum_list",
+  "id": "mbpp_real_805",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    max_sum_list = candidate\n    assert max_sum_list([[1,2,3], [4,5,6], [10,11,12], [7,8,9]])==[10, 11, 12]\n    assert max_sum_list([[3,2,1], [6,5,4], [12,11,10]])==[12,11,10]\n    assert max_sum_list([[2,3,1]])==[2,3,1]\n",
+    "oracle_type": "callable_check",
+    "original_id": 805,
+    "profile": "real_python",
+    "prompt": "Write a function that returns the list in a list of lists whose sum of elements is the highest.",
+    "source": "google_research_mbpp",
+    "source_code": "def max_sum_list(lists):\n return max(lists, key=sum)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_805/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "entrypoint": "solve",
+  "id": "action_balanced_clean_clamp",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          -1
+        ]
+      },
+      {
+        "args": [
+          0
+        ]
+      },
+      {
+        "args": [
+          11
+        ]
+      }
+    ],
+    "dataset": "action_balanced",
+    "fuzz_cases": [
+      {
+        "args": [
+          5
+        ],
+        "expected": 5
+      },
+      {
+        "args": [
+          100
+        ],
+        "expected": 10
+      }
+    ],
+    "original_id": "clean_clamp",
+    "profile": "action_balanced",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(x: int) -> int:\n    return 0 if x < 0 else (10 if x > 10 else x)\n",
+    "split": "val",
+    "stress_category": "clean"
+  },
+  "path": "action_balanced_clean_clamp/solution.py",
+  "tests": [
+    {
+      "args": [
+        -2
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        12
+      ],
+      "expected": 10
+    }
+  ]
+}

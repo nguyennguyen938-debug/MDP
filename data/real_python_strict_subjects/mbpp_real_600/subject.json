@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_Even",
+  "id": "mbpp_real_600",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_Even = candidate\n    assert is_Even(1) == False\n    assert is_Even(2) == True\n    assert is_Even(3) == False\n",
+    "oracle_type": "callable_check",
+    "original_id": 600,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether the given number is even or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def is_Even(n) : \n    if (n^1 == n+1) :\n        return True; \n    else :\n        return False; ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_600/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

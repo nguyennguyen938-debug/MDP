@@ -1,0 +1,39 @@
+{
+  "entrypoint": "solve",
+  "id": "stress_boundary_empty_list",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          []
+        ]
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ]
+      }
+    ],
+    "dataset": "stress",
+    "original_id": "boundary_empty_list",
+    "profile": "stress",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int]) -> int:\n    return items[0]\n",
+    "split": "test",
+    "stress_category": "boundary"
+  },
+  "path": "stress_boundary_empty_list/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 1
+    }
+  ]
+}

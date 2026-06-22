@@ -1,0 +1,21 @@
+{
+  "entrypoint": "solve",
+  "id": "bugsinpy_zero_is_positive",
+  "language": "python",
+  "metadata": {
+    "dataset": "bugsinpy",
+    "original_id": "bugsinpy_zero_is_positive",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(x: int) -> str:\n    return 'positive' if x >= 0 else 'negative'\n",
+    "split": "test"
+  },
+  "path": "bugsinpy_zero_is_positive/solution.py",
+  "tests": [
+    {
+      "args": [
+        0
+      ],
+      "expected": "zero"
+    }
+  ]
+}

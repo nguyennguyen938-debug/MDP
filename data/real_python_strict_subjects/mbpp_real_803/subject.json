@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_perfect_square",
+  "id": "mbpp_real_803",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_perfect_square = candidate\n    assert not is_perfect_square(10)\n    assert is_perfect_square(36)\n    assert not is_perfect_square(14)\n    assert is_perfect_square(14*14)\n    assert not is_perfect_square(125)\n    assert is_perfect_square(125*125)\n",
+    "oracle_type": "callable_check",
+    "original_id": 803,
+    "profile": "real_python",
+    "prompt": "Write a function to check whether the given number is a perfect square or not. https://www.geeksforgeeks.org/check-if-given-number-is-perfect-square-in-cpp/",
+    "source": "google_research_mbpp",
+    "source_code": "def is_perfect_square(n) :\n    i = 1\n    while (i * i<= n):\n        if ((n % i == 0) and (n / i == i)):\n            return True     \n        i = i + 1\n    return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_803/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

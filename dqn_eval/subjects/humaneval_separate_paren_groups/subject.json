@@ -1,0 +1,25 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_separate_paren_groups",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "separate_paren_groups",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(paren_string: str) -> list[str]:\n    groups = []\n    depth = 0\n    current = []\n    for ch in paren_string.replace(' ', ''):\n        current.append(ch)\n        depth += 1 if ch == '(' else -1\n        if depth == 0 and current:\n            groups.append(''.join(current))\n            current = []\n    return groups\n",
+    "split": "train"
+  },
+  "path": "humaneval_separate_paren_groups/solution.py",
+  "tests": [
+    {
+      "args": [
+        "(()) ()"
+      ],
+      "expected": [
+        "(())",
+        "()"
+      ]
+    }
+  ]
+}

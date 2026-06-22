@@ -1,0 +1,54 @@
+{
+  "entrypoint": "solve",
+  "id": "stress_fuzz_large_square",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          0
+        ]
+      },
+      {
+        "args": [
+          1
+        ]
+      },
+      {
+        "args": [
+          -1
+        ]
+      }
+    ],
+    "dataset": "stress",
+    "fuzz_cases": [
+      {
+        "args": [
+          20
+        ],
+        "expected": 400
+      },
+      {
+        "args": [
+          -21
+        ],
+        "expected": 441
+      }
+    ],
+    "original_id": "fuzz_large_square",
+    "profile": "stress",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(x: int) -> int:\n    return x * x if abs(x) < 20 else -1\n",
+    "split": "test",
+    "stress_category": "fuzz"
+  },
+  "path": "stress_fuzz_large_square/solution.py",
+  "tests": [
+    {
+      "args": [
+        3
+      ],
+      "expected": 9
+    }
+  ]
+}

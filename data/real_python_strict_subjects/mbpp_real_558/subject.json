@@ -1,0 +1,25 @@
+{
+  "entrypoint": "digit_distance_nums",
+  "id": "mbpp_real_558",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    digit_distance_nums = candidate\n    assert digit_distance_nums(1,2) == 1\n    assert digit_distance_nums(23,56) == 6\n    assert digit_distance_nums(123,256) == 7\n",
+    "oracle_type": "callable_check",
+    "original_id": 558,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the sum of the per-digit difference between two integers.",
+    "source": "google_research_mbpp",
+    "source_code": "def digit_distance_nums(n1, n2):\n         return sum(map(int,str(abs(n1-n2))))",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_558/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

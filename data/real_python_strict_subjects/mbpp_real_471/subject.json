@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_remainder",
+  "id": "mbpp_real_471",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_remainder = candidate\n    assert find_remainder([ 100, 10, 5, 25, 35, 14 ],11) ==9\n    assert find_remainder([1,1,1],1) == 0\n    assert find_remainder([1,2,1],2) == 0\n",
+    "oracle_type": "callable_check",
+    "original_id": 471,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the product of the array multiplication modulo n.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_remainder(arr, n): \n    mul = 1\n    for i in range(len(arr)):  \n        mul = (mul * (arr[i] % n)) % n \n    return mul % n ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_471/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

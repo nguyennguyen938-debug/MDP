@@ -1,0 +1,25 @@
+{
+  "entrypoint": "min_of_three",
+  "id": "mbpp_real_227",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    min_of_three = candidate\n    assert min_of_three(10,20,0)==0\n    assert min_of_three(19,15,18)==15\n    assert min_of_three(-10,-20,-30)==-30\n",
+    "oracle_type": "callable_check",
+    "original_id": 227,
+    "profile": "real_python",
+    "prompt": "Write a function to find minimum of three numbers.",
+    "source": "google_research_mbpp",
+    "source_code": "def min_of_three(a,b,c): \n      if (a <= b) and (a <= c): \n        smallest = a \n      elif (b <= a) and (b <= c): \n        smallest = b \n      else: \n        smallest = c \n      return smallest ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_227/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

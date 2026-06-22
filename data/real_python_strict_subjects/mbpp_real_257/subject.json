@@ -1,0 +1,25 @@
+{
+  "entrypoint": "swap_numbers",
+  "id": "mbpp_real_257",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    swap_numbers = candidate\n    assert swap_numbers(10,20)==(20,10)\n    assert swap_numbers(15,17)==(17,15)\n    assert swap_numbers(100,200)==(200,100)\n",
+    "oracle_type": "callable_check",
+    "original_id": 257,
+    "profile": "real_python",
+    "prompt": "Write a function that takes in two numbers and returns a tuple with the second number and then the first number.",
+    "source": "google_research_mbpp",
+    "source_code": "def swap_numbers(a,b):\n temp = a\n a = b\n b = temp\n return (a,b)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_257/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

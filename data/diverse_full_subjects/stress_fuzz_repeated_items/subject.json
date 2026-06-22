@@ -1,0 +1,63 @@
+{
+  "entrypoint": "solve",
+  "id": "stress_fuzz_repeated_items",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          []
+        ]
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ]
+      }
+    ],
+    "dataset": "stress",
+    "fuzz_cases": [
+      {
+        "args": [
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": 3
+      }
+    ],
+    "original_id": "fuzz_repeated_items",
+    "profile": "stress",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int]) -> int:\n    return len(set(items))\n",
+    "split": "test",
+    "stress_category": "fuzz"
+  },
+  "path": "stress_fuzz_repeated_items/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 3
+    }
+  ]
+}

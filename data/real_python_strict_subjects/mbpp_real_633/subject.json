@@ -1,0 +1,25 @@
+{
+  "entrypoint": "pair_xor_Sum",
+  "id": "mbpp_real_633",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    pair_xor_Sum = candidate\n    assert pair_xor_Sum([5,9,7,6],4) == 47\n    assert pair_xor_Sum([7,3,5],3) == 12\n    assert pair_xor_Sum([7,3],2) == 4\n",
+    "oracle_type": "callable_check",
+    "original_id": 633,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the sum of xor of all pairs of numbers in the given list.",
+    "source": "google_research_mbpp",
+    "source_code": "def pair_xor_Sum(arr,n) : \n    ans = 0 \n    for i in range(0,n) :    \n        for j in range(i + 1,n) :   \n            ans = ans + (arr[i] ^ arr[j])          \n    return ans ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_633/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

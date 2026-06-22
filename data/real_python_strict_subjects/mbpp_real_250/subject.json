@@ -1,0 +1,25 @@
+{
+  "entrypoint": "count_X",
+  "id": "mbpp_real_250",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    count_X = candidate\n    assert count_X((10, 8, 5, 2, 10, 15, 10, 8, 5, 8, 8, 2),4) == 0\n    assert count_X((10, 8, 5, 2, 10, 15, 10, 8, 5, 8, 8, 2),10) == 3\n    assert count_X((10, 8, 5, 2, 10, 15, 10, 8, 5, 8, 8, 2),8) == 4\n",
+    "oracle_type": "callable_check",
+    "original_id": 250,
+    "profile": "real_python",
+    "prompt": "Write a python function that takes in a tuple and an element and counts the occcurences of the element in the tuple.",
+    "source": "google_research_mbpp",
+    "source_code": "def count_X(tup, x): \n    count = 0\n    for ele in tup: \n        if (ele == x): \n            count = count + 1\n    return count ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_250/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

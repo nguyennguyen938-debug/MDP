@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 121,
+  "key": "fd182e37299cc5d99bb2797927af7b04f3416396309039bc546d9dca71f98bd3",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_capitalize_words:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_capitalize_words:solve`, focusing on different aspects of the problem:\n\n**Basic Functionality:**\n\n*   `assert solve(\"hello world\") == \"Hello World\"`\n*   `assert solve(\"a single word\") == \"A Single Word\"`\n*   `assert solve(\"already Capitalized\") == \"Already Capitalized\"`\n\n**Edge Cases & Variations:**\n\n*   `assert solve(\"\") == \"\"` (Empty string)\n*   `assert solve(\" \") == \" \"` (Single space)\n*   `assert solve(\"  multiple   spaces  \") == \"  Multiple   Spaces  \"` (Multiple spaces)\n*   `assert solve(\"123 numbers\") == \"123 Numbers\"` (Numbers at the start)\n*   `assert solve(\"word with 123 numbers\") == \"Word With 123 Numbers\"` (Numbers in the middle)\n*   `assert solve(\"word with punctuation!\") == \"Word With Punctuation!\"` (Punctuation)\n*   `assert solve(\"mixedCASE\") == \"Mixedcase\"` (Mixed case input)\n*   `assert solve(\"UPPERCASE\") == \"Uppercase\"` (All"
+}

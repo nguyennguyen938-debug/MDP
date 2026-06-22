@@ -1,0 +1,22 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_string_xor",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "string_xor",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(a: str, b: str) -> str:\n    return ''.join('1' if x != y else '0' for x, y in zip(a, b))\n",
+    "split": "train"
+  },
+  "path": "humaneval_string_xor/solution.py",
+  "tests": [
+    {
+      "args": [
+        "010",
+        "110"
+      ],
+      "expected": "100"
+    }
+  ]
+}

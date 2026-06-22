@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 106,
+  "key": "b31d15700ae19a3166d935a61e9c727539e77ed73ddb89c390e742d6ea71b340",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for stress_clean_palindrome:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `stress_clean_palindrome.solve`, categorized for clarity:\n\n**Basic Functionality & Edge Cases:**\n\n*   `assert solve(\"\") == \"\"`  (Empty string)\n*   `assert solve(\"a\") == \"a\"` (Single character)\n*   `assert solve(\"aa\") == \"aa\"` (Two identical characters)\n*   `assert solve(\"ab\") == \"a\"` (Two different characters, keep first)\n*   `assert solve(\"aba\") == \"aba\"` (Simple palindrome)\n*   `assert solve(\"aabbaa\") == \"aabbaa\"` (Even length palindrome)\n*   `assert solve(\"racecar\") == \"racecar\"` (Classic palindrome)\n\n**Non-Palindromic Input:**\n\n*   `assert solve(\"abc\") == \"a\"` (No palindrome, keep first)\n*   `assert solve(\"abca\") == \"a\"` (No palindrome, keep first)\n*   `assert solve(\"abacaba\") == \"abacaba\"` (Already a palindrome)\n*   `assert solve(\"abaxyzzyxf\") == \"a\"` (Longer non-palindrome)\n\n**Input with Du"
+}

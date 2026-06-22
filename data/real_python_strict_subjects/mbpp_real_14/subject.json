@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_Volume",
+  "id": "mbpp_real_14",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_Volume = candidate\n    assert find_Volume(10,8,6) == 240\n    assert find_Volume(3,2,2) == 6\n    assert find_Volume(1,2,1) == 1\n",
+    "oracle_type": "callable_check",
+    "original_id": 14,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the volume of a triangular prism.",
+    "source": "google_research_mbpp",
+    "source_code": "def find_Volume(l,b,h) : \n    return ((l * b * h) / 2) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_14/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

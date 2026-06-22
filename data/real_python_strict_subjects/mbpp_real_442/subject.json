@@ -1,0 +1,25 @@
+{
+  "entrypoint": "positive_count",
+  "id": "mbpp_real_442",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    positive_count = candidate\n    assert positive_count([0, 1, 2, -1, -5, 6, 0, -3, -2, 3, 4, 6, 8])==0.54\n    assert positive_count([2, 1, 2, -1, -5, 6, 4, -3, -2, 3, 4, 6, 8])==0.69\n    assert positive_count([2, 4, -6, -9, 11, -12, 14, -5, 17])==0.56\n",
+    "oracle_type": "callable_check",
+    "original_id": 442,
+    "profile": "real_python",
+    "prompt": "Write a function to find the ration of positive numbers in an array of integers.",
+    "source": "google_research_mbpp",
+    "source_code": "from array import array\ndef positive_count(nums):\n    n = len(nums)\n    n1 = 0\n    for x in nums:\n        if x > 0:\n            n1 += 1\n        else:\n          None\n    return round(n1/n,2)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_442/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

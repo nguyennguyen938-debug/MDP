@@ -1,0 +1,25 @@
+{
+  "entrypoint": "noprofit_noloss",
+  "id": "mbpp_real_637",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    noprofit_noloss = candidate\n    assert noprofit_noloss(1500,1200)==False\n    assert noprofit_noloss(100,100)==True\n    assert noprofit_noloss(2000,5000)==False\n",
+    "oracle_type": "callable_check",
+    "original_id": 637,
+    "profile": "real_python",
+    "prompt": "Write a function to check whether the given amount has no profit and no loss",
+    "source": "google_research_mbpp",
+    "source_code": "def noprofit_noloss(actual_cost,sale_amount): \n  if(sale_amount == actual_cost):\n    return True\n  else:\n    return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_637/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

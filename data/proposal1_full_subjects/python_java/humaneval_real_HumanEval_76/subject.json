@@ -1,0 +1,22 @@
+{
+  "id": "humaneval_real_HumanEval_76",
+  "source_language": "python",
+  "target_language": "java",
+  "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/proposal1_full_subjects/python_java/humaneval_real_HumanEval_76/source.py",
+  "target_path": null,
+  "entrypoint": "is_simple_power",
+  "seed_tests": [
+    {
+      "args": [
+        1,
+        1
+      ]
+    }
+  ],
+  "metadata": {
+    "dataset": "humaneval_real",
+    "profile": "real_cross_language",
+    "original_id": "HumanEval/76"
+  },
+  "oracle_policy": "differential"
+}

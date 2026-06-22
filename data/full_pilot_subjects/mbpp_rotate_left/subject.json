@@ -1,0 +1,30 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_rotate_left",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_rotate_left",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int], k: int) -> list[int]:\n    if not items:\n        return []\n    k %= len(items)\n    return items[k:] + items[:k]\n",
+    "split": "test"
+  },
+  "path": "mbpp_rotate_left/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          3
+        ],
+        1
+      ],
+      "expected": [
+        2,
+        3,
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "amicable_numbers_sum",
+  "id": "mbpp_real_123",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    amicable_numbers_sum = candidate\n    assert amicable_numbers_sum(999)==504\n    assert amicable_numbers_sum(9999)==31626\n    assert amicable_numbers_sum(99)==0\n",
+    "oracle_type": "callable_check",
+    "original_id": 123,
+    "profile": "real_python",
+    "prompt": "Write a function to sum all amicable numbers from 1 to a specified number.",
+    "source": "google_research_mbpp",
+    "source_code": "def amicable_numbers_sum(limit):\n    if not isinstance(limit, int):\n        return \"Input is not an integer!\"\n    if limit < 1:\n        return \"Input must be bigger than 0!\"\n    amicables = set()\n    for num in range(2, limit+1):\n        if num in amicables:\n            continue\n        sum_fact = sum([fact for fact in range(1, num) if num % fact == 0])\n        sum_fact2 = sum([fact for fact in range(1, sum_fact) if sum_fact % fact == 0])\n        if num == sum_fact2 and num != sum_fact:\n            amicables.add(num)\n            amicables.add(sum_fact2)\n    return sum(amicables)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_123/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

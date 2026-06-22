@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 103,
+  "key": "5d1c8fc39935f7a614078886ee94e4886755b328c2ce70d93c8288e61348d392",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for bugsinpy_zero_is_positive:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `bugsinpy_zero_is_positive:solve`, categorized by the type of behavior they aim to test:\n\n**Core Logic & Edge Cases:**\n\n*   `assert solve(0) == 0`  (Zero should remain zero)\n*   `assert solve(1) == 1`  (Positive numbers should remain positive)\n*   `assert solve(-1) == 0` (Negative numbers should become zero)\n*   `assert solve(100) == 100` (Larger positive numbers)\n*   `assert solve(-100) == 0` (Larger negative numbers)\n\n**Type Handling (if applicable/expected):**\n\n*   `assert solve(0.0) == 0.0` (Floating-point zero)\n*   `assert solve(1.5) == 1.5` (Floating-point positive)\n*   `assert solve(-1.5) == 0.0` (Floating-point negative)\n\n**Potential for Unexpected Behavior (if the bug is subtle):**\n\n*   `assert solve(0.00000000000"
+}

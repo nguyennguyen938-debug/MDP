@@ -1,0 +1,25 @@
+{
+  "entrypoint": "dog_age",
+  "id": "mbpp_real_264",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    dog_age = candidate\n    assert dog_age(12)==61\n    assert dog_age(15)==73\n    assert dog_age(24)==109\n",
+    "oracle_type": "callable_check",
+    "original_id": 264,
+    "profile": "real_python",
+    "prompt": "Write a function to calculate a dog's age in dog's years.",
+    "source": "google_research_mbpp",
+    "source_code": "def dog_age(h_age):\n if h_age < 0:\n \texit()\n elif h_age <= 2:\n\t d_age = h_age * 10.5\n else:\n\t d_age = 21 + (h_age - 2)*4\n return d_age",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_264/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

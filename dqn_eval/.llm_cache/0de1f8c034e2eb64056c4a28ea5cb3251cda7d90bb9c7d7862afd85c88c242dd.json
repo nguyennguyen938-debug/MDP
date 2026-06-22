@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 110,
+  "key": "0de1f8c034e2eb64056c4a28ea5cb3251cda7d90bb9c7d7862afd85c88c242dd",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_intersection:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_intersection:solve`, categorized by the type of input and expected output:\n\n**General Assertions (covering common cases):**\n\n*   `assert solve([1, 2, 3], [2, 3, 4]) == [2, 3]`\n*   `assert solve([1, 2, 3], [4, 5, 6]) == []`\n*   `assert solve([1, 2, 3], [1, 2, 3]) == [1, 2, 3]`\n*   `assert solve([], [1, 2, 3]) == []`\n*   `assert solve([1, 2, 3], []) == []`\n*   `assert solve([], []) == []`\n\n**Assertions for Duplicate Elements (if the function should handle them):**\n\n*   `assert solve([1, 2, 2, 3], [2, 2, 4]) == [2, 2]` (If duplicates are preserved)\n*   `assert solve([1, 2, 2, 3], [2, 2, 4"
+}

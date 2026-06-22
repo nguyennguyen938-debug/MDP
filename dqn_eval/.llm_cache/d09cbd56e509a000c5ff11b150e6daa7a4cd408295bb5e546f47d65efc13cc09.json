@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 143,
+  "key": "d09cbd56e509a000c5ff11b150e6daa7a4cd408295bb5e546f47d65efc13cc09",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for bugsinpy_empty_first_char:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `bugsinpy_empty_first_char.solve`, categorized by the expected behavior:\n\n**Core Functionality (Empty First Character):**\n\n*   `assert solve(\"\") == \"\"`: An empty string should result in an empty string.\n*   `assert solve(\" \") == \"\"`: A string with only a space should result in an empty string.\n*   `assert solve(\"\\t\") == \"\"`: A string with only a tab should result in an empty string.\n*   `assert solve(\"\\n\") == \"\"`: A string with only a newline should result in an empty string.\n*   `assert solve(\"  abc\") == \"abc\"`: Leading spaces should be removed.\n*   `assert solve(\"\\t\\tabc\") == \"abc\"`: Leading tabs should be removed.\n*   `assert solve(\"\\n\\nabc\") == \"abc\"`: Leading newlines should be removed.\n*   `assert solve(\" \\t\\nabc\") == \"abc\"`: Mixed leading whitespace should be removed.\n\n**No Leading Whitespace:**\n\n*   `assert solve(\"abc\") == \"abc\"`: A string with no leading whitespace should remain unchanged.\n*   "
+}

@@ -1,0 +1,41 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_chunk",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_chunk",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int], size: int) -> list[list[int]]:\n    return [items[i:i + size] for i in range(0, len(items), size)]\n",
+    "split": "val"
+  },
+  "path": "mbpp_chunk/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ]
+      ]
+    }
+  ]
+}

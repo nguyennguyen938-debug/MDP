@@ -1,0 +1,21 @@
+{
+  "entrypoint": "solve",
+  "id": "len_list",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "val"
+  },
+  "path": "len_list/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

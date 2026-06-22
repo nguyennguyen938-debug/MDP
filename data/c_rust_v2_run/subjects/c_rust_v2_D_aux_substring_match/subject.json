@@ -1,0 +1,30 @@
+{
+  "entrypoint": "solve",
+  "id": "c_rust_v2_D_aux_substring_match",
+  "metadata": {
+    "category": "D_strings",
+    "dataset": "c_rust_v2",
+    "license": "authored_for_this_paper",
+    "original_id": "D_aux_substring_match",
+    "signature": {
+      "params": [
+        "string",
+        "string"
+      ],
+      "return": "int"
+    }
+  },
+  "oracle_policy": "differential",
+  "seed_tests": [
+    {
+      "args": [
+        "h\u00e9lloh\u00e9lloA",
+        "\u00e9"
+      ]
+    }
+  ],
+  "source_language": "c",
+  "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_D_aux_substring_match/source.c",
+  "target_language": "rust",
+  "target_path": null
+}

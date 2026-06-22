@@ -1,0 +1,25 @@
+{
+  "entrypoint": "all_Characters_Same",
+  "id": "mbpp_real_741",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    all_Characters_Same = candidate\n    assert all_Characters_Same(\"python\") == False\n    assert all_Characters_Same(\"aaa\") == True\n    assert all_Characters_Same(\"data\") == False\n",
+    "oracle_type": "callable_check",
+    "original_id": 741,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether all the characters are same or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def all_Characters_Same(s) :\n    n = len(s)\n    for i in range(1,n) :\n        if s[i] != s[0] :\n            return False\n    return True",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_741/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

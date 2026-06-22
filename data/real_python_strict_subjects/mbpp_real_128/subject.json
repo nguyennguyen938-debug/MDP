@@ -1,0 +1,25 @@
+{
+  "entrypoint": "long_words",
+  "id": "mbpp_real_128",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    long_words = candidate\n    assert long_words(3,\"python is a programming language\")==['python','programming','language']\n    assert long_words(2,\"writing a program\")==['writing','program']\n    assert long_words(5,\"sorting list\")==['sorting']\n",
+    "oracle_type": "callable_check",
+    "original_id": 128,
+    "profile": "real_python",
+    "prompt": "Write a function to find words that are longer than n characters from a given list of words.",
+    "source": "google_research_mbpp",
+    "source_code": "def long_words(n, str):\n    word_len = []\n    txt = str.split(\" \")\n    for x in txt:\n        if len(x) > n:\n            word_len.append(x)\n    return word_len\t",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_128/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

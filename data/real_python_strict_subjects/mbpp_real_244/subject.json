@@ -1,0 +1,25 @@
+{
+  "entrypoint": "next_Perfect_Square",
+  "id": "mbpp_real_244",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    next_Perfect_Square = candidate\n    assert next_Perfect_Square(35) == 36\n    assert next_Perfect_Square(6) == 9\n    assert next_Perfect_Square(9) == 16\n",
+    "oracle_type": "callable_check",
+    "original_id": 244,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the next perfect square greater than a given number.",
+    "source": "google_research_mbpp",
+    "source_code": "import math  \ndef next_Perfect_Square(N): \n    nextN = math.floor(math.sqrt(N)) + 1\n    return nextN * nextN ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_244/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

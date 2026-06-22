@@ -1,0 +1,25 @@
+{
+  "entrypoint": "right_insertion",
+  "id": "mbpp_real_786",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    right_insertion = candidate\n    assert right_insertion([1,2,4,5],6)==4\n    assert right_insertion([1,2,4,5],3)==2\n    assert right_insertion([1,2,4,5],7)==4\n",
+    "oracle_type": "callable_check",
+    "original_id": 786,
+    "profile": "real_python",
+    "prompt": "Write a function to locate the right insertion point for a specified value in sorted order.",
+    "source": "google_research_mbpp",
+    "source_code": "import bisect\ndef right_insertion(a, x):\n    return bisect.bisect_right(a, x)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_786/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

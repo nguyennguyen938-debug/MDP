@@ -1,0 +1,25 @@
+{
+  "entrypoint": "find_Index",
+  "id": "mbpp_real_739",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    find_Index = candidate\n    assert find_Index(2) == 4\n    assert find_Index(3) == 14\n    assert find_Index(4) == 45\n",
+    "oracle_type": "callable_check",
+    "original_id": 739,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the index of smallest triangular number with n digits. https://www.geeksforgeeks.org/index-of-smallest-triangular-number-with-n-digits/",
+    "source": "google_research_mbpp",
+    "source_code": "import math \ndef find_Index(n): \n    x = math.sqrt(2 * math.pow(10,(n - 1)))\n    return round(x)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_739/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

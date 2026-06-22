@@ -1,0 +1,34 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_intersection",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_intersection",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(a: list[int], b: list[int]) -> list[int]:\n    return [x for x in a if x in b]\n",
+    "split": "test"
+  },
+  "path": "mbpp_intersection/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          4,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ]
+}

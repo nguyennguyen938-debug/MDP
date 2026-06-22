@@ -1,0 +1,25 @@
+{
+  "entrypoint": "power",
+  "id": "mbpp_real_93",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    power = candidate\n    assert power(3,4) == 81\n    assert power(2,3) == 8\n    assert power(5,5) == 3125\n",
+    "oracle_type": "callable_check",
+    "original_id": 93,
+    "profile": "real_python",
+    "prompt": "Write a function to calculate the value of 'a' to the power 'b'.",
+    "source": "google_research_mbpp",
+    "source_code": "def power(a,b):\n\tif b==0:\n\t\treturn 1\n\telif a==0:\n\t\treturn 0\n\telif b==1:\n\t\treturn a\n\telse:\n\t\treturn a*power(a,b-1)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_93/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

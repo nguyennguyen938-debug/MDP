@@ -1,0 +1,25 @@
+{
+  "entrypoint": "Find_Min_Length",
+  "id": "mbpp_real_95",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    Find_Min_Length = candidate\n    assert Find_Min_Length([[1],[1,2]]) == 1\n    assert Find_Min_Length([[1,2],[1,2,3],[1,2,3,4]]) == 2\n    assert Find_Min_Length([[3,3,3],[4,4,4,4]]) == 3\n",
+    "oracle_type": "callable_check",
+    "original_id": 95,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the length of the smallest list in a list of lists.",
+    "source": "google_research_mbpp",
+    "source_code": "def Find_Min_Length(lst):  \n    minLength = min(len(x) for x in lst )\n    return minLength ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_95/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

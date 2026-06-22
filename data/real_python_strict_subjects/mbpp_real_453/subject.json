@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sumofFactors",
+  "id": "mbpp_real_453",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sumofFactors = candidate\n    assert sumofFactors(18) == 26\n    assert sumofFactors(30) == 48\n    assert sumofFactors(6) == 8\n",
+    "oracle_type": "callable_check",
+    "original_id": 453,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the sum of even factors of a number.",
+    "source": "google_research_mbpp",
+    "source_code": "import math \ndef sumofFactors(n) : \n    if (n % 2 != 0) : \n        return 0\n    res = 1\n    for i in range(2, (int)(math.sqrt(n)) + 1) :    \n        count = 0\n        curr_sum = 1\n        curr_term = 1\n        while (n % i == 0) : \n            count= count + 1\n            n = n // i \n            if (i == 2 and count == 1) : \n                curr_sum = 0\n            curr_term = curr_term * i \n            curr_sum = curr_sum + curr_term \n        res = res * curr_sum  \n    if (n >= 2) : \n        res = res * (1 + n) \n    return res",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_453/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

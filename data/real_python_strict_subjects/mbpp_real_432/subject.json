@@ -1,0 +1,25 @@
+{
+  "entrypoint": "median_trapezium",
+  "id": "mbpp_real_432",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    median_trapezium = candidate\n    assert median_trapezium(15,25,35)==20\n    assert median_trapezium(10,20,30)==15\n    assert median_trapezium(6,9,4)==7.5\n",
+    "oracle_type": "callable_check",
+    "original_id": 432,
+    "profile": "real_python",
+    "prompt": "Write a function to find the median length of a trapezium.",
+    "source": "google_research_mbpp",
+    "source_code": "def median_trapezium(base1,base2,height):\n median = 0.5 * (base1+ base2)\n return median",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_432/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

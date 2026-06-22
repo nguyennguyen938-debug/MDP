@@ -1,0 +1,21 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_reverse_words",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_reverse_words",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> str:\n    return ' '.join(reversed(text.split()))\n",
+    "split": "val"
+  },
+  "path": "mbpp_reverse_words/solution.py",
+  "tests": [
+    {
+      "args": [
+        "hello world"
+      ],
+      "expected": "world hello"
+    }
+  ]
+}

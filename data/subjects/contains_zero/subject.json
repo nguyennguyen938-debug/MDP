@@ -1,0 +1,21 @@
+{
+  "entrypoint": "solve",
+  "id": "contains_zero",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "val"
+  },
+  "path": "contains_zero/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          0
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

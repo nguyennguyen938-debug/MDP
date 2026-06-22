@@ -1,0 +1,25 @@
+{
+  "entrypoint": "sum_div",
+  "id": "mbpp_real_295",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    sum_div = candidate\n    assert sum_div(8)==7\n    assert sum_div(12)==16\n    assert sum_div(7)==1\n",
+    "oracle_type": "callable_check",
+    "original_id": 295,
+    "profile": "real_python",
+    "prompt": "Write a function to return the sum of all divisors of a number.",
+    "source": "google_research_mbpp",
+    "source_code": "def sum_div(number):\n    divisors = [1]\n    for i in range(2, number):\n        if (number % i)==0:\n            divisors.append(i)\n    return sum(divisors)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_295/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

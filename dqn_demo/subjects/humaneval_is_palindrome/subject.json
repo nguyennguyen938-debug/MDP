@@ -1,0 +1,28 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_is_palindrome",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "is_palindrome",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> bool:\n    return text == text[::-1]\n",
+    "split": "train"
+  },
+  "path": "humaneval_is_palindrome/solution.py",
+  "tests": [
+    {
+      "args": [
+        "aba"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "abc"
+      ],
+      "expected": false
+    }
+  ]
+}

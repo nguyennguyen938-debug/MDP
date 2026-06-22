@@ -1,0 +1,25 @@
+{
+  "entrypoint": "lps",
+  "id": "mbpp_real_247",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    lps = candidate\n    assert lps(\"TENS FOR TENS\") == 5\n    assert lps(\"CARDIO FOR CARDS\") == 7\n    assert lps(\"PART OF THE JOURNEY IS PART\") == 9\n",
+    "oracle_type": "callable_check",
+    "original_id": 247,
+    "profile": "real_python",
+    "prompt": "Write a function to find the length of the longest palindromic subsequence in the given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def lps(str): \n\tn = len(str) \n\tL = [[0 for x in range(n)] for x in range(n)] \n\tfor i in range(n): \n\t\tL[i][i] = 1\n\tfor cl in range(2, n+1): \n\t\tfor i in range(n-cl+1): \n\t\t\tj = i+cl-1\n\t\t\tif str[i] == str[j] and cl == 2: \n\t\t\t\tL[i][j] = 2\n\t\t\telif str[i] == str[j]: \n\t\t\t\tL[i][j] = L[i+1][j-1] + 2\n\t\t\telse: \n\t\t\t\tL[i][j] = max(L[i][j-1], L[i+1][j]); \n\treturn L[0][n-1]",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_247/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

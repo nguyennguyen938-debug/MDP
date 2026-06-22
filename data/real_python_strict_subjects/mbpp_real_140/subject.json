@@ -1,0 +1,25 @@
+{
+  "entrypoint": "extract_singly",
+  "id": "mbpp_real_140",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    extract_singly = candidate\n    assert set(extract_singly([(3, 4, 5), (4, 5, 7), (1, 4)])) == set([3, 4, 5, 7, 1])\n    assert set(extract_singly([(1, 2, 3), (4, 2, 3), (7, 8)])) == set([1, 2, 3, 4, 7, 8])\n    assert set(extract_singly([(7, 8, 9), (10, 11, 12), (10, 11)])) == set([7, 8, 9, 10, 11, 12])\n",
+    "oracle_type": "callable_check",
+    "original_id": 140,
+    "profile": "real_python",
+    "prompt": "Write a function to flatten the list of lists into a single set of numbers.",
+    "source": "google_research_mbpp",
+    "source_code": "def extract_singly(test_list):\n  res = []\n  temp = set()\n  for inner in test_list:\n    for ele in inner:\n      if not ele in temp:\n        temp.add(ele)\n        res.append(ele)\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_140/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

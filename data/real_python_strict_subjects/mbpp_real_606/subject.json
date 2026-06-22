@@ -1,0 +1,25 @@
+{
+  "entrypoint": "radian_degree",
+  "id": "mbpp_real_606",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    radian_degree = candidate\n    assert radian_degree(90)==1.5707963267948966\n    assert radian_degree(60)==1.0471975511965976\n    assert radian_degree(120)==2.0943951023931953\n",
+    "oracle_type": "callable_check",
+    "original_id": 606,
+    "profile": "real_python",
+    "prompt": "Write a function to convert degrees to radians.",
+    "source": "google_research_mbpp",
+    "source_code": "import math\ndef radian_degree(degree):\n radian = degree*(math.pi/180)\n return radian",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_606/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

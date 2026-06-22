@@ -1,0 +1,25 @@
+{
+  "entrypoint": "min_k",
+  "id": "mbpp_real_753",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    min_k = candidate\n    assert min_k([('Manjeet', 10), ('Akshat', 4), ('Akash', 2), ('Nikhil', 8)], 2) == [('Akash', 2), ('Akshat', 4)]\n    assert min_k([('Sanjeev', 11), ('Angat', 5), ('Akash', 3), ('Nepin', 9)], 3) == [('Akash', 3), ('Angat', 5), ('Nepin', 9)]\n    assert min_k([('tanmay', 14), ('Amer', 11), ('Ayesha', 9), ('SKD', 16)], 1) == [('Ayesha', 9)]\n",
+    "oracle_type": "callable_check",
+    "original_id": 753,
+    "profile": "real_python",
+    "prompt": "Write a function to find minimum k records from tuple list. https://www.geeksforgeeks.org/python-find-minimum-k-records-from-tuple-list/ - in this case a verbatim copy of test cases",
+    "source": "google_research_mbpp",
+    "source_code": "def min_k(test_list, K):\n  res = sorted(test_list, key = lambda x: x[1])[:K]\n  return (res) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_753/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entrypoint": "solve",
+  "id": "mbpp_second_largest",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp",
+    "original_id": "mbpp_second_largest",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(items: list[int]) -> int | None:\n    unique = sorted(set(items))\n    return unique[-2] if len(unique) >= 2 else None\n",
+    "split": "val"
+  },
+  "path": "mbpp_second_largest/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          3,
+          2,
+          3
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

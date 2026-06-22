@@ -1,0 +1,25 @@
+{
+  "entrypoint": "freq_count",
+  "id": "mbpp_real_88",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    freq_count = candidate\n    assert freq_count([10,10,10,10,20,20,20,20,40,40,50,50,30])==({10: 4, 20: 4, 40: 2, 50: 2, 30: 1})\n    assert freq_count([1,2,3,4,3,2,4,1,3,1,4])==({1:3, 2:2,3:3,4:3})\n    assert freq_count([5,6,7,4,9,10,4,5,6,7,9,5])==({10:1,5:3,6:2,7:2,4:2,9:2})\n",
+    "oracle_type": "callable_check",
+    "original_id": 88,
+    "profile": "real_python",
+    "prompt": "Write a function to get the frequency of all the elements in a list, returned as a dictionary.",
+    "source": "google_research_mbpp",
+    "source_code": "import collections\ndef freq_count(list1):\n  freq_count= collections.Counter(list1)\n  return freq_count",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_88/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

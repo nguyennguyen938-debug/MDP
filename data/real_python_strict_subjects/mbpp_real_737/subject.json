@@ -1,0 +1,25 @@
+{
+  "entrypoint": "check_str",
+  "id": "mbpp_real_737",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    check_str = candidate\n    assert check_str(\"annie\")\n    assert not check_str(\"dawood\")\n    assert check_str(\"Else\")\n",
+    "oracle_type": "callable_check",
+    "original_id": 737,
+    "profile": "real_python",
+    "prompt": "Write a function to check whether the given string is starting with a vowel or not using regex.",
+    "source": "google_research_mbpp",
+    "source_code": "import re \nregex = '^[aeiouAEIOU][A-Za-z0-9_]*'\ndef check_str(string): \n\treturn re.search(regex, string)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_737/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

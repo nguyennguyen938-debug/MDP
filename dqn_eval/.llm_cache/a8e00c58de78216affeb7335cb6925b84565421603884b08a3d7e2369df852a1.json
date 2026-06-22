@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 103,
+  "key": "a8e00c58de78216affeb7335cb6925b84565421603884b08a3d7e2369df852a1",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for humaneval_has_close_elements:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `humaneval_has_close_elements:solve`, focusing on different aspects of the problem:\n\n**General Cases:**\n\n*   `assert solve([1, 2, 3, 4, 5], 0.5) == True`  (Standard case with close elements)\n*   `assert solve([1.0, 1.1, 2.0, 2.1], 0.2) == True` (Floating point numbers)\n*   `assert solve([1, 5, 10, 15], 2) == False` (No close elements)\n*   `assert solve([1, 1, 1, 1], 0.1) == True` (All elements are identical)\n*   `assert solve([1, 2, 3, 4, 5], 1.1) == False` (Threshold too large for any pair)\n\n**Edge Cases:**\n\n*   `assert solve([], 0.5) == False` (Empty list)\n*   `assert solve([5], 0.5) == False` (Single element list)\n*   "
+}

@@ -1,0 +1,34 @@
+{
+  "entrypoint": "solve",
+  "id": "c_rust_v2_C_sentinel_index_out_of_range",
+  "metadata": {
+    "category": "C_error",
+    "dataset": "c_rust_v2",
+    "license": "authored_for_this_paper",
+    "original_id": "C_sentinel_index_out_of_range",
+    "signature": {
+      "params": [
+        "int_array",
+        "int"
+      ],
+      "return": "int"
+    }
+  },
+  "oracle_policy": "differential",
+  "seed_tests": [
+    {
+      "args": [
+        [
+          10,
+          20,
+          30
+        ],
+        5
+      ]
+    }
+  ],
+  "source_language": "c",
+  "source_path": "/Users/xuanbachle/Desktop/05_Notes/2026/Uni-Project/CSoNET/data/c_rust_v2_run/subjects/c_rust_v2_C_sentinel_index_out_of_range/source.c",
+  "target_language": "rust",
+  "target_path": null
+}

@@ -1,0 +1,22 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_count_distinct_characters",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "count_distinct_characters",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> int:\n    return len(set(text.lower()))\n",
+    "split": "test"
+  },
+  "path": "humaneval_count_distinct_characters/solution.py",
+  "tests": [
+    {
+      "args": [
+        "AaBb"
+      ],
+      "expected": 2
+    }
+  ]
+}

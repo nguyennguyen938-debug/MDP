@@ -1,0 +1,26 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_all_prefixes",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "all_prefixes",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> list[str]:\n    return [text[:i] for i in range(len(text) + 1)]\n",
+    "split": "val"
+  },
+  "path": "humaneval_all_prefixes/solution.py",
+  "tests": [
+    {
+      "args": [
+        "abc"
+      ],
+      "expected": [
+        "",
+        "a",
+        "ab",
+        "abc"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "replace_spaces",
+  "id": "mbpp_real_631",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    replace_spaces = candidate\n    assert replace_spaces('Jumanji The Jungle') == 'Jumanji_The_Jungle'\n    assert replace_spaces('The_Avengers') == 'The Avengers'\n    assert replace_spaces('Fast and Furious') == 'Fast_and_Furious'\n",
+    "oracle_type": "callable_check",
+    "original_id": 631,
+    "profile": "real_python",
+    "prompt": "Write a function to replace whitespaces with an underscore and vice versa in a given string.",
+    "source": "google_research_mbpp",
+    "source_code": "def replace_spaces(text):\n  return \"\".join(\" \" if c == \"_\" else (\"_\" if c == \" \" else c) for c in text)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_631/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

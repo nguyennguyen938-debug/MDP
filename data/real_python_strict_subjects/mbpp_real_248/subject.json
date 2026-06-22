@@ -1,0 +1,25 @@
+{
+  "entrypoint": "harmonic_sum",
+  "id": "mbpp_real_248",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "import math\n\ndef check(candidate):\n    harmonic_sum = candidate\n    assert math.isclose(harmonic_sum(7), 2.5928571428571425, rel_tol=0.001)\n    assert math.isclose(harmonic_sum(4), 2.083333333333333, rel_tol=0.001)\n    assert math.isclose(harmonic_sum(19), 3.547739657143682, rel_tol=0.001)\n",
+    "oracle_type": "callable_check",
+    "original_id": 248,
+    "profile": "real_python",
+    "prompt": "Write a function that takes in an integer n and calculates the harmonic sum of n-1.",
+    "source": "google_research_mbpp",
+    "source_code": "def harmonic_sum(n):\n  if n < 2:\n    return 1\n  else:\n    return 1 / n + (harmonic_sum(n - 1)) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_248/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

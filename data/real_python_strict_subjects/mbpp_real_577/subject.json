@@ -1,0 +1,25 @@
+{
+  "entrypoint": "last_Digit_Factorial",
+  "id": "mbpp_real_577",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    last_Digit_Factorial = candidate\n    assert last_Digit_Factorial(4) == 4\n    assert last_Digit_Factorial(21) == 0\n    assert last_Digit_Factorial(30) == 0\n",
+    "oracle_type": "callable_check",
+    "original_id": 577,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the last digit in factorial of a given number.",
+    "source": "google_research_mbpp",
+    "source_code": "def last_Digit_Factorial(n): \n    if (n == 0): return 1\n    elif (n <= 2): return n  \n    elif (n == 3): return 6\n    elif (n == 4): return 4 \n    else: \n      return 0",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_577/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

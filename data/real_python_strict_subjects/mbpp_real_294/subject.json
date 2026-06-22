@@ -1,0 +1,25 @@
+{
+  "entrypoint": "max_val",
+  "id": "mbpp_real_294",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    max_val = candidate\n    assert max_val(['Python', 3, 2, 4, 5, 'version'])==5\n    assert max_val(['Python', 15, 20, 25])==25\n    assert max_val(['Python', 30, 20, 40, 50, 'version'])==50\n",
+    "oracle_type": "callable_check",
+    "original_id": 294,
+    "profile": "real_python",
+    "prompt": "Write a function to find the maximum value in a given heterogeneous list.",
+    "source": "google_research_mbpp",
+    "source_code": "def max_val(listval):\n     max_val = max(i for i in listval if isinstance(i, int)) \n     return(max_val)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_294/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "entrypoint": "solve",
+  "id": "humaneval_mean_absolute_deviation",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval",
+    "original_id": "mean_absolute_deviation",
+    "profile": "full_pilot",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(numbers: list[float]) -> float:\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)\n",
+    "split": "train"
+  },
+  "path": "humaneval_mean_absolute_deviation/solution.py",
+  "tests": [
+    {
+      "args": [
+        [
+          1.0,
+          2.0,
+          3.0
+        ]
+      ],
+      "expected": 0.6666666666666666
+    }
+  ]
+}

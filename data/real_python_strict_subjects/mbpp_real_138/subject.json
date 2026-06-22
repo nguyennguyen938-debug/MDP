@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_Sum_Of_Powers_Of_Two",
+  "id": "mbpp_real_138",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_Sum_Of_Powers_Of_Two = candidate\n    assert is_Sum_Of_Powers_Of_Two(10) == True\n    assert is_Sum_Of_Powers_Of_Two(7) == False\n    assert is_Sum_Of_Powers_Of_Two(14) == True\n",
+    "oracle_type": "callable_check",
+    "original_id": 138,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether the given number can be represented as sum of non-zero powers of 2 or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def is_Sum_Of_Powers_Of_Two(n): \n    if (n % 2 == 1): \n        return False\n    else: \n        return True",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_138/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "left_rotate",
+  "id": "mbpp_real_799",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    left_rotate = candidate\n    assert left_rotate(16,2) == 64\n    assert left_rotate(10,2) == 40\n    assert left_rotate(99,3) == 792\n    assert left_rotate(99,3) == 792\n    assert left_rotate(0b0001,3) == 0b1000\n    assert left_rotate(0b0101,3) == 0b101000\n    assert left_rotate(0b11101,3) == 0b11101000\n",
+    "oracle_type": "callable_check",
+    "original_id": 799,
+    "profile": "real_python",
+    "prompt": "Write a function to that rotate left bits by d bits a given number. We assume that the number is 32 bit.",
+    "source": "google_research_mbpp",
+    "source_code": "def left_rotate(n,d):   \n    INT_BITS = 32\n    return (n << d)|(n >> (INT_BITS - d))  ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_799/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

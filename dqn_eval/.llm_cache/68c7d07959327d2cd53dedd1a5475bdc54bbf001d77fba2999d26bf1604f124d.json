@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 143,
+  "key": "68c7d07959327d2cd53dedd1a5475bdc54bbf001d77fba2999d26bf1604f124d",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for action_balanced_clean_clamp:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `action_balanced_clean_clamp:solve`, categorized for clarity:\n\n**Core Functionality:**\n\n*   `solve` returns a valid solution.\n*   `solve` returns a solution that satisfies all constraints.\n*   `solve` returns an optimal solution (if applicable).\n*   `solve` returns a solution within the specified bounds.\n\n**Input/Output & State:**\n\n*   `solve` returns a solution with the correct dimensions.\n*   `solve` returns a solution of the expected data type.\n*   `solve` does not modify input parameters (unless intended).\n*   `solve` leaves the system in a consistent state.\n\n**Edge Cases & Robustness:**\n\n*   `solve` handles empty inputs gracefully.\n*   `solve` handles trivial inputs correctly.\n*   `solve` handles boundary conditions accurately.\n*   `solve` returns an error/specific value for unsolvable problems.\n*   `solve` is robust to small perturbations in input.\n\n**Performance (if relevant):**\n\n*   `solve` completes within a reasonable time.\n*   `solve`'s performance scales predictably with input size.\n\n**Specific to"
+}

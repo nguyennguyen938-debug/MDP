@@ -1,0 +1,54 @@
+{
+  "entrypoint": "solve",
+  "id": "action_balanced_counterexample_gcd_zero",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          6,
+          3
+        ]
+      },
+      {
+        "args": [
+          4,
+          2
+        ]
+      }
+    ],
+    "counterexample_cases": [
+      {
+        "args": [
+          -6,
+          3
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          0,
+          0
+        ],
+        "expected": 0
+      }
+    ],
+    "dataset": "action_balanced",
+    "original_id": "counterexample_gcd_zero",
+    "profile": "action_balanced",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(a: int, b: int) -> int:\n    while b:\n        a, b = b, a % b\n    return a\n",
+    "split": "test",
+    "stress_category": "counterexample"
+  },
+  "path": "action_balanced_counterexample_gcd_zero/solution.py",
+  "tests": [
+    {
+      "args": [
+        6,
+        3
+      ],
+      "expected": 3
+    }
+  ]
+}

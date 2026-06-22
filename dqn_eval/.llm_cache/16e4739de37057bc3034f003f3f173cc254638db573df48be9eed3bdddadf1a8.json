@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 97,
+  "key": "16e4739de37057bc3034f003f3f173cc254638db573df48be9eed3bdddadf1a8",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_fibonacci:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_fibonacci:solve`, categorized for clarity:\n\n**Basic Cases:**\n\n*   `assert solve(0) == 0`\n*   `assert solve(1) == 1`\n*   `assert solve(2) == 1`\n\n**Small Positive Integers:**\n\n*   `assert solve(3) == 2`\n*   `assert solve(4) == 3`\n*   `assert solve(5) == 5`\n*   `assert solve(6) == 8`\n*   `assert solve(7) == 13`\n*   `assert solve(8) == 21`\n*   `assert solve(9) == 34`\n*   `assert solve(10) == 55`\n\n**Larger Values (to test efficiency/correctness for more complex calculations):**\n\n*   `assert solve(15) == 610`\n*   `assert solve(20) == 6765`\n*   `assert solve(25) == 75025`\n\n**Edge Cases/Constraints (if applicable"
+}

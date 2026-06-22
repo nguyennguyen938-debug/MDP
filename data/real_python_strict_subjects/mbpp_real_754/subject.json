@@ -1,0 +1,25 @@
+{
+  "entrypoint": "extract_index_list",
+  "id": "mbpp_real_754",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    extract_index_list = candidate\n    assert extract_index_list([1, 1, 3, 4, 5, 6, 7],[0, 1, 2, 3, 4, 5, 7],[0, 1, 2, 3, 4, 5, 7])==[1, 7]\n    assert extract_index_list([1, 1, 3, 4, 5, 6, 7],[0, 1, 2, 3, 4, 6, 5],[0, 1, 2, 3, 4, 6, 7])==[1, 6]\n    assert extract_index_list([1, 1, 3, 4, 6, 5, 6],[0, 1, 2, 3, 4, 5, 7],[0, 1, 2, 3, 4, 5, 7])==[1, 5]\n    assert extract_index_list([1, 2, 3, 4, 6, 6, 6],[0, 1, 2, 3, 4, 5, 7],[0, 1, 2, 3, 4, 5, 7])==[]\n",
+    "oracle_type": "callable_check",
+    "original_id": 754,
+    "profile": "real_python",
+    "prompt": "We say that an element is common for lists l1, l2, l3 if it appears in all three lists under the same index. Write a function to find common elements from three lists. The function should return a list.",
+    "source": "google_research_mbpp",
+    "source_code": "def extract_index_list(l1, l2, l3):\n    result = []\n    for m, n, o in zip(l1, l2, l3):\n        if (m == n == o):\n            result.append(m)\n    return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_754/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

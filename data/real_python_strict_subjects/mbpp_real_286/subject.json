@@ -1,0 +1,25 @@
+{
+  "entrypoint": "max_sub_array_sum_repeated",
+  "id": "mbpp_real_286",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    max_sub_array_sum_repeated = candidate\n    assert max_sub_array_sum_repeated([10, 20, -30, -1], 4, 3) == 30\n    assert max_sub_array_sum_repeated([-1, 10, 20], 3, 2) == 59\n    assert max_sub_array_sum_repeated([-1, -2, -3], 3, 3) == -1\n",
+    "oracle_type": "callable_check",
+    "original_id": 286,
+    "profile": "real_python",
+    "prompt": "Write a function to find the largest sum of a contiguous array in the modified array which is formed by repeating the given array k times.",
+    "source": "google_research_mbpp",
+    "source_code": "def max_sub_array_sum_repeated(a, n, k): \n\tmax_so_far = -2147483648\n\tmax_ending_here = 0\n\tfor i in range(n*k): \n\t\tmax_ending_here = max_ending_here + a[i%n] \n\t\tif (max_so_far < max_ending_here): \n\t\t\tmax_so_far = max_ending_here \n\t\tif (max_ending_here < 0): \n\t\t\tmax_ending_here = 0\n\treturn max_so_far",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_286/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

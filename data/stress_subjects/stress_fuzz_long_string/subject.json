@@ -1,0 +1,49 @@
+{
+  "entrypoint": "solve",
+  "id": "stress_fuzz_long_string",
+  "language": "python",
+  "metadata": {
+    "boundary_cases": [
+      {
+        "args": [
+          ""
+        ]
+      },
+      {
+        "args": [
+          "abc"
+        ]
+      }
+    ],
+    "dataset": "stress",
+    "fuzz_cases": [
+      {
+        "args": [
+          "abcD"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "longlower"
+        ],
+        "expected": true
+      }
+    ],
+    "original_id": "fuzz_long_string",
+    "profile": "stress",
+    "source": "embedded_pilot_catalog",
+    "source_code": "def solve(text: str) -> bool:\n    return text.islower()\n",
+    "split": "train",
+    "stress_category": "fuzz"
+  },
+  "path": "stress_fuzz_long_string/solution.py",
+  "tests": [
+    {
+      "args": [
+        "abc"
+      ],
+      "expected": true
+    }
+  ]
+}

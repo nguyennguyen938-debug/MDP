@@ -1,0 +1,24 @@
+{
+  "entrypoint": "unique",
+  "id": "humaneval_real_humaneval_34",
+  "language": "python",
+  "metadata": {
+    "dataset": "humaneval_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate([5, 3, 5, 2, 3, 3, 9, 0, 123]) == [0, 2, 3, 5, 9, 123]\n\n",
+    "oracle_type": "callable_check",
+    "original_id": "HumanEval/34",
+    "profile": "real_python",
+    "source": "openai_human_eval",
+    "source_code": "\n\ndef unique(l: list):\n    \"\"\"Return sorted unique elements in a list\n    >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [0, 2, 3, 5, 9, 123]\n    \"\"\"\n    return sorted(list(set(l)))\n",
+    "source_url": "https://raw.githubusercontent.com/openai/human-eval/master/data/HumanEval.jsonl.gz",
+    "split": "train"
+  },
+  "path": "humaneval_real_humaneval_34/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

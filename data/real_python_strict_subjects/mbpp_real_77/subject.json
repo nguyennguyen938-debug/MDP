@@ -1,0 +1,25 @@
+{
+  "entrypoint": "is_Diff",
+  "id": "mbpp_real_77",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    is_Diff = candidate\n    assert is_Diff (12345) == False\n    assert is_Diff(1212112) == True\n    assert is_Diff(1212) == False\n",
+    "oracle_type": "callable_check",
+    "original_id": 77,
+    "profile": "real_python",
+    "prompt": "Write a python function to find whether a number is divisible by 11.",
+    "source": "google_research_mbpp",
+    "source_code": "def is_Diff(n): \n    return (n % 11 == 0) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_77/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

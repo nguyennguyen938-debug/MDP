@@ -1,0 +1,19 @@
+{
+  "entrypoint": "solve",
+  "id": "max2",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "train"
+  },
+  "path": "max2/solution.py",
+  "tests": [
+    {
+      "args": [
+        1,
+        2
+      ],
+      "expected": 2
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "largest_subset",
+  "id": "mbpp_real_620",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    largest_subset = candidate\n    assert largest_subset([ 1, 3, 6, 13, 17, 18 ]) == 4\n    assert largest_subset([10, 5, 3, 15, 20]) == 3\n    assert largest_subset([18, 1, 3, 6, 13, 17]) == 4\n",
+    "oracle_type": "callable_check",
+    "original_id": 620,
+    "profile": "real_python",
+    "prompt": "Write a function to find the size of the largest subset of a list of numbers so that every pair is divisible.",
+    "source": "google_research_mbpp",
+    "source_code": "def largest_subset(a):\n\tn = len(a)\n\tdp = [0 for i in range(n)]\n\tdp[n - 1] = 1; \n\tfor i in range(n - 2, -1, -1):\n\t\tmxm = 0;\n\t\tfor j in range(i + 1, n):\n\t\t\tif a[j] % a[i] == 0 or a[i] % a[j] == 0:\n\t\t\t\tmxm = max(mxm, dp[j])\n\t\tdp[i] = 1 + mxm\n\treturn max(dp)",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "test"
+  },
+  "path": "mbpp_real_620/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

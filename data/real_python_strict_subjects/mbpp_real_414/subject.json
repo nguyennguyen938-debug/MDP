@@ -1,0 +1,25 @@
+{
+  "entrypoint": "overlapping",
+  "id": "mbpp_real_414",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    overlapping = candidate\n    assert overlapping([1,2,3,4,5],[6,7,8,9]) == False\n    assert overlapping([1,2,3],[4,5,6]) == False\n    assert overlapping([1,4,5],[1,4,5]) == True\n",
+    "oracle_type": "callable_check",
+    "original_id": 414,
+    "profile": "real_python",
+    "prompt": "Write a python function to check whether any value in a sequence exists in a sequence or not.",
+    "source": "google_research_mbpp",
+    "source_code": "def overlapping(list1,list2):  \n    for i in range(len(list1)): \n        for j in range(len(list2)): \n            if(list1[i]==list2[j]): \n                return True\n    return False",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_414/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

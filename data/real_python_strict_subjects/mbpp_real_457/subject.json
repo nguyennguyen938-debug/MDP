@@ -1,0 +1,25 @@
+{
+  "entrypoint": "Find_Min",
+  "id": "mbpp_real_457",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    Find_Min = candidate\n    assert Find_Min([[1],[1,2],[1,2,3]]) == [1]\n    assert Find_Min([[1,1],[1,1,1],[1,2,7,8]]) == [1,1]\n    assert Find_Min([['x'],['x','y'],['x','y','z']]) == ['x']\n",
+    "oracle_type": "callable_check",
+    "original_id": 457,
+    "profile": "real_python",
+    "prompt": "Write a python function to find the sublist having minimum length.",
+    "source": "google_research_mbpp",
+    "source_code": "def Find_Min(lst): \n    return min(lst, key=len) ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_457/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

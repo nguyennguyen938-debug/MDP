@@ -1,0 +1,18 @@
+{
+  "entrypoint": "solve",
+  "id": "sign",
+  "language": "python",
+  "metadata": {
+    "dataset": "toy",
+    "split": "test"
+  },
+  "path": "sign/solution.py",
+  "tests": [
+    {
+      "args": [
+        0
+      ],
+      "expected": 0
+    }
+  ]
+}

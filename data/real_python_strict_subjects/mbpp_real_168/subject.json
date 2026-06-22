@@ -1,0 +1,25 @@
+{
+  "entrypoint": "frequency",
+  "id": "mbpp_real_168",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    frequency = candidate\n    assert frequency([1,2,3], 4) == 0\n    assert frequency([1,2,2,3,3,3,4], 3) == 3\n    assert frequency([0,1,2,3,1,2], 1) == 2\n",
+    "oracle_type": "callable_check",
+    "original_id": 168,
+    "profile": "real_python",
+    "prompt": "Write a function to count the number of occurrences of a number in a given list.",
+    "source": "google_research_mbpp",
+    "source_code": "def frequency(a,x): \n    count = 0  \n    for i in a: \n      if i == x: \n        count += 1\n\n    return count ",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_168/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "completion_tokens": 104,
+  "key": "00df9483c8d1d391229b9ee8ae01f9538f45fd42215361e4947794c0a0c317fb",
+  "model": "gemini-2.5-flash-lite",
+  "params": {},
+  "prompt": "Suggest concise assertions for mbpp_sum_even:solve.",
+  "prompt_tokens": 5,
+  "provider": "gemini",
+  "text": "Here are concise assertions for `mbpp_sum_even:solve`, focusing on different aspects of the problem:\n\n**Core Functionality:**\n\n*   `assert solve([1, 2, 3, 4, 5, 6]) == 12`  (Basic case with mixed numbers)\n*   `assert solve([2, 4, 6, 8]) == 20`      (All even numbers)\n*   `assert solve([1, 3, 5, 7]) == 0`       (All odd numbers)\n*   `assert solve([]) == 0`                (Empty list)\n*   `assert solve([0, 2, 4]) == 6`         (Includes zero)\n\n**Edge Cases/Variations:**\n\n*   `assert solve([-2, -4, 1, 3]) == -6`   (Negative even numbers)\n*   `assert solve([10]) == 10`             (Single even number)\n*   `assert solve([7]) == 0`               (Single odd number)\n*   `assert solve([0]) == 0`               (Single zero"
+}

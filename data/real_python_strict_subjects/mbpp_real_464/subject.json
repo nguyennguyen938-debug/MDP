@@ -1,0 +1,25 @@
+{
+  "entrypoint": "check_value",
+  "id": "mbpp_real_464",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "\ndef check(candidate):\n    check_value = candidate\n    assert check_value({'Cierra Vega': 12, 'Alden Cantrell': 12, 'Kierra Gentry': 12, 'Pierre Cox': 12},10)==False\n    assert check_value({'Cierra Vega': 12, 'Alden Cantrell': 12, 'Kierra Gentry': 12, 'Pierre Cox': 12},12)==True\n    assert check_value({'Cierra Vega': 12, 'Alden Cantrell': 12, 'Kierra Gentry': 12, 'Pierre Cox': 12},5)==False\n",
+    "oracle_type": "callable_check",
+    "original_id": 464,
+    "profile": "real_python",
+    "prompt": "Write a function to check if all values are same in a dictionary.",
+    "source": "google_research_mbpp",
+    "source_code": "def check_value(dict, n):\n    result = all(x == n for x in dict.values()) \n    return result",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "val"
+  },
+  "path": "mbpp_real_464/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "entrypoint": "volume_sphere",
+  "id": "mbpp_real_82",
+  "language": "python",
+  "metadata": {
+    "dataset": "mbpp_real",
+    "import_status": "imported",
+    "license": "dataset-specific; see source repository",
+    "oracle_code": "import math\n\ndef check(candidate):\n    volume_sphere = candidate\n    assert math.isclose(volume_sphere(10), 4188.790204786391, rel_tol=0.001)\n    assert math.isclose(volume_sphere(25), 65449.84694978735, rel_tol=0.001)\n    assert math.isclose(volume_sphere(20), 33510.32163829113, rel_tol=0.001)\n",
+    "oracle_type": "callable_check",
+    "original_id": 82,
+    "profile": "real_python",
+    "prompt": "Write a function to find the volume of a sphere.",
+    "source": "google_research_mbpp",
+    "source_code": "import math\ndef volume_sphere(r):\n  volume=(4/3)*math.pi*r*r*r\n  return volume",
+    "source_url": "https://raw.githubusercontent.com/google-research/google-research/master/mbpp/sanitized-mbpp.json",
+    "split": "train"
+  },
+  "path": "mbpp_real_82/solution.py",
+  "tests": [
+    {
+      "oracle": "check"
+    }
+  ]
+}
