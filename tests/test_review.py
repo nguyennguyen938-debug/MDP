@@ -4,9 +4,23 @@ from __future__ import annotations
 
 import unittest
 
+from scripts.review_numbers import mcnemar_exact, wilson
 from testgenrl.actions import Action
 from testgenrl.cli import build_parser
 from testgenrl.planners import LinUCBPlanner, planner_from_name
+
+
+class ReviewStatsTests(unittest.TestCase):
+    def test_wilson_interval(self) -> None:
+        lo, hi = wilson(4, 22)
+        self.assertAlmostEqual(lo, 0.07307, places=4)
+        self.assertAlmostEqual(hi, 0.38517, places=4)
+
+    def test_mcnemar_exact_is_two_sided(self) -> None:
+        self.assertEqual(mcnemar_exact(0, 0), 1.0)
+        self.assertAlmostEqual(mcnemar_exact(5, 0), 0.0625)
+        self.assertAlmostEqual(mcnemar_exact(0, 5), 0.0625)
+        self.assertAlmostEqual(mcnemar_exact(10, 0), 2 / 1024)
 
 
 class LinUCBTests(unittest.TestCase):
