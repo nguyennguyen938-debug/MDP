@@ -33,7 +33,7 @@ command above for the submitted TestGenRL artifact.
 
 ## Reproduction
 
-### Tier 1 (included): held-out paper numbers, replay/audit — no credentials
+### Tier 1 (included): held-out paper numbers, replay/audit, no credentials
 
 The headline results (held-out test split, conservative Double-DQN, 3 seeds) are reproduced from the
 included replay caches and logs under `dqn_eval/`. To re-aggregate the large-scale replay corpus into
@@ -48,7 +48,7 @@ python3 scripts/aggregate_exp.py \
 
 The manuscript's reported tables and figures (`results_core_tables.tex`, `results_diagnostics_tables.tex`, `appendix_secondary_results.tex`, `results_dashboard.tex`) come from the **held-out conservative-DDQN evaluation** in `dqn_eval/`.
 
-### Tier 2 (optional): live-cache rebuild — requires provider credentials
+### Tier 2 (optional): live-cache rebuild, requires provider credentials
 
 A full live rerun rebuilds provider caches and retrains/evaluates per provider-budget-horizon cell.
 It **requires fresh LLM provider credentials** and is **not** runnable from the staged package alone,

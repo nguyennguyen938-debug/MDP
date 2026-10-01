@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 import random
 from dataclasses import dataclass
 
@@ -116,6 +117,51 @@ class ContextualBanditPlanner(Planner):
         self.bias[action] += self.lr * error
 
 
+class LinUCBPlanner(ContextualBanditPlanner):
+    """Disjoint LinUCB (Li et al., 2010): per-action ridge regression plus an
+    exploration bonus ``alpha * sqrt(x^T A^-1 x)``. ``A^-1`` is kept directly
+    with Sherman-Morrison rank-1 updates, so no linear-algebra dependency is
+    needed. STOP is never explored: it keeps a fixed score of 0."""
+
+    name = "linucb"
+
+    def __init__(self, alpha: float = 1.0):
+        super().__init__()
+        self.alpha = alpha
+        self.a_inv: list[list[list[float]]] | None = None
+        self.b: list[list[float]] | None = None
+
+    def select(self, state: list[float], mask: list[bool]) -> int:
+        x = list(state) + [1.0]
+        if self.a_inv is None:
+            d = len(x)
+            self.a_inv = [[[1.0 if i == j else 0.0 for j in range(d)] for i in range(d)] for _ in Action]
+            self.b = [[0.0] * d for _ in Action]
+        scores: list[float] = []
+        for a in Action:
+            if a == Action.STOP:
+                scores.append(0.0)
+                continue
+            inv_x = [sum(r * xi for r, xi in zip(row, x)) for row in self.a_inv[a]]
+            mean = sum(bi * v for bi, v in zip(self.b[a], inv_x))  # theta.x = b.(A^-1 x), A^-1 symmetric
+            width = sum(xi * v for xi, v in zip(x, inv_x))
+            scores.append(mean + self.alpha * math.sqrt(max(width, 0.0)))
+        self.last_state = x
+        return masked_argmax(scores, mask)
+
+    def update(self, action: int, reward: float) -> None:
+        if self.last_state is None or self.a_inv is None or action == Action.STOP:
+            return
+        x, inv = self.last_state, self.a_inv[action]
+        inv_x = [sum(r * xi for r, xi in zip(row, x)) for row in inv]
+        denom = 1.0 + sum(xi * v for xi, v in zip(x, inv_x))
+        for i, vi in enumerate(inv_x):
+            row = inv[i]
+            for j, vj in enumerate(inv_x):
+                row[j] -= vi * vj / denom
+        self.b[action] = [bi + reward * xi for bi, xi in zip(self.b[action], x)]
+
+
 def planner_from_name(name: str) -> Planner:
     if name == "existing":
         return ExistingTestsPlanner()
@@ -127,6 +173,8 @@ def planner_from_name(name: str) -> Planner:
         return GreedyPlanner()
     if name == "bandit":
         return ContextualBanditPlanner()
+    if name == "linucb":
+        return LinUCBPlanner()
     if name == "dqn":
         from .dqn import DQNPlanner
 
