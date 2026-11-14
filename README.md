@@ -22,8 +22,8 @@ Artifact for "MDP-Guided Reinforcement Learning for Cost-Aware LLM-Based Test Ge
 The in-scope TestGenRL test suite passes from the artifact root:
 
 ```bash
-python3 -m pytest tests/test_core.py tests/test_exp_scripts.py tests/test_integration.py -q
-# -> 32 passed
+python3 -m pytest tests/test_core.py tests/test_exp_scripts.py tests/test_integration.py tests/test_review.py -q
+# -> 37 passed
 ```
 
 `tests/test_proposal1_eval.py`, `tests/test_sagetransval_full.py`, and `tests/test_extensions.py`
@@ -48,6 +48,18 @@ python3 scripts/aggregate_exp.py \
 
 The manuscript's reported tables and figures (`results_core_tables.tex`, `results_diagnostics_tables.tex`, `appendix_secondary_results.tex`, `results_dashboard.tex`) come from the **held-out conservative-DDQN evaluation** in `dqn_eval/`.
 
+The statistics added for the reviews are recomputed from the same `dqn_eval/` logs:
+
+```bash
+python3 scripts/review_numbers.py            # defaults to dqn_eval/
+```
+
+It prints the LinUCB rows (failure-found rate, coverage, return, and boundary/fuzz/LLM action
+shares per profile), the failure-found counts with 95% Wilson intervals, exact McNemar p-values of
+each Double-DQN seed against Greedy, the fixed schedule and the bandit (per profile, and pooled over
+stress and action-balanced against Greedy), and the CQL-weight table for weights 0, 0.3, 0.5, 1.0
+and 3.0. `tests/test_review.py` checks the Wilson and McNemar helpers and the LinUCB planner.
+
 ### Tier 2 (optional): live-cache rebuild, requires provider credentials
 
 A full live rerun rebuilds provider caches and retrains/evaluates per provider-budget-horizon cell.
@@ -55,6 +67,22 @@ It **requires fresh LLM provider credentials** and is **not** runnable from the 
 because the live `.llm_cache/` directories are omitted (see **Omitted Live Caches**). The held-out
 evaluation scripts (`scripts/dqn_eval_run.sh`, `dqn_eval_profiles.sh`, `dqn_eval_rq3.sh`) read a
 `GEMINI_API_KEY`/`OPENAI_API_KEY` and populate a local cache on first run.
+
+## LinUCB Baseline
+
+The `linucb` planner (`LinUCBPlanner` in `testgenrl/planners.py`) is disjoint LinUCB (Li et al.,
+2010): a ridge regression per action on the 24-dimensional state plus a bias, scored as the
+predicted reward plus an exploration bonus `alpha * sqrt(x^T A^-1 x)` with `alpha = 1.0`. `A^-1` is
+updated with Sherman-Morrison rank-1 steps, so it needs no linear-algebra dependency. STOP is never
+explored and keeps a fixed score of 0. Its logs are under `dqn_eval/results/linucb/`,
+`dqn_eval/results_stress/linucb/` and `dqn_eval/results_action_balanced/linucb/`, and replaying it
+needs no credentials, for example on the stress profile:
+
+```bash
+python3 -m testgenrl.cli run --planner linucb --subjects dqn_eval/subjects_stress \
+  --budget dqn_eval/configs/budget.yaml --llm-provider gemini --llm-model gemini-2.5-flash-lite \
+  --cache-mode replay --cache-dir dqn_eval/.llm_cache --out <out_dir>
+```
 
 ## Learned Planner: Masked Double-DQN (conservative, offline)
 
