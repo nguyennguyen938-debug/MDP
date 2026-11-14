@@ -67,8 +67,8 @@ Training is **offline** (it learns from logged baseline trajectories), so it is 
 overestimating the value of actions that are under-represented in the buffer. We therefore train
 with a **Conservative Q-Learning (CQL)** penalty by default (`--cql-alpha 0.5`), which pushes down
 the value of under-covered actions. Empirically this removes the planner's over-exploration on easy
-regimes (full-pilot coverage 69%->97.3%, recovering the boundary-test optimum) **while keeping its
-adaptation on adversarial profiles** (stress/action-balanced failure-found rate held at 66.7%/58.3%,
+regimes (full-pilot coverage 68.2%->97.3%, recovering the boundary-test optimum) **while keeping its
+adaptation on adversarial profiles** (stress/action-balanced failure-found rate held at 66.7%/55.6%, mean of 3 seeds,
 vs Greedy's 25.0%/16.7%). `--cql-alpha 0` recovers the non-conservative learner; `>=1.0`
 over-suppresses exploration. See the evaluation section of the paper for details on the diagnosis, ablation, and related work.
 
