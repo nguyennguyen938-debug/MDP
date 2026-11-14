@@ -163,7 +163,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_prepare)
 
     p = sub.add_parser("run")
-    p.add_argument("--planner", required=True, choices=["existing", "fixed", "random", "greedy", "bandit", "dqn"])
+    p.add_argument("--planner", required=True, choices=["existing", "fixed", "random", "greedy", "bandit", "linucb", "dqn"])
     p.add_argument("--subjects", required=True)
     p.add_argument("--budget")
     p.add_argument("--split")

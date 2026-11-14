@@ -33,7 +33,7 @@ command above for the submitted TestGenRL artifact.
 
 ## Reproduction
 
-### Tier 1 (included): held-out paper numbers, replay/audit — no credentials
+### Tier 1 (included): held-out paper numbers, replay/audit, no credentials
 
 The headline results (held-out test split, conservative Double-DQN, 3 seeds) are reproduced from the
 included replay caches and logs under `dqn_eval/`. To re-aggregate the large-scale replay corpus into
@@ -48,7 +48,7 @@ python3 scripts/aggregate_exp.py \
 
 The manuscript's reported tables and figures (`results_core_tables.tex`, `results_diagnostics_tables.tex`, `appendix_secondary_results.tex`, `results_dashboard.tex`) come from the **held-out conservative-DDQN evaluation** in `dqn_eval/`.
 
-### Tier 2 (optional): live-cache rebuild — requires provider credentials
+### Tier 2 (optional): live-cache rebuild, requires provider credentials
 
 A full live rerun rebuilds provider caches and retrains/evaluates per provider-budget-horizon cell.
 It **requires fresh LLM provider credentials** and is **not** runnable from the staged package alone,
@@ -67,8 +67,8 @@ Training is **offline** (it learns from logged baseline trajectories), so it is 
 overestimating the value of actions that are under-represented in the buffer. We therefore train
 with a **Conservative Q-Learning (CQL)** penalty by default (`--cql-alpha 0.5`), which pushes down
 the value of under-covered actions. Empirically this removes the planner's over-exploration on easy
-regimes (full-pilot coverage 69%->97.3%, recovering the boundary-test optimum) **while keeping its
-adaptation on adversarial profiles** (stress/action-balanced failure-found rate held at 66.7%/58.3%,
+regimes (full-pilot coverage 68.2%->97.3%, recovering the boundary-test optimum) **while keeping its
+adaptation on adversarial profiles** (stress/action-balanced failure-found rate held at 66.7%/55.6%, mean of 3 seeds,
 vs Greedy's 25.0%/16.7%). `--cql-alpha 0` recovers the non-conservative learner; `>=1.0`
 over-suppresses exploration. See the evaluation section of the paper for details on the diagnosis, ablation, and related work.
 
